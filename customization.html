@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>定制配方</title>
+   
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+   <div class='slider-example bg-show border-bottom'>
+        <div class="well">
+            <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+            <p class="flowerName border-top border-bottom">玫瑰花</p>
+            <p class="operation">...</p>
+        </div>
+
+         <div class="well">
+            <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+            <p class="flowerName border-top border-bottom">薰衣草</p>
+            <p class="operation">...</p>
+        </div>
+        <div class="well">
+          <p class="add">+</p>
+        </div>  
+    </div>
+    
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap-slider.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type='text/javascript'>
+    $(document).ready(function() {
+         $('.prefumeSilder').each(function() {
+
+            $(this).slider({
+                reversed: true,
+                step: 10,
+                min:0,
+                max: 100,
+                value:10,
+            
+            });
+        })      
+    });
+    </script>
+</body>
+
+</html>

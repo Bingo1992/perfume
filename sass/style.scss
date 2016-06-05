@@ -1,0 +1,297 @@
+@import "compass";
+@import "partials/default";
+@import "partials/base";
+// ----------------定制配方--------------
+// 
+
+// ---silder---
+.slider-example {
+    padding: .5rem;
+    overflow: hidden;
+}
+
+.well {
+    width: 2.5rem;
+    float: left;
+    text-align: center;
+    .add {
+        height: 250px;
+        font-size: 3rem;
+        color: #aab7c6;
+        @extend %box;
+    }
+}
+
+.tooltip {
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    visibility: visible;
+    width: 40px;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.tooltip span {
+    float: left;
+}
+
+.tooltip-inner {
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    white-space: nowrap;
+}
+
+.flowerName {
+    line-height: 40px;
+    margin-top: 2rem;
+    font-size: $md-font;
+    color: $color-gray;
+}
+
+.operation {
+    border: 1px solid #dadada;
+    color: #dadada;
+    text-align: center;
+    @include circle;
+    width: 2rem;
+    margin: 0.5rem auto 0;
+}
+
+// ------------personnel.html-------------
+.person-top {
+    background: -webkit-linear-gradient(top,#fe017e,#fa263e);
+    padding: 30px 0;
+    color: #fff;
+    img {
+        @include circle(3rem);
+        border: 1px solid #fff;
+        margin-right: .5rem;
+    }
+    .list-info p {
+        opacity: .6;
+    }
+}
+.approve {
+    padding: 0 .5rem;
+    border: 1px solid #fff;
+    @include semicircle(1.8rem);
+    margin-top: .6rem;
+    font-size: $md-font;
+}
+.gray-font {
+    line-height: 24px;
+    font-size: $md-font;
+    color: $color-gray;
+}
+
+.equably-layout p{
+    color: $color-gray;
+    font-size: $md-font;
+    margin-top: .3rem;
+    span{color:#333;}
+}
+
+// -----------order_list.html------------
+.tabs {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    li{
+        @include height;
+        position: relative;
+    }
+    li.active{
+            p{
+                 color: $color-theme;
+            }
+            &:after {
+                display: block;
+                content: "";
+                @include circle(6px);
+                background-color:$color-theme;
+                position: absolute;
+                bottom: 6px;
+                left: 50%;
+                margin-left: -3px;
+            }
+        }
+    p{
+        margin-top: 0;
+    }
+}
+
+.list-title {
+    font-size: $md-font;
+    .theme-font{
+        line-height: 24px;
+    }
+}
+
+.tabs-list {
+    display:none;
+    margin-top: -10px;
+}
+
+// ------ticket_list.html----
+.ticket-list {
+    padding: 0 .25rem;
+    li {
+        margin: 10px .25rem 0 .25rem;
+        float: left;
+        width: 7.25rem;
+        border: 1px solid $border-color;
+        border-radius: .6rem;
+        box-sizing:border-box;
+        position: relative;
+         background-color:#fff;
+    }
+    a{
+        display: block;
+        padding: 10px .5rem 0 .5rem;
+    }
+    h2 span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .use-range {
+        width: 100%;
+        color: #fff;
+        background-color:$color-theme;
+        border-bottom-left-radius: .6rem;
+        border-bottom-right-radius: .6rem;
+        padding-left: .5rem;
+        box-sizing:border-box;
+        line-height: 24px;
+        font-size: $md-font;
+    }
+    img {
+        position: absolute;
+        
+    }
+}
+.effective img {
+    width: .2rem;
+    right: 1rem;
+    top: .3rem;
+}
+.past,.used{
+    img{
+        width: 60px;
+        right: 0;
+        top: -.3rem;
+    }
+    .use-range {
+        background-color: #eee;
+        color: #dadada;
+    }
+    h2,h2 span {
+        color: #dadada;
+    }
+    .gray-font{
+        color: #ccc;
+    }
+}
+
+// ----------cart_list.html---------
+.cart-list {
+    .list-info .list-box {
+        padding: .25rem 0;
+    }
+    .checkbox {
+        padding-top: 1.4rem;
+        i{
+            top: 1.4rem;
+        }
+    }
+
+    .delete,.count {
+        margin-right: 0;
+        @include semicircle(24px);
+        width: 40px;
+        border: 1px solid #dadada;
+    }
+    .delete{margin-left:.5rem;color:#dadada}
+}
+
+.minus,.plus {
+    @include circle(24px);
+   border: 1px solid #dadada;
+}
+
+// -------package_setting.html-----
+.setting-list {
+    color: $color-gray;
+    li {
+        @include height(50px);
+        padding: 0 10px;
+    }
+}
+.title-bar {
+    @include height(40px);
+    padding-left: 10px;
+}
+
+.wish-name input {width: 11rem;}
+li.wish-text {
+    height: 100px;
+    label{display:inherit;}
+    textarea {
+        width: 11rem;
+        line-height: 24px;
+        margin-top: 12px;
+    }
+}
+// -----fixed bottom-----
+.actionBar-container {
+    background-color: #fff;
+    box-sizing:border-box;
+    padding: 0 0 0 10px;
+    @include height(50px);
+    .all-check {
+        margin-right: 1rem;
+        input{top: 8px;}
+        i{top: 13px;}
+    }
+}
+
+.btn {
+    @include height(50px);
+    background-color: $color-theme;
+    color: #fff;
+    text-align: center;
+    display: block;
+    width: 4rem;
+}
+.nav {
+    background-color: #231418;
+    height: 60px;
+    i{
+        color: $color-theme;
+        font-size: 22px;
+    }
+    a{
+        padding: 9px 0;
+    }
+    p{
+        color: #fff;
+    }
+}
+.banner,.fixed-banner{
+    margin-bottom: 144px;
+    width: 100%;
+    overflow: hidden;
+}
+.fixed-banner{
+    margin-top: 54px;
+}
+.show {
+    display:block;
+}
+.hide {
+    display:none;
+}

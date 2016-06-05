@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+        <ul class="cart-list border-list">
+            <li>
+                <a class="list-box" href="#">
+                    <label class="checkbox" for="cart1">
+                        <input type="checkbox" name="checkbox" id="cart1">
+                        <i class="icon-hook"></i>
+                    </label>
+                    <img class="list-img" src="img/pic2.jpg">
+                    <div class="list-info">
+                        <div class="list-box">
+                            <div class="list-info">
+                                <h4 class="nowrap">邂逅清新淡香水配方香水配方</h4>
+                            </div>
+                            <i class="delete icon-cha"></i>
+                        </div>
+                        <div class="list-box">
+                            <p class="list-info">价格：
+                                <span class="theme-font">￥ <span>250</span></span>
+                            </p>
+                            <div class="amount">
+                                <span class="minus icon-jian"></span>
+                                <input type="text" class="count" value="1">
+                                <span class="plus icon-jia"></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="list-box" href="#">
+                    <label class="checkbox" for="cart2">
+                        <input type="checkbox" name="checkbox" id="cart2">
+                        <i class="icon-hook"></i>
+                    </label>
+                    <img class="list-img" src="img/pic1.jpg">
+                    <div class="list-info">
+                        <div class="list-box">
+                            <div class="list-info">
+                                <h4 class="nowrap">邂逅清新淡香水配方香水配方</h4>
+                            </div>
+                            <i class="delete icon-cha"></i>
+                        </div>
+                        <div class="list-box">
+                            <p class="list-info">价格：
+                                <span class="theme-font">￥ <span>250</span></span>
+                            </p>
+                            <div class="amount">
+                                <span class="minus icon-jian"></span>
+                                <input type="text" class="count" value="1">
+                                <span class="plus icon-jia"></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+    
+        </ul>
+    </div>
+
+    <!-- 底部固定内容 -->
+    <div class="fixed-bottom">
+        <!-- 结账 -->
+        <div class="actionBar-container list-box border-top">
+            <label class="all-check">
+                <input type="checkbox">
+                <i class="icon-hook"></i>
+                全选
+            </label>
+            <div class="list-info">
+                <span>合计：<span class="theme-font">￥<span>3123</span></span></span>
+            </div>
+            <a class="btn" href="#">立刻支付</a>
+        </div>
+
+        <!-- 底部导航 -->
+        <ul class="nav equably-layout">
+            <li>
+                <a href="index.html">
+                    <i class="icon-shouye"></i>
+                    <p>商城首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart_list.html">
+                    <i class="icon-gouwuche"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="online_help.html">
+                    <i class="icon-jifen"></i>
+                    <p>在线咨询</p>
+                </a>
+            </li>
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-vip"></i>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+
+    <script type="text/javascript">
+    $(function(){
+        minus_plus();//购物车数量加减（该函数在script.js中）    
+    });
+    </script>
+</body>
+
+</html>

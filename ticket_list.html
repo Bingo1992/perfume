@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>我的优惠券</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="fixed-banner">
+         <nav class="tabs bg-show">
+            <ul class="equably-layout">
+                <li class="active">
+                    <p>有效优惠券</p>
+                </li>
+                <li>
+                    <p>过期优惠券</p>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- 有效优惠券 -->
+        <div class="tabs-list show">
+           <ul class="ticket-list">
+               <li class="effective">
+                   <a href="#">
+                       <h2 class="theme-font"><span>9</span>折</h2>
+                       <p class="gray-font">买满300元可用</p>
+                   </a>
+                   <p class="use-range">全场通用</p>
+                  <img src="img/circle.png">
+               </li>
+               <li class="effective">
+                   <a href="#">
+                       <h2 class="theme-font">￥<span>300</span></h2>
+                       <p class="gray-font">买满1500元可用</p>
+                   </a>
+                   <p class="use-range">仅限搭配套餐使用</p>
+                  <img src="img/circle.png">
+               </li>
+               <li class="past">
+                   <a href="#">
+                       <h2 class="theme-font"><span>9</span>折</h2>
+                       <p class="gray-font">买满300元可用</p>
+                   </a>
+                   <p class="use-range">全场通用</p>
+                  <img src="img/false.png">
+               </li>
+               <li class="used">
+                   <a href="#">
+                       <h2 class="theme-font"><span>9</span>折</h2>
+                       <p class="gray-font">买满300元可用</p>
+                   </a>
+                   <p class="use-range">全场通用</p>
+                  <img src="img/used.png">
+               </li>
+           </ul>
+        </div>
+            
+        <!-- 过期优惠券 -->
+        <div class="tabs-list">  
+            <!-- 无列表状态 -->
+             <div class="nothing">
+                 <i class="icon-dingdan"></i>
+                 <h2>您还没有优惠券</h2>
+                 <p class="gray-font">可以去商城领优惠券</p>
+             </div>
+        </div>
+    </div>
+       
+    <!-- 底部导航 -->
+    <div class="fixed-bottom">
+        <ul class="nav equably-layout">
+            <li>
+                <a href="index.html">
+                    <i class="icon-shouye"></i>
+                    <p>商城首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart_list.html">
+                    <i class="icon-gouwuche"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="online_help.html">
+                    <i class="icon-jifen"></i>
+                    <p>在线咨询</p>
+                </a>
+            </li>
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-vip"></i>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
