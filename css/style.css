@@ -408,18 +408,20 @@ img {
   padding: 0 .25rem;
 }
 .ticket-list li {
-  margin: 10px .25rem 0 .25rem;
+  margin-top: 10px;
+  padding: 0 .25rem;
   float: left;
-  width: 7.25rem;
-  border: 1px solid #e1e1e1;
-  border-radius: .6rem;
+  width: 50%;
   box-sizing: border-box;
   position: relative;
-  background-color: #fff;
 }
 .ticket-list a {
   display: block;
-  padding: 10px .5rem 0 .5rem;
+  text-indent: 10px;
+  padding-top: 10px;
+  border-radius: .6rem;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
 }
 .ticket-list h2 span {
   font-size: 20px;
@@ -431,7 +433,6 @@ img {
   background-color: #fe007f;
   border-bottom-left-radius: .6rem;
   border-bottom-right-radius: .6rem;
-  padding-left: .5rem;
   box-sizing: border-box;
   line-height: 24px;
   font-size: 12px;
@@ -473,9 +474,9 @@ img {
 }
 .cart-list .delete, .cart-list .count {
   margin-right: 0;
-  height: 24px;
-  line-height: 24px;
-  border-radius: 12px;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-radius: 0.6rem;
   text-align: center;
   width: 40px;
   border: 1px solid #dadada;
@@ -486,10 +487,10 @@ img {
 }
 
 .minus, .plus {
-  height: 24px;
-  line-height: 24px;
-  border-radius: 24px;
-  width: 24px;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-radius: 1.2rem;
+  width: 1.2rem;
   text-align: center;
   border: 1px solid #dadada;
 }
