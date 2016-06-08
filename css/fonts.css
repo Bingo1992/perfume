@@ -18,58 +18,142 @@
     font-variant: normal;
     text-transform: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
      vertical-align: middle;
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.icon-vip:before {
-    content: "\e60f";
-}
-.icon-xing:before {
-    content: "\e604";
-}
-.icon-jian:before {
-    content: "\e900";
-}
-.icon-jia:before {
-    content: "\e901";
-}
-.icon-dianhua:before {
+.icon-bottle_1:before {
     content: "\e902";
 }
-.icon-zuobiao:before {
+.icon-bottle_2:before {
     content: "\e903";
 }
-.icon-shouye:before {
+.icon-gift:before {
     content: "\e904";
 }
-.icon-dingdan:before {
+.icon-crown:before {
     content: "\e905";
 }
-.icon-kaquan:before {
+.icon-pay:before {
     content: "\e906";
 }
-.icon-gouwuche:before {
+.icon-detail:before {
     content: "\e907";
 }
-.icon-jifen:before {
+.icon-heart:before {
     content: "\e908";
 }
-.icon-shouye-2:before {
+.icon-eyes:before {
     content: "\e909";
 }
-.icon-dingdan-2:before {
+.icon-user_1:before {
     content: "\e90a";
 }
-.icon-kaquan-2:before {
+.icon-cart:before {
     content: "\e90b";
 }
-.icon-gouwuche-2:before {
+.icon-star_1:before {
     content: "\e90c";
 }
-.icon-cha:before {
+.icon-sort:before {
+    content: "\e90d";
+}
+.icon-home_1:before {
+    content: "\e90e";
+}
+.icon-users:before {
+    content: "\e90f";
+}
+.icon-delete:before {
+    content: "\e910";
+}
+.icon-video:before {
+    content: "\e911";
+}
+.icon-camera:before {
+    content: "\e912";
+}
+.icon-filter:before {
+    content: "\e913";
+}
+.icon-coin:before {
+    content: "\e914";
+}
+.icon-share:before {
+    content: "\e915";
+}
+.icon-set:before {
+    content: "\e916";
+}
+.icon-voice:before {
+    content: "\e917";
+}
+.icon-order:before {
+    content: "\e918";
+}
+.icon-help:before {
+    content: "\e919";
+}
+.icon-ticket:before {
+    content: "\e91a";
+}
+.icon-flow:before {
+    content: "\e91b";
+}
+.icon-wchat_1:before {
+    content: "\e91c";
+}
+.icon-commet:before {
+    content: "\e91d";
+}
+.icon-hot:before {
+    content: "\e91e";
+}
+.icon-approve:before {
+    content: "\e91f";
+}
+.icon-shop:before {
+    content: "\e920";
+}
+.icon-water:before {
+    content: "\e921";
+}
+.icon-mask:before {
+    content: "\e922";
+}
+.icon-car:before {
+    content: "\e923";
+}
+.icon-bottle_3:before {
+    content: "\e924";
+}
+.icon-vip:before {
+    content: "\e925";
+}
+.icon-star_2:before {
+    content: "\e926";
+}
+.icon-home_2:before {
+    content: "\e927";
+}
+.icon-user_2:before {
+    content: "\e928";
+}
+.icon-cart_2:before {
+    content: "\e929";
+}
+.icon-wchat_2:before {
+    content: "\e92a";
+}
+.icon-minus:before {
+    content: "\e900";
+}
+.icon-plus:before {
+    content: "\e901";
+}
+.icon-cancel:before {
     content: "\e61a";
 }
 .icon-gantan:before {
@@ -90,3 +174,5 @@
 .icon-down:before {
     content: "\e60b";
 }
+
+

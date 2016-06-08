@@ -4,3 +4,5 @@
 
 我的订单： order_list.html
 我的优惠券：ticket_list.html
+
+调香师详情：flavorist_detail.html

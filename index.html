@@ -2,16 +2,60 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>商城首页</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/swipeSlide.min.js"></script>
 </head>
 <body>
-	<div class="color">
-		fasf
-	</div>
+	<!--banner-->
+    <div class="slide" id="slide">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="img/banner.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/banner.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/banner.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="dot">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!--banner end-->
 
 	<script type="text/javascript">
-	
+	$(function(){
+		//banner图片只有一张时，隐藏圆点
+        window.onload = function() {
+                var len = $('#slide li').length;
+                if (len <= 1) {
+                    $('.dot').addClass('hide');
+                }
+            }
+            //首页banner 图片轮播效果
+        $('#slide').swipeSlide({
+            continuousScroll: true,
+            speed: 3000,
+            transitionType: 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+            callback: function(i) {
+                $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+            }
+        });
+	})
 	</script>
 
 </body>
