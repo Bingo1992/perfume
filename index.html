@@ -1,45 +1,331 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>商城首页</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/swipeSlide.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>商城首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/swipeSlide.min.js"></script>
 </head>
+
 <body>
-	<!--banner-->
-    <div class="slide" id="slide">
-        <ul>
+    <div class="banner">
+	<!--banner轮播-->
+        <div class="slide" id="slide">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/banner.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="dot">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!--banner end-->
+        <!-- 九宫格 -->
+        <ul class="sudoku bg-show">
+
+            <li>
+                <a href="customization.html">
+                    <i class="icon-bottle_1"></i>
+                    <p>私属配方</p>
+                </a>
+            </li>
+
             <li>
                 <a href="#">
-                    <img src="img/banner.jpg" alt="">
+                    <i class="icon-bottle_2"></i>
+                    <p>独立香型</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="match_suit.html">
+                    <i class="icon-gift"></i>
+                    <p>搭配套装</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="icon-shop"></i>
+                    <p>品牌商城</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="icon-mask"></i>
+                    <p>香薰面膜</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="icon-bottle_3"></i>
+                    <p>精油护肤</p>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="img/banner.jpg" alt="">
+                    <i class="icon-water"></i>
+                    <p>香薰精油</p>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="img/banner.jpg" alt="">
+                    <i class="icon-car"></i>
+                    <p>汽车香薰</p>
+                </a>
+            </li>    
+        </ul>
+
+        <!-- 热销配方 -->
+        <ul class="production-list border-list">
+            <li class="list-box title_more" href="order_list.html">
+                <i class="icon-hot"></i>
+                <span class="list-info">
+                    <h4>热销配方</h4>
+                </span>
+                <a class="more" href="#">更多</a>
+            </li>
+            <li class="list-box" >
+                <img class="list-img" src="img/pic1.jpg">
+                <div class="list-info">
+                    <h4 class="nowrap">邂逅清新淡香水配方</h4>
+                    <p class="gray-font nowrap-2">蕴藏在圆形瓶身中的闪亮花香调香水。清新的气息让你沉醉在幸福与幸运的环绕中。</p>
+                        
+                    <div class="list-box">
+                        <div class="list-info">
+                            <span class="blue-font">
+                                <i class="icon-heart"></i>
+                                <span>1022</span>
+                            </span>
+                            <span class="blue-font">
+                               <i class="icon-eyes"></i>
+                               <span>1022</span> 
+                            </span>
+                        </div>
+                        <a class="btn-border">立即购买</a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-box" >
+                <img class="list-img" src="img/pic2.jpg">
+                <div class="list-info">
+                    <h4 class="nowrap">邂逅清新淡香水配方</h4>
+                    <p class="gray-font nowrap-2">蕴藏在圆形瓶身中的闪亮花香调香水</p>
+                        
+                    <div class="list-box">
+                        <div class="list-info">
+                            <span class="blue-font">
+                            <i class="icon-heart"></i>
+                            <span>1022</span>
+                        </span>
+                        <span class="blue-font">
+                           <i class="icon-eyes"></i>
+                           <span>1022</span> 
+                        </span>
+                        </div>
+                        <a class="btn-border">立即购买</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 认证调香师 -->
+        <ul class="border-list">
+            <li class="list-box title_more" href="order_list.html">
+                <i class="icon-approve"></i>
+                <span class="list-info">
+                    <h4>认证调香师</h4>
+                </span>
+                <a class="more" href="#">更多</a>
+            </li>
+            <li class="list-box">
+                <div class="per-img approve-img">
+                    <img src="img/per2.jpg">
+                    <i class="icon-vip"></i>
+                </div>
+                <div class="list-info">
+                    <h4>
+                        <span>奥利维耶</span>
+                        <span class="stars">
+                            <i class="icon-star_2 active"></i>
+                            <i class="icon-star_2"></i>
+                            <i class="icon-star_2"></i>
+                            <i class="icon-star_2"></i>
+                            <i class="icon-star_2"></i>
+                        </span>
+                    </h4>
+                    <p class="blue-font">世界级顶尖调香师</p>
+                    <div class="list-box more-recipe">
+                        <div class="list-info">
+                            <img src="img/1.jpg">
+                            <img src="img/1.jpg">
+                            <img src="img/1.jpg">
+                        </div>
+                        <a class="blue-font" href="#">更多配方&gt;</a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-box">
+                <div class="per-img approve-img">
+                    <img src="img/per2.jpg">
+                    <i class="icon-vip"></i>
+                </div>
+                <div class="list-info">
+                    <h4>
+                        <span>奥利维耶</span>
+                        <span class="stars">
+                            <i class="icon-star_2 active"></i>
+                            <i class="icon-star_2"></i>
+                            <i class="icon-star_2"></i>
+                            <i class="icon-star_2"></i>
+                            <i class="icon-star_2"></i>
+                        </span>
+                    </h4>
+                    <p class="blue-font">世界级顶尖调香师</p>
+                    <div class="list-box more-recipe">
+                        <div class="list-info">
+                            <img src="img/1.jpg">
+                            <img src="img/1.jpg">
+                            <img src="img/1.jpg">
+                            <img src="img/1.jpg">
+                        </div>
+                        <a class="blue-font" href="#">更多配方&gt;</a>
+                    </div>
+                </div>
+            </li>        
+        </ul>
+
+        <!-- 热销产品 -->
+        <div class="border-list">
+            <div class="title_more list-box border-bottom" href="order_list.html">
+                <i class="icon-sort"></i>
+                <span class="list-info">
+                    <h4>热销产品</h4>
+                </span>
+                <a class="more" href="#">更多</a>
+            </div>
+            <ul class="hot-product">
+                <li>
+                    <a href="#">
+                        <div class="hot-img">
+                            <img src="img/3.png">
+                        </div>
+                        <p class="nowrap-2">范思哲VERSACE星夜水晶女士香水 30ml</p>
+                        <div class="list-box">
+                            <div class="list-info">
+                                <span class="theme-font">￥<span>309</span></span>
+                            </div>
+                            <span class="blue-font">
+                                销量
+                                <span>47283</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="hot-img">
+                            <img src="img/2.png">
+                        </div>
+                        <p class="nowrap-2">女士香水 30ml</p>
+                        <div class="list-box">
+                            <div class="list-info">
+                                <span class="theme-font">￥<span>309</span></span>
+                            </div>
+                            <span class="blue-font">
+                                销量
+                                <span>47283</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="hot-img">
+                            <img src="img/1.png">
+                        </div>
+                        <p class="nowrap-2">范思哲 (VERSACE) 绅情香水 100ml ( 买三送一活动）</p>
+                        <div class="list-box">
+                            <div class="list-info">
+                                <span class="theme-font">￥<span>309</span></span>
+                            </div>
+                            <span class="blue-font">
+                                销量
+                                <span>47283</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <p class="getMore bg-show">点击加载更多</p>
+                  
+        </div>
+
+    </div>
+    <!-- -banner- -->
+
+    <!-- 底部固定内容 -->
+    <div class="fixed-bottom"> 
+
+        <!-- 底部导航 -->
+        <ul class="nav equably-layout">
+            <li>
+                <a href="index.html">
+                    <i class="icon-home_2"></i>
+                    <p>商城首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart_list.html">
+                    <i class="icon-cart"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="online_help.html">
+                    <i class="icon-wchat_1"></i>
+                    <p>在线咨询</p>
+                </a>
+            </li>
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-user_1"></i>
+                    <p>个人中心</p>
                 </a>
             </li>
         </ul>
-        <div class="dot">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </div>
-    <!--banner end-->
+ 
 
-	<script type="text/javascript">
-	$(function(){
-		//banner图片只有一张时，隐藏圆点
+    <script type="text/javascript">
+    $(function(){
+      //banner图片只有一张时，隐藏圆点
         window.onload = function() {
                 var len = $('#slide li').length;
                 if (len <= 1) {
@@ -55,8 +341,9 @@
                 $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
             }
         });
-	})
-	</script>
-
+        
+    });
+    </script>
 </body>
+
 </html>

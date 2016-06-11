@@ -18,7 +18,8 @@
 $(function(){
     //tab选项卡
     $('.tabs').find('li').click(function() {
-        $(this).addClass('active').siblings().removeClass('active');
+        // $(this).addClass('active').siblings().removeClass('active');
+        active($(this));
         var index = $('.tabs li').index($(this));
         $('.tabs-list').eq(index).addClass('show').siblings('.tabs-list').removeClass('show');
     });
@@ -82,5 +83,10 @@ function allCheck(){
 			$(".all-check :checkbox").prop("checked", true); 
 		}
 	});
+}
+
+//激活元素
+function active(className){
+    $(className).addClass('active').siblings().removeClass('active');
 }
    

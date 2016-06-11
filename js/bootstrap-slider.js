@@ -377,7 +377,7 @@
 				// Undo inline styles on handles
 				[this.handle1, this.handle2].forEach(function(handle) {
 					this._removeProperty(handle, 'left');
-					this._removeProperty(handle, 'top');
+					// this._removeProperty(handle, 'top');
 				}, this);
 
 				// Undo inline styles and classes on tooltips
@@ -416,14 +416,14 @@
 				this.mousePos = 'pageX';
 				this.sizePos = 'offsetWidth';
 
-				this._addClass(this.tooltip, 'top');
-				this.tooltip.style.top = -this.tooltip.outerHeight - 14 + 'px';
+				// this._addClass(this.tooltip, 'top');
+				// this.tooltip.style.top = -this.tooltip.outerHeight - 14 + 'px';
 
-				this._addClass(this.tooltip_min, 'top');
-				this.tooltip_min.style.top = -this.tooltip_min.outerHeight - 14 + 'px';
+				// this._addClass(this.tooltip_min, 'top');
+				// this.tooltip_min.style.top = -this.tooltip_min.outerHeight - 14 + 'px';
 
-				this._addClass(this.tooltip_max, 'top');
-				this.tooltip_max.style.top = -this.tooltip_max.outerHeight - 14 + 'px';
+				// this._addClass(this.tooltip_max, 'top');
+				// this.tooltip_max.style.top = -this.tooltip_max.outerHeight - 14 + 'px';
 			}
 
 			if (this.options.value instanceof Array) {
@@ -776,10 +776,10 @@
 				this.handle2.style[this.stylePos] = positionPercentages[1]+'%';
 
 				if (this.options.orientation === 'vertical') {
-					this.trackSelection.style.top = Math.min(positionPercentages[0], positionPercentages[1]) +'%';
+					// this.trackSelection.style.top = Math.min(positionPercentages[0], positionPercentages[1]) +'%';
 					this.trackSelection.style.height = Math.abs(positionPercentages[0] - positionPercentages[1]) +'%';
 				} else {
-					this.trackSelection.style.left = Math.min(positionPercentages[0], positionPercentages[1]) +'%';
+					// this.trackSelection.style.left = Math.min(positionPercentages[0], positionPercentages[1]) +'%';
 					this.trackSelection.style.width = Math.abs(positionPercentages[0] - positionPercentages[1]) +'%';
 
 			        var offset_min = this.tooltip_min.getBoundingClientRect();
@@ -801,19 +801,19 @@
 				if (this.options.range) {
 					formattedTooltipVal = this.options.formatter(this.options.value);
 					this._setText(this.tooltipInner, formattedTooltipVal);
-					this.tooltip.style[this.stylePos] = (positionPercentages[1] + positionPercentages[0])/2 + '%';
+					// this.tooltip.style[this.stylePos] = (positionPercentages[1] + positionPercentages[0])/2 + '%';
 
-					if (this.options.orientation === 'vertical') {
-						this._css(this.tooltip, 'margin-top', -this.tooltip.offsetHeight / 2 + 'px');
-					} else {
-						this._css(this.tooltip, 'margin-left', -this.tooltip.offsetWidth / 2 + 'px');
-					}
+					// if (this.options.orientation === 'vertical') {
+					// 	this._css(this.tooltip, 'margin-top', -this.tooltip.offsetHeight / 2 + 'px');
+					// } else {
+					// 	this._css(this.tooltip, 'margin-left', -this.tooltip.offsetWidth / 2 + 'px');
+					// }
 
-					if (this.options.orientation === 'vertical') {
-						this._css(this.tooltip, 'margin-top', -this.tooltip.offsetHeight / 2 + 'px');
-					} else {
-						this._css(this.tooltip, 'margin-left', -this.tooltip.offsetWidth / 2 + 'px');
-					}
+					// if (this.options.orientation === 'vertical') {
+					// 	this._css(this.tooltip, 'margin-top', -this.tooltip.offsetHeight / 2 + 'px');
+					// } else {
+					// 	this._css(this.tooltip, 'margin-left', -this.tooltip.offsetWidth / 2 + 'px');
+					// }
 
 					var innerTooltipMinText = this.options.formatter(this.options.value[0]);
 					this._setText(this.tooltipInner_min, innerTooltipMinText);
@@ -821,31 +821,31 @@
 					var innerTooltipMaxText = this.options.formatter(this.options.value[1]);
 					this._setText(this.tooltipInner_max, innerTooltipMaxText);
 
-					this.tooltip_min.style[this.stylePos] = positionPercentages[0] + '%';
+					// this.tooltip_min.style[this.stylePos] = positionPercentages[0] + '%';
 
-					if (this.options.orientation === 'vertical') {
-						this._css(this.tooltip_min, 'margin-top', -this.tooltip_min.offsetHeight / 2 + 'px');
-					} else {
-						this._css(this.tooltip_min, 'margin-left', -this.tooltip_min.offsetWidth / 2 + 'px');
-					}
+					// if (this.options.orientation === 'vertical') {
+					// 	this._css(this.tooltip_min, 'margin-top', -this.tooltip_min.offsetHeight / 2 + 'px');
+					// } else {
+					// 	this._css(this.tooltip_min, 'margin-left', -this.tooltip_min.offsetWidth / 2 + 'px');
+					// }
 
-					this.tooltip_max.style[this.stylePos] = positionPercentages[1] + '%';
+					// this.tooltip_max.style[this.stylePos] = positionPercentages[1] + '%';
 
-					if (this.options.orientation === 'vertical') {
-						this._css(this.tooltip_max, 'margin-top', -this.tooltip_max.offsetHeight / 2 + 'px');
-					} else {
-						this._css(this.tooltip_max, 'margin-left', -this.tooltip_max.offsetWidth / 2 + 'px');
-					}
+					// if (this.options.orientation === 'vertical') {
+					// 	this._css(this.tooltip_max, 'margin-top', -this.tooltip_max.offsetHeight / 2 + 'px');
+					// } else {
+					// 	this._css(this.tooltip_max, 'margin-left', -this.tooltip_max.offsetWidth / 2 + 'px');
+					// }
 				} else {
 					formattedTooltipVal = this.options.formatter(this.options.value[0]);
 					this._setText(this.tooltipInner, formattedTooltipVal);
 
-					this.tooltip.style[this.stylePos] = positionPercentages[0] + '%';
-					if (this.options.orientation === 'vertical') {
-						this._css(this.tooltip, 'margin-top', -this.tooltip.offsetHeight / 2 + 'px');
-					} else {
-						this._css(this.tooltip, 'margin-left', -this.tooltip.offsetWidth / 2 + 'px');
-					}
+					// this.tooltip.style[this.stylePos] = positionPercentages[0] + '%';
+					// if (this.options.orientation === 'vertical') {
+					// 	this._css(this.tooltip, 'margin-top', -this.tooltip.offsetHeight / 2 + 'px');
+					// } else {
+					// 	this._css(this.tooltip, 'margin-left', -this.tooltip.offsetWidth / 2 + 'px');
+					// }
 				}
 			},
 			_removeProperty: function(element, prop) {

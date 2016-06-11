@@ -10,43 +10,292 @@
    
     <link href="css/bootstrap-slider.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-   
-</head>
-
-<body>
-   <div class='slider-example bg-show border-bottom'>
-        <div class="well">
-            <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
-            <p class="flowerName border-top border-bottom">玫瑰花</p>
-            <p class="operation">...</p>
-        </div>
-
-         <div class="well">
-            <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
-            <p class="flowerName border-top border-bottom">薰衣草</p>
-            <p class="operation">...</p>
-        </div>
-        <div class="well">
-          <p class="add">+</p>
-        </div>  
-    </div>
-    
+    <link rel="stylesheet" href="css/fonts.css">
     <script type='text/javascript' src="js/jquery.min.js"></script>
     <script type='text/javascript' src="js/bootstrap-slider.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="slider-example">
+            <div class="well">
+                <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+                <p class="flowerName">玫瑰</p>
+            </div>
+
+            <div class="well">
+                <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+                <p class="flowerName">玫瑰花</p>
+            </div>
+            <div class="well">
+                <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+                <p class="flowerName">玫瑰</p>
+            </div>
+            <div class="well">
+                <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+                <p class="flowerName">玫瑰</p>
+            </div>
+            <div class="well">
+                <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+                <p class="flowerName">玫瑰</p>
+            </div>
+            <div class="well">
+                <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+                <p class="flowerName">玫瑰</p>
+            </div>
+            <div class="well">
+                <input class="prefumeSilder" type="text"  data-slider-orientation="vertical" />
+                <p class="flowerName">玫瑰</p>
+            </div>
+            <div class="add-recipe">
+                <i class="icon-bottle_1"></i>
+                <p>选择下列香基自由组合属于自己的配方</p>
+            </div>
+        </div>
+        <div class="total-ml list-box bg-show">
+            <div class="list-info">
+               <span class="gray-font">总容量</span>
+                <div class="tube">
+                    <div class="min-tube"></div>
+                </div>
+                <span class="gray-font"><span class="total">70</span>/150ml</span>
+            </div>
+            <div class="btn btn-bg">编辑</div>
+        </div>
+        <div class="bg-show">
+            <div class="list-box border-bottom">
+                <div class="list-info">
+                    <h4>选择瓶型</h4>
+                </div>
+                <p class="gray-font">圆形喷雾式水晶瓶子</p>
+                <i class="icon-up"></i>
+            </div>
+
+            
+            <div class="bottle-sort border-bottom">
+                <span>瓶子筛选</span>
+                <ul>
+                    <li>全部</li>
+                    <li class="active">20ml</li>
+                    <li>30ml</li>
+                    <li>50ml</li>
+                    <li>80ml</li>
+                    <li>120ml</li>
+                </ul>
+            </div>
+            <div class="container-outter">
+                <table class="bottle-img container-inner">
+                    <tr>
+                        <td>
+                            <label for="b1">
+                                <img src="img/b1.jpg">
+                                <div class="checkbox">
+                                    <input id="b1" type="radio" name="bottle" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>  
+                        </td>
+                        <td>
+                            <label for="b2">
+                                <img src="img/b2.jpg">
+                                <div class="checkbox">
+                                    <input id="b2" type="radio" name="bottle">
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="b3">
+                                <img src="img/b3.jpg">
+                                <div class="checkbox">
+                                    <input id="b3" type="radio" name="bottle">
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="b4">
+                                <img src="img/b2.jpg">
+                                <div class="checkbox">
+                                    <input id="b4" type="radio" name="bottle">
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                        </td>
+                        <td>
+                            <label for="b5">
+                                <img src="img/b1.jpg">
+                                <div class="checkbox">
+                                    <input id="b5" type="radio" name="bottle">
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-show">
+            <div class="js-select list-box border-bottom">
+                <div class="list-info">
+                    <h4>选择颜色</h4>
+                </div>
+                <span class="bg-color" style="background-color: #ffcb71"></span>
+                <i class="icon-up"></i>
+            </div>
+           
+            <div class="container-outter">
+                <table class="bottle-color container-inner">
+                    <td> 
+                        <label for="c1">
+                            <span style="background-color: #ffcb71"></span>
+                            <div class="checkbox">
+                                <input id="c1" type="radio" name="color" checked>
+                                <i class="icon-hook"></i>
+                            </div>
+                        </label>
+                    </td>
+                    <td> 
+                        <label for="c2">
+                            <span style="background-color: #ff9786"></span>
+                            <div class="checkbox">
+                                <input id="c2" type="radio" name="color">
+                                <i class="icon-hook"></i>
+                            </div>
+                        </label>
+                    </td>
+                    <td> 
+                        <label for="c3">
+                            <span style="background-color: #ff98e8"></span>
+                            <div class="checkbox">
+                                <input id="c3" type="radio" name="color">
+                                <i class="icon-hook"></i>
+                            </div>
+                        </label>
+                    </td>
+                    <td> 
+                        <label for="c4">
+                            <span style="background-color: #daa0ff"></span>
+                            <div class="checkbox">
+                                <input id="c4" type="radio" name="color">
+                                <i class="icon-hook"></i>
+                            </div>
+                        </label>
+                    </td>
+                    <td> 
+                        <label for="c5">
+                            <span style="background-color: #e3b7ff"></span>
+                            <div class="checkbox">
+                                <input id="c5" type="radio" name="color">
+                                <i class="icon-hook"></i>
+                            </div>
+                        </label>
+                    </td>
+                    <td> 
+                        <label for="c6">
+                            <span style="background-color: #d4e0ff"></span>
+                            <div class="checkbox">
+                                <input id="c6" type="radio" name="color">
+                                <i class="icon-hook"></i>
+                            </div>
+                        </label>
+                    </td>
+                    <td> 
+                        <label for="c7">
+                            <span style="background-color: #b7cbff"></span>
+                            <div class="checkbox">
+                                <input id="c7" type="radio" name="color">
+                                <i class="icon-hook"></i>
+                            </div>
+                        </label>
+                    </td>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        
+     <!-- 底部固定内容 -->
+    <div class="fixed-bottom">
+        <!-- 结账 -->
+        <div class="actionBar-container list-box border-top">
+            <label class="all-check">
+                <input type="checkbox">
+                <i class="icon-hook"></i>
+                全选
+            </label>
+            <div class="list-info">
+                <span>合计：<span class="theme-font">￥<span>3123</span></span></span>
+            </div>
+            <a class="btn" href="#">立刻支付</a>
+        </div>
+
+        <!-- 底部导航 -->
+        <ul class="nav equably-layout">
+            <li>
+                <a href="index.html">
+                    <i class="icon-home_1"></i>
+                    <p>商城首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart_list.html">
+                    <i class="icon-cart_2"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="online_help.html">
+                    <i class="icon-wchat_1"></i>
+                    <p>在线咨询</p>
+                </a>
+            </li>
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-user_1"></i>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
     <script type='text/javascript'>
     $(document).ready(function() {
+        // 滑块选择容量
          $('.prefumeSilder').each(function() {
-
             $(this).slider({
                 reversed: true,
-                step: 10,
-                min:0,
-                max: 100,
-                value:10,
-            
+                step: 10, //每步值
+                min:0, //最小值
+                max: 100, //最大值
+                value:10 //当前值
+               
             });
-        })      
+        });
+
+         $('.slider-track').bind('touchmove', function (){
+            var $parent = $('.slider-example').find('.well');
+             var len = $parent.length;
+             var total = 0, value=0;
+             for(var i=0; i<len; i++){
+                value = $parent.eq(i).find('input').val();//获取当前input值
+                total += parseInt(value);
+             } 
+             total = (total > 150) ? total : 150;
+             $('.total').html(total);
+             var per = (total / 150)*100 + '%'; 
+             $('.min-tube').css('width',per);
+             
+         });
+
+         //激活元素
+         $('.bottle-sort').find('li').click(function(){
+             active($(this));
+         })
+        
+             
     });
     </script>
 </body>

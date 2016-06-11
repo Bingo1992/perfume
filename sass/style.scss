@@ -4,62 +4,205 @@
 // ----------------定制配方--------------
 // 
 
-// ---silder---
-.slider-example {
-    padding: .5rem;
+// -------index.html-----------
+.more-recipe{
+    margin-top: .2rem;
+    img {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+    }
+    a{
+        line-height: 2rem;
+        font-size: $md-font;
+    }
+       
+}
+.approve-img {
+    margin: .7rem 0 !important;
+}
+
+.hot-product{
+    margin: 0 .25rem;
+    padding-bottom: .5rem;
+    background-color:#fff;
+    width: 100%;
     overflow: hidden;
+    li {
+        position:relative;
+        margin: .5rem .25rem 0 .25rem;
+        width: 7.25rem;
+        float: left;
+        &:after {
+           border-right: 1px solid $border-color;
+           border-left: 1px solid $border-color;
+           border-top: 1px solid $border-color;
+        }
+    }
+    a{
+        display: block;
+    }
+    p.nowrap-2{
+        padding: 10px $gauge 0 $gauge ;
+        height: 2rem;
+    }
+    .blue-font {font-size: 12px;}
+}
+.hot-img {
+    width: 7.25rem;
+    height: 7.25rem;
+    background-color: #f6f6f6;
+    @extend %box;
+    img {
+        height: 6.2rem;
+        width: auto;
+    }
+}
+.getMore {
+    @include height;
+    text-align: center;
+}
+
+// -----customization.html-----
+.slider-example {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    color: $color-gray;
+    font-size: $md-font;
 }
 
 .well {
-    width: 2.5rem;
-    float: left;
-    text-align: center;
-    .add {
-        height: 250px;
-        font-size: 3rem;
-        color: #aab7c6;
-        @extend %box;
+     width: 1.7778rem;
+     position:relative;
+     &:nth-child(even) {
+        background-color: #eee;
+     }
+     &:nth-child(odd){
+        background-color: #f6f6f6;
+     }
+    &:after{
+        @extend .border-right:after;
     }
 }
 
 .tooltip {
     display: block;
-    font-size: 12px;
-    line-height: 1.4;
     visibility: visible;
-    width: 40px;
-    top: 0 !important;
     left: 0 !important;
+    bottom: -80px;
+    position: absolute;
+    line-height: 40px;
+    height: 40px;
+    width: 1.7778rem;
+    &:before {
+        @extend .border-top:after;
+    }
+    span { display: inline-block;}
 }
-
-.tooltip span {
-    float: left;
-}
-
 .tooltip-inner {
-    color: #333;
-    text-align: center;
     text-decoration: none;
-    float: left;
+    display: inline-block;
     white-space: nowrap;
 }
 
 .flowerName {
     line-height: 40px;
-    margin-top: 2rem;
-    font-size: $md-font;
+    height: 40px;
+    margin-top: 80px;
     color: $color-gray;
-}
-
-.operation {
-    border: 1px solid #dadada;
-    color: #dadada;
+    position:relative;
+    width: 1.7778rem;
     text-align: center;
-    @include circle;
-    width: 2rem;
-    margin: 0.5rem auto 0;
+    overflow: hidden;
+    &:before {
+        @extend .border-top:after;
+    }
+}
+.add-recipe {
+    @extend %box;
+    -webkit-box-orient:vertical;
+    -webkit-box-flex:1;
+    padding: 40px $gauge;
+    i{
+        font-size: 60px;
+        color: #ced6d9;
+    }
 }
 
+.tube {
+    width: 6rem;
+    position: relative;
+    height: .5rem;
+    border-radius: .5rem;
+    background-color: #dadada;
+    display: inline-block;
+}
+.min-tube{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: .5rem;
+    border-radius: .5rem;
+    background: $color-theme;
+    width: 46%;
+}
+.total-ml .btn{
+    margin-right: 1rem;
+    padding: 0 .7rem;
+}
+
+.bottle-sort {
+    @include height(36px);
+    color: $color-gray;
+    font-size: $md-font;
+    padding: 0 $gauge;
+    span{padding-right: .5rem;float: left;}
+    ul {
+        float: left;
+    }
+    li {
+        float: left;
+        margin-right: .3rem;
+        @include height(24px);
+        margin-top: 5px;
+        box-sizing: border-box;
+        padding: 0 2px;
+    }
+    .active {
+            border: 1px solid $color-theme;
+            border-radius: 4px;
+            color: $color-theme;
+        }
+}
+.container-outter {
+    width: 100%;
+    overflow-x: auto;
+}
+.container-inner{
+    td{
+        position:relative;
+    }
+    .checkbox{
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        input {border:none;}
+    }
+}
+.bottle-img img{
+    width: 4rem;
+    height: 4rem;
+    padding: .5rem .25rem;
+}
+.bottle-color span {
+    @include circle(2.2rem);
+    margin: .5rem .25rem;
+    display: inline-block;
+}
+.bg-color {
+     @include circle(26px);
+     display: block;
+}
 // ------------personnel.html-------------
 .person-top {
     background: -webkit-linear-gradient(top,#fe017e,#fa263e);
@@ -72,15 +215,19 @@
 }
 .per-img {
     position: relative;
+    width: auto;
+    height: 3rem;
+    margin: $gauge 0;
     img{
          @include circle(3rem);
-    border: 2px solid #fff;
-    margin-right: .5rem;
+        border: 2px solid #fff;
+        margin-right: .3rem;
+        box-sizing: border-box;
     }
     i{
         position: absolute;
-        bottom: -.2rem;
-        right: 1rem;
+        bottom: -.3rem;
+        right: .5rem;
         
     }
    
@@ -88,9 +235,9 @@
 i.icon-vip {
     background-color:#824bff;
     color: #fff;
-    @include circle;
+    @include circle(1.2rem);
     border: 1px solid #fff;
-    font-size: 18px;
+    font-size: .9rem;
 }
 
 .stars{
@@ -123,7 +270,6 @@ i.icon-vip {
 .equably-layout p{
     color: $color-gray;
     font-size: $md-font;
-    margin-top: .3rem;
     span{color:#333;}
 }
 .title_i {font-size: 28px;}
@@ -174,7 +320,7 @@ i.icon-vip {
 .ticket-list {
     padding: 0 .25rem;
     li {
-       margin-top: 10px;
+       margin-top: $gauge * 2;
        padding: 0 .25rem;
         float: left;
         width: 50%;  
@@ -183,8 +329,8 @@ i.icon-vip {
     }
     a{
         display: block;
-        text-indent: 10px;
-        padding-top:10px;
+        text-indent: $gauge;
+        padding-top:$gauge;
         border-radius: .6rem;
         border: 1px solid $border-color;
         background-color:#fff;
@@ -210,7 +356,7 @@ i.icon-vip {
     }
 }
 .effective img {
-    width: .2rem;
+    width: 4.3px;
     right: 1rem;
     top: .3rem;
 }
@@ -273,7 +419,7 @@ i.icon-vip {
     
     li {
         @include height(44px);
-        padding: 0 10px;
+        padding: 0 $gauge;
     }
     .right-info {
         color: $color-gray;
@@ -281,7 +427,7 @@ i.icon-vip {
 }
 .title-bar {
     @include height(36px);
-    padding-left: 10px;
+    padding-left: $gauge;
     border-left: 3px solid $color-theme;
 }
 
@@ -298,7 +444,8 @@ li.wish-text {
 
 // -------------flavorist_detail.html-----------
 .instroduction {
-    padding: 0 10px 20px 10px;
+    padding: 0 $gauge $gauge $gauge;
+    text-align: justify;
 }
 .title_more {
     i {
@@ -310,19 +457,22 @@ li.wish-text {
 }
 .blue-font {
     color:#68839f;
+    line-height: 24px;
+    display: inline-block;
+}
+.more {
+    line-height: 28px;
 }
 .production-list {
-    .more {
-        line-height: 24px;
-    }
+    
     .list-img {
-        margin-top: 14px;
+        margin: 14px 0;
     }
     .list-info {
-        .list-box {
-            padding: 0;
-        }
         i{margin-right: 0;}
+        .list-box {
+            padding: 10px 0 0 0;
+        }
     }
     .blue-font {
         margin-right: .5rem;
@@ -331,18 +481,59 @@ li.wish-text {
         }
     }
 }
-.btn-border {
-    @include borderRadius(36px);
-    color: $color-theme;
-    border: 1px solid $color-theme;
-    display: block;
-    padding: 0 .5rem;
+// --------match_suit.html----
+.match-suit {
+    margin: $gauge;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    &:after {
+        @extend %mini-border;
+        border: 1px solid $border-color;
+    }
+    
+    a.list-info{
+        padding: 0 $gauge;
+    }
+    .btn {
+        margin: .7rem 0;
+    }
+}
+
+.match-img {
+   @include circle(44px);
+   @media screen and(min-width:375px){
+   @include circle(54px);
+   }
+   margin: .6rem 0;
+}
+
+.matchSuit-list {
+    padding: 0 .25rem $gauge .25rem;
+    overflow: hidden;
+
+    li {
+        float: left;
+        padding: 0 .25rem;
+        margin-top: $gauge;
+    }
+    a {       
+        display: block;
+        width: 2.4rem;
+        font-size: $md-font;
+    }
+    img {
+       @include borderRadius(2.4rem);
+       width: 2.4rem;
+       background-color: #ededed;
+       margin-bottom: .2rem;
+    }
 }
 // -----fixed bottom-----
 .actionBar-container {
     background-color: #fff;
     box-sizing:border-box;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 $gauge;
     @include height(50px);
     .all-check {
         margin-right: 1rem;
@@ -357,8 +548,20 @@ li.wish-text {
     color: #fff;
     text-align: center;
     display: block;
-    width: 4rem;
+    padding: 0 .5rem;
 }
+.btn-bg {
+     @include height(36px);
+     border-radius: 6px;
+}
+.btn-border {
+    @include borderRadius(36px);
+    color: $color-theme;
+    border: 1px solid $color-theme;
+    display: block;
+    padding: 0 .5rem;
+}
+
 .nav {
     background-color: #231418;
     height: 60px;
@@ -367,13 +570,13 @@ li.wish-text {
         font-size: 26px;
     }
     a{
-        padding: 7px 0;
+        padding: 2px 0;
     }
     p{
         color: #fff;
     }
 }
-.banner,.fixed-banner{
+.fixed-banner,.banner{
     margin-bottom: 144px;
     width: 100%;
     overflow: hidden;
