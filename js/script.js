@@ -18,14 +18,31 @@
 $(function(){
     //tab选项卡
     $('.tabs').find('li').click(function() {
-        // $(this).addClass('active').siblings().removeClass('active');
         active($(this));
         var index = $('.tabs li').index($(this));
         $('.tabs-list').eq(index).addClass('show').siblings('.tabs-list').removeClass('show');
     });
 
+    //显示隐藏内容
+    $('.js-select').click(function(){
+	    $(this).siblings('.show-container').toggleClass('hide');
+	    var $i = $(this).find('i')
+	    if($i.hasClass('icon-up')){
+	        $i.attr('class','icon-right');
+	    }else {
+	        $i.attr('class','icon-up');
+	    }
+	 });
 
+      //激活元素(选瓶子容量)
+        $('.bottle-sort').find('li').click(function() {
+            active($(this));
+        });
     
+    	//购物车提示语
+    	$('.btn-cart').click(function(){
+            show_hide_TipDialog();//显示提示语(函数在script.js)
+        });
  });
 
  //购物车数量加减
@@ -54,6 +71,16 @@ function show_hide_dialog(){
         $('.ui-dialog').removeClass('show');
     });
 }
+
+// 1.5秒后隐藏提示语
+function show_hide_TipDialog(){
+    $('.tip-dialog').addClass('show');
+    setTimeout(function(){
+        $('.tip-dialog').removeClass('show');
+    },1500);
+}
+
+
 
 function allCheck(){
 	//全选
@@ -89,4 +116,6 @@ function allCheck(){
 function active(className){
     $(className).addClass('active').siblings().removeClass('active');
 }
-   
+  
+
+

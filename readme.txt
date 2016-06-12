@@ -7,6 +7,10 @@
 
 调香师详情：flavorist_detail.html
 搭配套装:match_suit.html
+
+私属配方：private_recipe.html
 定制配方： customization.html
+
+独立香型： single_perfume.html
 
 物流信息：logistics_info.html

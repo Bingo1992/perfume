@@ -1,8 +1,6 @@
 @import "compass";
 @import "partials/default";
 @import "partials/base";
-// ----------------定制配方--------------
-// 
 
 // -------index.html-----------
 .more-recipe{
@@ -132,8 +130,8 @@
 .tube {
     width: 6rem;
     position: relative;
-    height: .5rem;
-    border-radius: .5rem;
+    height: 10px;
+    border-radius: 10px;
     background-color: #dadada;
     display: inline-block;
 }
@@ -141,8 +139,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: .5rem;
-    border-radius: .5rem;
+    height: 10px;
+    border-radius: 10px;
     background: $color-theme;
     width: 46%;
 }
@@ -174,9 +172,69 @@
             color: $color-theme;
         }
 }
+h4.x-title {
+    @include borderRadius(30px);
+    background-color: $border-color;
+    width: 2.5rem;
+    font-size: $md-font;
+    color: $color-gray;
+}
+.xiangji {
+    p{
+        color: #c2c2c2;
+    }
+    .blue-font{
+        margin-top: 1rem;
+        font-size: $md-font;
+        padding-left: .5rem;
+    }
+}
+
+.slide2 {
+    height: 12rem;
+    .slide-img{
+        width: 3.375rem;
+        display: block;
+        float: left;
+        margin: .25rem;
+        box-sizing: border-box;
+    }
+    label {
+        position: relative;
+    }
+    .checkbox {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        input {border:none;}
+    }
+    li{
+        padding: .25rem;
+        img {
+            width: 3.375rem;
+            height: 3.375rem;
+            display: inline-block;
+            position: relative;
+        }
+    }
+    .dot span{
+        background-color: #7f7f7f ;
+        @include circle(.3rem);
+    }
+    .list-box {
+        padding: 0;
+        font-size: $md-font;
+        p{
+            @extend .nowrap;
+            display: inline-block;
+        }
+    }    
+}
 .container-outter {
     width: 100%;
     overflow-x: auto;
+    box-sizing: border-box;
+    padding: 0 .25rem;
 }
 .container-inner{
     td{
@@ -190,12 +248,12 @@
     }
 }
 .bottle-img img{
-    width: 4rem;
-    height: 4rem;
+    width: 80px;
+    height: 80px;
     padding: .5rem .25rem;
 }
 .bottle-color span {
-    @include circle(2.2rem);
+    @include circle(44px);
     margin: .5rem .25rem;
     display: inline-block;
 }
@@ -203,6 +261,97 @@
      @include circle(26px);
      display: block;
 }
+
+.btn-cart {
+    color: $color-theme;
+    padding: 0 $gauge;
+    display: block;
+    position: relative;
+    &:before{
+        @extend .border-left:after;
+    }
+}
+
+// ----------------private_recipe.html-------------
+.fixed-banner-2{
+    margin-top: 44px;
+    margin-bottom: 60px;
+    width: 100%;
+    overflow: hidden;
+    .tabs-list {
+        margin-top: 0;
+    }
+}
+.individuality-tabs,.individuality-tabs-list{
+    float: left;
+}
+ .individuality-tabs{
+    width: 5rem;
+    text-align: center;
+    color: $color-gray;
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    box-sizing:border-box;
+    &:after {
+      @extend .border-right:after;  
+    }
+    li {
+        position: relative;
+        @include height(50px);
+        &:after {
+            @extend .border-bottom:after;
+        }
+
+    }
+    li.active {
+       border-left: 3px solid $color-theme;
+       color: $color-theme;
+       background-color: #fff; 
+    }
+ }
+ .individuality-tabs-list {
+    width: 11rem;
+    box-sizing:border-box;
+    background-color: #fff;
+    // padding-bottom: 2rem;
+    li {
+        position: relative;
+        &:after {
+            @extend .border-bottom:after;
+        }
+    }
+    dt {
+        @include borderRadius(28px);
+        background-color: #e1e1e1;
+        width: 2.5rem;
+        margin: 0 0 .25rem .25rem;
+
+        
+    }
+    dd {
+        float: left;
+        width: 2.125rem;
+        padding: .25rem;
+        img{
+            width: 2.125rem;
+            height: 2.125rem;
+        }
+        p{
+            @extend .nowrap;
+            font-size: 10px;
+        }
+       
+    }
+    dl {
+        color: $color-gray;
+        font-size: $md-font;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 .25rem $gauge .25rem;
+    }
+ }
 // ------------personnel.html-------------
 .person-top {
     background: -webkit-linear-gradient(top,#fe017e,#fa263e);
@@ -389,12 +538,6 @@ i.icon-vip {
             top: 1.4rem;
         }
     }
-
-    .count {
-       @include borderRadius;
-        width: 40px;
-        background-color: #efefef;
-    }
     .delete{
         margin-left:.5rem;
         margin-right: 0;
@@ -412,6 +555,11 @@ i.icon-vip {
    width: 30px;
    box-sizing:border-box;
    color: $color-gray;
+}
+.count {
+   @include borderRadius;
+    width: 40px;
+    background-color: #efefef;
 }
 
 // -------package_setting.html-----
@@ -529,6 +677,53 @@ li.wish-text {
        margin-bottom: .2rem;
     }
 }
+
+// --------single_perfume.html-----------
+.pro-sort-dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 10;
+}
+.pro-sort-content {
+    background-color: #fff;
+    width: 100%;
+    overflow: hidden;
+    header {
+        @include height(40px);
+        text-align: center;
+    }
+}
+.sort-list {
+    padding: $gauge;
+    span {float: left;}
+    ul {
+        padding-left: .5rem;
+        float: left;
+    }
+    li {
+        float: left;
+    }
+}
+.right-btn {
+    float: right;
+    p {
+        display: inline-block;
+        width: 3rem;
+        @include height(36px);
+    }
+    .btn-reset {
+        position: relative;
+        text-align: center;
+        &:after{
+            @extend .border-left:after;
+        }
+        
+    }
+}
 // -----fixed bottom-----
 .actionBar-container {
     background-color: #fff;
@@ -585,6 +780,7 @@ li.wish-text {
 .fixed-banner{
     margin-top: 54px;
 }
+
 .show {
     display:block;
 }

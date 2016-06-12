@@ -162,6 +162,7 @@ $gauge: .5rem;
 .list-info p{
     line-height: 24px;
     font-size: $md-font;
+    // display: inline-block;
 }
 
 // ----均匀分布---
@@ -291,6 +292,23 @@ $gauge: .5rem;
     .cancel {
 	    background-color: #ccc;
 	}
+}
+
+.tip-dialog {
+    background: 0 0;   
+}
+.tip-dialog.show {
+    display: -webkit-box;
+}
+.tip-content{
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    padding: .5rem 1rem;
+    line-height: 24px;
+    border-radius: .3rem;
+    max-width: 180px;
+    min-width: 100px;
+    text-align: center;
 }
 
 
@@ -432,8 +450,6 @@ $gauge: .5rem;
     }
 }
 
-
-
 .fixed-bottom {
 	position:fixed;
 	bottom:0;
@@ -441,6 +457,6 @@ $gauge: .5rem;
 	width: 100%;
 	z-index: 3;
 }
-
-i.icon-right {color: #898989;}
-i.icon-up,i.icon-down {color: #ccc;}
+.left {float: left;}
+.right{float: right;}
+i.icon-right,i.icon-up,i.icon-down{color: #898989;}
