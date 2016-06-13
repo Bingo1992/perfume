@@ -385,17 +385,19 @@ img {
 }
 .slide .dot {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   z-index: 2;
   font-size: 0;
   left: 7rem;
 }
 .slide .dot span {
   display: inline-block;
-  width: .4rem;
-  height: .4rem;
+  height: 6px;
+  line-height: 6px;
+  border-radius: 6px;
+  width: 6px;
+  text-align: center;
   margin: 0 .1rem;
-  border-radius: .4rem;
   background: #FFF;
   opacity: .8;
 }
@@ -666,7 +668,6 @@ i.icon-right, i.icon-up, i.icon-down {
 }
 
 .total-ml .btn {
-  margin-right: 1rem;
   padding: 0 .7rem;
 }
 
@@ -700,8 +701,8 @@ i.icon-right, i.icon-up, i.icon-down {
 }
 
 h4.x-title {
-  height: 30px;
-  line-height: 30px;
+  height: 24px;
+  line-height: 24px;
   border-radius: 6px;
   text-align: center;
   background-color: #e1e1e1;
@@ -751,11 +752,6 @@ h4.x-title {
 }
 .slide2 .dot span {
   background-color: #7f7f7f;
-  height: 0.3rem;
-  line-height: 0.3rem;
-  border-radius: 0.3rem;
-  width: 0.3rem;
-  text-align: center;
 }
 .slide2 .list-box {
   padding: 0;
@@ -772,8 +768,10 @@ h4.x-title {
   padding: 0 .25rem;
 }
 
-.container-inner td {
+.container-inner label {
   position: relative;
+  display: block;
+  padding: .5rem .25rem;
 }
 .container-inner .checkbox {
   position: absolute;
@@ -787,7 +785,10 @@ h4.x-title {
 .bottle-img img {
   width: 80px;
   height: 80px;
-  padding: .5rem .25rem;
+}
+.bottle-img p {
+  text-align: center;
+  padding-bottom: .5rem;
 }
 
 .bottle-color span {
@@ -796,15 +797,14 @@ h4.x-title {
   border-radius: 44px;
   width: 44px;
   text-align: center;
-  margin: .5rem .25rem;
   display: inline-block;
 }
 
 .bg-color {
-  height: 26px;
-  line-height: 26px;
-  border-radius: 26px;
-  width: 26px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 24px;
+  width: 24px;
   text-align: center;
   display: block;
 }
@@ -1099,6 +1099,10 @@ i.icon-vip {
   font-size: 18px;
 }
 
+.amount {
+  margin: -3.5px 0;
+}
+
 .minus, .plus {
   height: 30px;
   line-height: 30px;
@@ -1149,6 +1153,14 @@ li.wish-text textarea {
   width: 11rem;
   line-height: 24px;
   margin-top: 12px;
+}
+
+.wish-img {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  margin: 8px 0;
 }
 
 .instroduction {
@@ -1259,6 +1271,7 @@ li.wish-text textarea {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
+  display: none;
 }
 
 .pro-sort-content {
@@ -1273,17 +1286,34 @@ li.wish-text textarea {
 }
 
 .sort-list {
-  padding: 0.5rem;
+  padding: 0.5rem 0 0 0.5rem;
+  width: 100%;
+  overflow-y: auto;
+  font-size: 12px;
 }
-.sort-list span {
+.sort-list p {
   float: left;
+  width: 4rem;
+  line-height: 26px;
 }
 .sort-list ul {
-  padding-left: .5rem;
+  padding: 0 0.5rem;
   float: left;
+  width: 11rem;
 }
 .sort-list li {
   float: left;
+  padding: 0 0.5rem;
+  margin-right: 0.25rem;
+  height: 26px;
+  line-height: 26px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.sort-list li.active {
+  color: #fe007f;
+  border-color: #fe007f;
 }
 
 .right-btn {
@@ -1298,6 +1328,97 @@ li.wish-text textarea {
 .right-btn .btn-reset {
   position: relative;
   text-align: center;
+}
+
+.num {
+  padding-right: 0.5rem;
+}
+
+.logistics {
+  margin-top: 0.5rem;
+}
+.logistics i {
+  line-height: 48px;
+  padding-left: 0.5rem;
+}
+
+/*img scale*/
+.imgzoom_pack {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 10;
+}
+.imgzoom_pack .imgzoom_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.imgzoom_pack .imgzoom_img img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+.imgzoom_pack .imgzoom_x {
+  color: #fff;
+  background: rgba(225, 45, 41, 0.5);
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  z-index: 10;
+  border-radius: 1rem;
+}
+
+.recipe-detail h2 {
+  padding: 0.5rem 0 0 0.5rem;
+}
+.recipe-detail .list-box {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.recipe-img {
+  overflow: hidden;
+  width: 100%;
+}
+.recipe-img li {
+  float: left;
+  padding: .25rem;
+}
+.recipe-img img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.instroduction .list-box {
+  color: #898989;
+  padding-left: 0;
+  padding-right: 0;
+}
+.instroduction i {
+  margin-right: 0 !important;
+  font-size: 20px;
+}
+
+.love, .share {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .actionBar-container {
@@ -1367,6 +1488,13 @@ li.wish-text textarea {
 
 .fixed-banner {
   margin-top: 54px;
+}
+
+.fixed-body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .show {

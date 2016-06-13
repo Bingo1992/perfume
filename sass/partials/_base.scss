@@ -341,7 +341,7 @@ $gauge: .5rem;
 	    	z-index: 1;
 	    }
 	    img {
-	    	 position: absolute;
+	    	position: absolute;
 		    left: 0;
 		    top: 0;
 		    width: 100%;
@@ -351,22 +351,20 @@ $gauge: .5rem;
     }
     .dot {
     	position: absolute;
-	    bottom: 15px;
+	    bottom: 10px;
 	    z-index: 2;
 	    font-size: 0;
 	    left: 7rem;
 	    span {
 	    	display: inline-block;
-		    width: .4rem;
-		    height: .4rem;
+            @include circle(6px);
 		    margin: 0 .1rem;
-		    border-radius: .4rem;
 		    background: #FFF;
 		    opacity: .8;
 	    }
 	    .cur {
 	    	 background-color: $color-theme;
-    opacity: .8;
+            opacity: .8;
 	    }
     }
 }

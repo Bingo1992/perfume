@@ -135,6 +135,7 @@
     background-color: #dadada;
     display: inline-block;
 }
+
 .min-tube{
     position: absolute;
     top: 0;
@@ -145,7 +146,6 @@
     width: 46%;
 }
 .total-ml .btn{
-    margin-right: 1rem;
     padding: 0 .7rem;
 }
 
@@ -173,7 +173,7 @@
         }
 }
 h4.x-title {
-    @include borderRadius(30px);
+    @include borderRadius(24px);
     background-color: $border-color;
     width: 2.5rem;
     font-size: $md-font;
@@ -201,6 +201,9 @@ h4.x-title {
     }
     label {
         position: relative;
+        // width: 3.375rem;
+        // height: 3.375rem;
+        // display: inline-block;
     }
     .checkbox {
         position: absolute;
@@ -219,7 +222,6 @@ h4.x-title {
     }
     .dot span{
         background-color: #7f7f7f ;
-        @include circle(.3rem);
     }
     .list-box {
         padding: 0;
@@ -237,8 +239,10 @@ h4.x-title {
     padding: 0 .25rem;
 }
 .container-inner{
-    td{
+    label{
         position:relative;
+        display: block;
+        padding: .5rem .25rem;
     }
     .checkbox{
         position: absolute;
@@ -247,18 +251,22 @@ h4.x-title {
         input {border:none;}
     }
 }
-.bottle-img img{
-    width: 80px;
-    height: 80px;
-    padding: .5rem .25rem;
+.bottle-img {
+    img{
+         width: 80px;
+        height: 80px;
+    }
+     p{
+        text-align: center;
+        padding-bottom: .5rem;
+     }  
 }
 .bottle-color span {
     @include circle(44px);
-    margin: .5rem .25rem;
     display: inline-block;
 }
 .bg-color {
-     @include circle(26px);
+     @include circle(24px);
      display: block;
 }
 
@@ -549,6 +557,7 @@ i.icon-vip {
     }
 }
 
+.amount {margin: -3.5px 0;}
 .minus,.plus {
     @include borderRadius;
    border: 1px solid #dadada;
@@ -588,6 +597,14 @@ li.wish-text {
         line-height: 24px;
         margin-top: 12px;
     }
+}
+
+.wish-img{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    margin: 8px 0
 }
 
 // -------------flavorist_detail.html-----------
@@ -687,6 +704,7 @@ li.wish-text {
     width: 100%;
     background-color: rgba(0,0,0,.6);
     z-index: 10;
+    display: none;
 }
 .pro-sort-content {
     background-color: #fff;
@@ -698,14 +716,32 @@ li.wish-text {
     }
 }
 .sort-list {
-    padding: $gauge;
-    span {float: left;}
-    ul {
-        padding-left: .5rem;
+    padding: $gauge 0 0 $gauge;
+    width: 100%;
+    overflow-y: auto;
+    font-size: $md-font;
+    p {
         float: left;
+        width: 4rem;
+        line-height: 26px;
+    }
+    ul {
+        padding: 0 $gauge;
+        float: left;
+        width: 11rem;
     }
     li {
         float: left;
+        padding: 0 $gauge;
+        margin-right: $gauge / 2;
+        @include height(26px);
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        margin-bottom: $gauge;
+    }
+    li.active {
+        color: $color-theme;
+        border-color: $color-theme;
     }
 }
 .right-btn {
@@ -724,6 +760,98 @@ li.wish-text {
         
     }
 }
+
+// -------------logistics_info.html-----------
+.num {padding-right: $gauge;}
+.logistics {
+    margin-top: $gauge;
+    i{
+        line-height: 48px;
+        padding-left: $gauge;
+    }
+}
+
+//----------recipe_detail.html--------------
+/*img scale*/
+.imgzoom_pack {
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,.7);
+    display:none;
+    z-index: 10;
+    .imgzoom_img{
+        width:100%;
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        overflow:hidden;
+        img{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+        }
+    }
+    .imgzoom_x{
+        color: #fff;
+        background: rgba(225,45,41,.5);
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        position: absolute;
+        right: .5rem;
+        top: .5rem;
+        z-index: 10;
+        border-radius: 1rem;
+    }   
+}
+
+
+.recipe-detail {
+    h2 {
+        padding: $gauge 0 0 $gauge;
+    }
+    .list-box {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.recipe-img {
+    overflow: hidden;
+    width: 100%;
+    li {
+        float: left;
+        padding: .25rem;
+    }
+    img {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.instroduction {
+    .list-box {
+        color: $color-gray;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    i {
+        margin-right: 0 !important;
+        font-size: 20px;
+    }
+}
+.love,.share {
+    @include borderRadius;
+    border: 1px solid $border-color;
+    padding: 0 $gauge;
+    margin-left: $gauge;
+}
+
 // -----fixed bottom-----
 .actionBar-container {
     background-color: #fff;
@@ -779,6 +907,12 @@ li.wish-text {
 }
 .fixed-banner{
     margin-top: 54px;
+}
+.fixed-body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .show {

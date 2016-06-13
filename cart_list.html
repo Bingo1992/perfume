@@ -139,9 +139,7 @@
     </div>
 
     <script type="text/javascript">
-    $(function(){
-        minus_plus();//购物车数量加减（该函数在script.js中）   
-        allCheck();//全选
+    $(function(){   
         // 删除
         $('.delete').click(function(){
             show_hide_dialog();
@@ -158,6 +156,7 @@
             });
         });
 
+        //加载页面，若购物车无内容则显示此样式
         window.onload = function(){
             var length = $('.cart-list').find('li').length;
             if(length==0){

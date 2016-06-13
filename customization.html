@@ -568,6 +568,8 @@
             </div>
             <!-- 香基B结束 -->
         </div>
+
+        <!-- 选择瓶形 -->
         <div class="bg-show">
             <div class="js-select list-box border-bottom">
                 <div class="list-info">
@@ -641,6 +643,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- 选择颜色 -->
         <div class="bg-show">
             <div class="js-select list-box border-bottom">
                 <div class="list-info">
@@ -652,64 +656,64 @@
             <div class="show-container container-outter">
                 <table class="bottle-color container-inner">
                     <td>
-                        <label for="c1">
+                        <label>
                             <span style="background-color: #ffcb71"></span>
                             <div class="checkbox">
-                                <input id="c1" type="radio" name="color" checked>
+                                <input type="radio" name="color" checked>
                                 <i class="icon-hook"></i>
                             </div>
                         </label>
                     </td>
                     <td>
-                        <label for="c2">
+                        <label>
                             <span style="background-color: #ff9786"></span>
                             <div class="checkbox">
-                                <input id="c2" type="radio" name="color">
+                                <input type="radio" name="color">
                                 <i class="icon-hook"></i>
                             </div>
                         </label>
                     </td>
                     <td>
-                        <label for="c3">
+                        <label>
                             <span style="background-color: #ff98e8"></span>
                             <div class="checkbox">
-                                <input id="c3" type="radio" name="color">
+                                <input type="radio" name="color">
                                 <i class="icon-hook"></i>
                             </div>
                         </label>
                     </td>
                     <td>
-                        <label for="c4">
+                        <label>
                             <span style="background-color: #daa0ff"></span>
                             <div class="checkbox">
-                                <input id="c4" type="radio" name="color">
+                                <input type="radio" name="color">
                                 <i class="icon-hook"></i>
                             </div>
                         </label>
                     </td>
                     <td>
-                        <label for="c5">
+                        <label>
                             <span style="background-color: #e3b7ff"></span>
                             <div class="checkbox">
-                                <input id="c5" type="radio" name="color">
+                                <input type="radio" name="color">
                                 <i class="icon-hook"></i>
                             </div>
                         </label>
                     </td>
                     <td>
-                        <label for="c6">
+                        <label>
                             <span style="background-color: #d4e0ff"></span>
                             <div class="checkbox">
-                                <input id="c6" type="radio" name="color">
+                                <input type="radio" name="color">
                                 <i class="icon-hook"></i>
                             </div>
                         </label>
                     </td>
                     <td>
-                        <label for="c7">
+                        <label>
                             <span style="background-color: #b7cbff"></span>
                             <div class="checkbox">
-                                <input id="c7" type="radio" name="color">
+                                <input type="radio" name="color">
                                 <i class="icon-hook"></i>
                             </div>
                         </label>
@@ -775,27 +779,28 @@
                 step: 10, //每步值
                 min: 0, //最小值
                 max: 100, //最大值
-                value: 10 //当前值
+                value: 10, //当前值
+                
             });
         });
 
-        $('.well').on('slide', function() {
-
-            var $parent = $('.slider-example').find('.well');
-            var len = $parent.length;
+        $('.well').on('touchmove', function() {
             var amount = 150;
             var total = 0,
                 value = 0;
-            for (var i = 0; i < len; i++) {
-                value = $parent.eq(i).find('input').val(); //获取当前input值
+            $('.well').each(function(){
+                value = $(this).find('input').val();
                 total += parseInt(value);
+            })
+            // total = (total >= 150) ? 150 : total;
+            if(total >= amount){
+             // $(this).find('.perfumeSilder').slider("disable");
+             total=150;
+             alert('aaa');
+             // return;
             }
-            total = (total >= 150) ? 150 : total;
-            // if(total >= amount){
-            //  $(this).find('.perfumeSilder').slider("disable");
-            // }
             $('.total').html(total);
-            var per = (total / 150) * 100 + '%';
+            var per = ((total )/ 150) * 100 + '%';
             $('.min-tube').css('width', per);
 
         });
@@ -808,7 +813,7 @@
         $('.slide2').each(function(){
             var $_this = $(this);
             $(this).swipeSlide({
-                continuousScroll: true,
+                continuousScroll: false,
                 speed: 350000,
                 transitionType: 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
                 callback: function(i) {

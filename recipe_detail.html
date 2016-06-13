@@ -1,125 +1,152 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta name="format-detection" content="telephone=no" />
-    <title>独立香型</title>
+    <title>配方详情</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <script type='text/javascript' src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <!-- 图片缩放 -->
+    <script type="text/javascript" src="js/scale.js"></script>
 </head>
 
 <body>
     <div class="banner">
-        <!-- 产品筛选 -->
         <div class="bg-show">
-            <div class="js-sort list-box border-bottom" href="#">
-                <i class="icon-sort theme-font"></i>
-                <span class="list-info">
-                    <h4>产品筛选</h4>
-                </span>
-                <p class="gray-font">全部产品</p>
-                <i class="icon-right"></i>
+            <div class="recipe-detail">
+                <h2>COCO NOIR 可可小姐黑色香水配方</h2>
+                <div class="list-box">
+                    <div class="per-img">
+                        <img src="img/per2.jpg">
+                        <i class="icon-vip"></i>
+                    </div>
+                    
+                    <div class="list-info">
+                        <h4>
+                            <span>奥利维耶</span>
+                            <span class="stars">
+                                <i class="icon-star_2 active"></i>
+                                <i class="icon-star_2"></i>
+                                <i class="icon-star_2"></i>
+                                <i class="icon-star_2"></i>
+                                <i class="icon-star_2"></i>
+                            </span>
+                        </h4>
+                        <p class="blue-font">世界级顶尖调香师</p>
+                    </div>
+                </div>
             </div>
+            <div class="instroduction">
+                <p class="gray-font">
+                无与伦比，令人着迷。它强烈的个性与神秘的优雅，预示着超乎想象的际遇。从这深邃而浓郁的黑色中，诞生全新的嗅觉诱惑。<br>一抹明媚的东方气息。开瓶调层次丰富而鲜明，主体调大气而又感性出众，基调则萦绕不绝，令人迷醉……一种不可思议的诱惑，以其迷人的魅力，席卷一切，不容错失。
+                 </p>
+                 <ul class="recipe-img">
+                     <li><img src="img/pic2.jpg"></li>
+                     <li><img src="img/pic3.jpg"></li>
+                     <li><img src="img/pic4.jpg"></li>
+                 </ul>
 
-            <div class="container-outter">
+                 <div class="list-box">
+                    <div class="list-info">
+                        <h4>
+                            <i class="icon-eyes"></i>
+                            <span>4230</span>
+                        </h4>
+                    </div>
+                    <div class="love">
+                        <i class="icon-heart"></i>
+                        <span>1088</span>
+                    </div>
+                    <div class="share">
+                        <i class="icon-share"></i>
+                        <span>1088</span>
+                    </div>
+                </div>        
+
+            </div> 
+                
+        </div>
+
+        <!-- 香水配方 -->
+        <div class="bg-show">
+            <div class="js-select list-box border-bottom">
+                <div class="list-info">
+                    <h4>香水配方</h4>
+                </div>
+                <p class="gray-font">薰衣草</p>
+                <i class="icon-up"></i>
+            </div>
+          
+            <div class="show-container container-outter">
                 <table class="bottle-img container-inner">
                     <tr>
                         <td>
-                            <label for="s1">
-                                <img src="img/s1.jpg">
+                            <label for="m1">
+                                <img src="img/x1.jpg">
                                 <div class="checkbox">
-                                    <input id="s1" type="radio" name="single" checked>
+                                    <input id="m1" type="radio" name="recipe" checked>
                                     <i class="icon-hook"></i>
                                 </div>
                             </label>
+                            <p>薰衣草</p>
                         </td>
                         <td>
-                            <label for="s2">
-                                <img src="img/s1.jpg">
+                            <label for="m2">
+                                <img src="img/x1.jpg">
+                                
                                 <div class="checkbox">
-                                    <input id="s2" type="radio" name="single">
+                                    <input id="m2" type="radio" name="recipe">
                                     <i class="icon-hook"></i>
                                 </div>
                             </label>
+                            <p>薰衣草</p>
                         </td>
                         <td>
-                            <label for="s3">
-                                <img src="img/s1.jpg">
+                            <label for="m3">
+                                <img src="img/x1.jpg">
+                                
                                 <div class="checkbox">
-                                    <input id="s3" type="radio" name="single">
+                                    <input id="m3" type="radio" name="recipe">
                                     <i class="icon-hook"></i>
                                 </div>
                             </label>
+                            <p>薰衣草</p>
                         </td>
                         <td>
-                            <label for="s4">
-                                <img src="img/s1.jpg">
+                            <label for="m4">
+                                <img src="img/x1.jpg">
+                                
                                 <div class="checkbox">
-                                    <input id="s4" type="radio" name="single">
+                                    <input id="m4" type="radio" name="recipe">
                                     <i class="icon-hook"></i>
                                 </div>
                             </label>
+                            <p>薰衣草</p>
                         </td>
                         <td>
-                            <label for="s5">
-                                <img src="img/s1.jpg">
+                            <label for="m5">
+                                <img src="img/x1.jpg">
+                                
                                 <div class="checkbox">
-                                    <input id="s5" type="radio" name="single">
+                                    <input id="m5" type="radio" name="recipe">
                                     <i class="icon-hook"></i>
                                 </div>
                             </label>
+                            <p>薰衣草</p>
                         </td>
-                    </tr>
-                     <tr>
-                        <td>
-                            <label for="s6">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s6" type="radio" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                        </td>
-                        <td>
-                            <label for="s7">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s7" type="radio" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                        </td>
-                        <td>
-                            <label for="s8">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s8" type="radio" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                        </td>
-                        <td>
-                            <label for="s9">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s9" type="radio" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                        </td>
-                        
                     </tr>
                 </table>
             </div>
+            
         </div>
-
+        <!-- 香水配方结束 -->
+            
         <!-- 选择瓶形 -->
         <div class="bg-show">
             <div class="js-select list-box border-bottom">
@@ -195,6 +222,30 @@
             </div>
         </div>
         <!-- 选择瓶子结束 -->
+
+        <!-- 选择容量 -->
+        <div class="bg-show">
+            <div class="js-select list-box border-bottom">
+                <div class="list-info">
+                    <h4>选择容量</h4>
+                </div>
+                <p class="gray-font">100ml</p>
+                <i class="icon-up"></i>
+            </div>
+            <div class="show-container container-outter">
+                <div class="bottle-sort border-bottom">
+                    <ul>
+                        <li class="active">20ml</li>
+                        <li>30ml</li>
+                        <li>50ml</li>
+                        <li>80ml</li>
+                        <li>120ml</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <!-- 选择容量结束 -->
 
         <!-- 选择颜色 -->
         <div class="bg-show">
@@ -274,24 +325,9 @@
             </div>
         </div>
         <!-- 选择颜色结束 -->
-
-        <!-- 购买数量 -->
-        <div class="bg-show">
-            <div class="list-box">
-                <div class="list-info">
-                    <h4>购买数量</h4>
-                </div>
-                <div class="amount">
-                    <span class="minus icon-minus"></span>
-                    <input type="text" class="count" value="1">
-                    <span class="plus icon-plus"></span>
-                </div>
-            </div>
-        </div>
-        <!-- 购买数量结束 -->
     </div>
-
-    <!-- 底部固定内容 -->
+       
+    
     <div class="fixed-bottom">
         <!-- 结账 -->
         <div class="actionBar-container list-box border-top">
@@ -331,78 +367,24 @@
         </ul>
     </div>
 
-    <!-- 产品筛选遮罩 -->
-    <div class="pro-sort-dialog">
-        <div class="pro-sort-content">
-            <header class="border-bottom">产品筛选</header>
-            <div class="sort-list">
-                <p>适用场景</p>
-                <ul>
-                    <li class="active">商务</li>
-                    <li>旅行</li>
-                    <li>约会</li>
-                    <li>运动</li>
-                    <li>日常</li>
-                    <li>情趣</li>
-                    <li>车载</li>
-                </ul>
-            </div>
-            <div class="sort-list">
-                <p>香水类型</p>
-                <ul>
-                    <li>花香</li>
-                    <li class="active">果香</li>
-                    <li>清香</li>
-                    <li>淡香</li>
-                    <li>浓香</li>
-                    <li>其他</li>
-                </ul>
-            </div>
-            <div class="sort-list">
-                <p>适用人士</p>
-                <ul>
-                    <li>男士</li>
-                    <li class="active">女士</li>
-                    <li>通用</li>
-                </ul>
-            </div>
-            <div class="border-top">
-                <div class="right-btn">
-                    <p class="btn-reset">重置</p>
-                    <p class="btn">确定</p>
-                </div>
-            </div>
-                
-        </div>
+    <!-- 图片缩放弹出层 -->
+    <section class="imgzoom_pack">
+        <div class="imgzoom_x"><i class="icon-cancel"></i></div>
+        <div class="imgzoom_img"><img src="" /></div>
+    </section>
+
+    <!-- 分享层 -->
+    <div class="share-dialog">
+        <img src="img/share.jpg">
     </div>
 
-    <!-- 加入购物车提示层 -->
-    <div class="tip-dialog">
-        <p class="tip-content">
-            加入购物车成功
-        </p>
-    </div>
-
-    <script type='text/javascript'>
-    $(document).ready(function() {
-        //产品筛选
-         $('.js-sort').click(function(){
-            $('.pro-sort-dialog').addClass('show');
-            $('body').addClass('fixed-body');//固定遮罩下层内容
-
-            //选择类型
-            $('.sort-list').find('li').click(function(){
-                $(this).addClass('active').siblings().removeClass('active');
-            });
-
-            //点击重置按钮
-            $('.btn-reset').click(function(){
-                $('.pro-sort-dialog').removeClass('show');
-                $('body').removeClass('fixed-body');//取消固定
-            });
-         }); 
-
-    });
+    <script type="text/javascript">
+        // 图片缩放
+    document.addEventListener("DOMContentLoaded", function(event) {
+        ImagesZoom.init({
+            "elem": ".instroduction"
+        });
+    }, false);
     </script>
 </body>
 

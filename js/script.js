@@ -38,11 +38,33 @@ $(function(){
         $('.bottle-sort').find('li').click(function() {
             active($(this));
         });
+
+        //颜色选择
+        $('.bottle-color').find('label').click(function(){
+            var span_color = $(this).find('span').css('background-color');
+            $('.bg-color').css('background-color',span_color);
+        });
     
     	//购物车提示语
     	$('.btn-cart').click(function(){
             show_hide_TipDialog();//显示提示语(函数在script.js)
         });
+
+         minus_plus();//购物车加减
+
+         allCheck();//购物车全选
+
+
+         $('.slide2').find('label').click(function(){
+         	var $input = $(this).find('input');
+         	var check = $input.prop('checked');
+         	if(check == false){
+				$input.prop("checked", true);  
+			}else{
+				$input.prop("checked", false); 
+			}  
+
+         });
  });
 
  //购物车数量加减
