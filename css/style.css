@@ -337,7 +337,7 @@ img {
 .tip-content {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: .5rem 1rem;
+  padding: .5rem;
   line-height: 24px;
   border-radius: .3rem;
   max-width: 180px;
@@ -984,7 +984,13 @@ i.icon-vip {
   line-height: 44px;
   position: relative;
 }
-.tabs li.active p {
+.tabs a {
+  padding: 0;
+  display: block;
+  color: #898989;
+  font-size: 12px;
+}
+.tabs li.active a {
   color: #fe007f;
 }
 .tabs li.active:after {
@@ -1000,9 +1006,6 @@ i.icon-vip {
   bottom: 6px;
   left: 50%;
   margin-left: -3px;
-}
-.tabs p {
-  margin-top: 0;
 }
 
 .list-title {
@@ -1152,7 +1155,7 @@ li.wish-text label {
 li.wish-text textarea {
   width: 11rem;
   line-height: 24px;
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .wish-img {
@@ -1161,6 +1164,18 @@ li.wish-text textarea {
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   margin: 8px 0;
+}
+
+.upload {
+  position: relative;
+}
+.upload input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  opacity: 0;
 }
 
 .instroduction {
@@ -1187,6 +1202,8 @@ li.wish-text textarea {
 
 .more {
   line-height: 28px;
+  display: block;
+  padding-left: 3rem;
 }
 
 .production-list .list-img {
@@ -1263,7 +1280,7 @@ li.wish-text textarea {
   margin-bottom: .2rem;
 }
 
-.pro-sort-dialog {
+.pro-sort-dialog, .share-dialog {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -1419,6 +1436,16 @@ li.wish-text textarea {
   border: 1px solid #e1e1e1;
   padding: 0 0.5rem;
   margin-left: 0.5rem;
+}
+
+.love.focus {
+  color: #f00;
+  border-color: #f00;
+}
+
+.share-dialog img {
+  width: 90%;
+  margin: .2rem 5%;
 }
 
 .actionBar-container {

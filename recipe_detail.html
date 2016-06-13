@@ -375,7 +375,14 @@
 
     <!-- 分享层 -->
     <div class="share-dialog">
-        <img src="img/share.jpg">
+        <img src="img/share.png">
+    </div>
+
+    <!-- 购物车提示层 -->
+    <div class="tip-dialog">
+        <p class="tip-content">
+           已成功加入购物车
+        </p>
     </div>
 
     <script type="text/javascript">
@@ -385,6 +392,29 @@
             "elem": ".instroduction"
         });
     }, false);
+
+    $(function(){
+        //点击收藏按钮
+        $('.love').click(function(){
+            // show_hide_TipDialog();
+            if($(this).hasClass('focus')){
+                $(this).removeClass('focus');
+                // $('.tip-content').html('已取消收藏');
+            }else {
+                $(this).addClass('focus');
+                // $('.tip-content').html('已成功收藏');
+            }
+        
+        });
+
+        //点击分享按钮
+        $('.share').click(function(){
+            $('.share-dialog').addClass('show');
+            $('.share-dialog').click(function(){
+                $(this).removeClass('show');
+            })
+        })
+    })
     </script>
 </body>
 

@@ -12,8 +12,9 @@
 我的优惠券：ticket_list.html
 
 调香师详情：flavorist_detail.html
-搭配套装:match_suit.html
 
+搭配套装:match_suit.html
+选择套装：select_suit.html
 
 
 

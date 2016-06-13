@@ -441,9 +441,17 @@ i.icon-vip {
         @include height;
         position: relative;
     }
+    a{
+        // margin-top: 0;
+        padding: 0;
+        display: block;
+        color: #898989;
+        font-size: 12px;
+    }
     li.active{
-            p{
+            a{
                  color: $color-theme;
+                 
             }
             &:after {
                 display: block;
@@ -456,9 +464,7 @@ i.icon-vip {
                 margin-left: -3px;
             }
         }
-    p{
-        margin-top: 0;
-    }
+    
 }
 
 .list-title {
@@ -595,7 +601,7 @@ li.wish-text {
     textarea {
         width: 11rem;
         line-height: 24px;
-        margin-top: 12px;
+        margin-top: 9px;
     }
 }
 
@@ -605,6 +611,17 @@ li.wish-text {
     border: 1px solid #e1e1e1;
     border-radius: 4px;
     margin: 8px 0
+}
+.upload {
+    position:relative;
+    input{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 44px;
+        height: 44px;
+        opacity: 0;
+    }
 }
 
 // -------------flavorist_detail.html-----------
@@ -627,6 +644,8 @@ li.wish-text {
 }
 .more {
     line-height: 28px;
+    display: block;
+    padding-left: 3rem;
 }
 .production-list {
     
@@ -850,6 +869,19 @@ li.wish-text {
     border: 1px solid $border-color;
     padding: 0 $gauge;
     margin-left: $gauge;
+}
+
+.love.focus {
+    color: #f00;
+    border-color: #f00;
+}
+
+.share-dialog {
+    @extend .pro-sort-dialog ;
+    img{
+        width: 90%;
+        margin: .2rem 5%;
+    }
 }
 
 // -----fixed bottom-----
