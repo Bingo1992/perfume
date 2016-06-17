@@ -31,7 +31,7 @@
                     </div>
                     
                 </li>
-                <li class="list-box">
+                <li class="js-wp-open list-box">
                     <span class="list-info">
                         <label>选择礼盒</label>
                     </span>
@@ -41,7 +41,7 @@
                     </div>
                     <i class="icon-right"></i>
                 </li>
-                <li class="list-box">    
+                <li class="js-wp-open list-box">    
                     <span class="list-info">
                         <label>选择包装样式</label>
                     </span>
@@ -60,31 +60,29 @@
                 <h4>祝福语选项</h4>
             </div>
              <ul class="setting-list">
-                <li class="list-box">
+                <li class="js-wp-open list-box">
                     <span class="list-info">
                         <label>选择背景样式</label>
                     </span>
                     <img class="wish-img" src="img/bg1.jpg">
                     <i class="icon-right"></i>
                 </li>
-                <li class="list-box">
+                <li class="list-box upload">
                     <span class="list-info">
                         <label>上传个人照片/图片</label>
                     </span>
-                    <div class="upload">
-                        <i class="icon-camera"></i>
-                        <input type="file">
-                    </div>
+                    <span class="gray-font">1.jpg</span>
+                    <i class="icon-camera"></i>
+                    <input type="file">
                     
                 </li>
-                <li class="list-box">    
+                <li class="list-box upload">    
                     <span class="list-info">
                         <label>上传祝福视频/音频</label>
                     </span>
-                     <div class="upload">
-                        <i class="icon-video"></i>
-                        <input type="file">
-                    </div>
+                    <span class="gray-font"></span>
+                    <i class="icon-video"></i>
+                    <input type="file">
                 </li>
             </ul>
         </div>
@@ -94,14 +92,14 @@
             <div class="title-bar border-bottom">
                 <h4>祝福语选项</h4>
             </div>
-             <ul class="setting-list">
-                <li class="wish-name list-box">
+             <ul class="form-list">
+                <li>
                     <label>落款姓名：</label>
                     <input type="text" placeholder="请填写您的姓名或昵称">
                 </li>
-                <li class="wish-text list-box">
+                <li>
                     <label>祝福语内容：</label>
-                    <textarea type="text" placeholder="文本内容不超过100个字符"></textarea>
+                    <textarea type="text" placeholder="文本内容不超过100个字符" rows="5"></textarea>
                 </li>
               
             </ul>
@@ -117,7 +115,7 @@
             <div class="list-info">
                 <span>合计：<span class="theme-font">￥<span>3123</span></span></span>
             </div>
-            <a class="btn" href="#">立刻支付</a>
+            <a class="btn" href="logistics_info.html">立即购买</a>
         </div>
 
         <!-- 底部导航 -->
@@ -151,17 +149,86 @@
 
     <!-- 选择列表 -->
     <div class="package-list">
-        <ul>
-            <li>
-                <img src="img/gift.jpg">
-                <div class="list-box">
-                    <div class="list-info">
-                        <p>普通</p>
-                    </div>
+        <div class="shade-dialog"></div>
+        <!-- 选择礼盒 -->
+        <ul class="border-list">
+            <li class="return-back">
+                <a href="#"><i class="icon-left"></i></a>
+            </li>
+            <li class="list-box">
+               <img src="img/gift.jpg">
+                <div class="list-info">
+                    <h4>普通</h4>
+                    <p class="theme-font">￥<span>10</span></p>
+                </div>
+            </li>
+            <li class="list-box">
+               <img src="img/gift.jpg">
+                <div class="list-info">
+                    <h4>普通</h4>
+                    <p class="theme-font">￥<span>10</span></p>
+                </div>
+            </li>
+            <li class="list-box">
+               <img src="img/gift.jpg">
+                <div class="list-info">
+                    <h4>普通</h4>
                     <p class="theme-font">￥<span>10</span></p>
                 </div>
             </li>
         </ul>
+        <!-- 选择包装样式 -->
+        <ul class="border-list">
+            <li class="return-back">
+                <a href="#"><i class="icon-left"></i></a>
+            </li>
+            <li class="list-box">
+               <img src="img/gift.jpg">
+                <div class="list-info">
+                    <h4>精致丝带礼品包装</h4>
+                    <p class="theme-font">￥<span>20</span></p>
+                </div>
+            </li>
+            <li class="list-box">
+               <img src="img/gift.jpg">
+                <div class="list-info">
+                    <h4>普通</h4>
+                    <p class="theme-font">￥<span>10</span></p>
+                </div>
+            </li>
+            <li class="list-box">
+               <img src="img/gift.jpg">
+                <div class="list-info">
+                    <h4>普通</h4>
+                    <p class="theme-font">￥<span>10</span></p>
+                </div>
+            </li>
+        </ul>
+        <!-- 选择背景样式 -->
+        <ul class="border-list">
+            <li class="return-back">
+                <a href="#"><i class="icon-left"></i></a>
+            </li>
+            <li class="list-box">
+               <img src="img/bg1.jpg">
+                <div class="list-info">
+                    <h4>碎花</h4>
+                </div>
+            </li>
+            <li class="list-box">
+               <img src="img/bg1.jpg">
+                <div class="list-info">
+                    <h4>碎花</h4>
+                </div>
+            </li>
+            <li class="list-box">
+               <img src="img/bg1.jpg">
+                <div class="list-info">
+                    <h4>碎花</h4>
+                </div>
+            </li>
+        </ul>
+        
     </div>
 </body>
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>填写地址</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<form>
+        <ul class="form-list border-list">
+        	<li>
+                <label>收货人：</label>
+                <input class="name" name="textfield" type="text"  placeholder="请输入收货人姓名" />
+            </li>
+            <li>
+                <label>联系电话：</label>
+                <input class="mobile" name="textfield" type="tel"  placeholder="请输入收货人手机号码" />
+            </li>
+            <li>
+                <label>所在地区：</label>
+                <div class="list-box">
+                    <div class="select_box">
+                        <select>
+                            <option value=" ">广东省</option>  
+                            <option value=" ">福建省</option>
+                            <option value=" ">湖南省</option>  
+                            <option value=" ">湖北省</option> 
+                            <option value=" ">浙江省</option>  
+                            <option value=" ">广西省</option> 
+                        </select>
+                        <i class="icon-right"></i>  
+                    </div>
+                    <div class="select_box">
+                        <select>
+                            <option value=" ">广州市</option>  
+                            <option value=" ">福州市</option>
+                            <option value=" ">武汉市</option>  
+                            <option value=" ">杭州市</option> 
+                            <option value=" ">南京市</option>  
+                            <option value=" ">克拉玛依市</option> 
+                        </select>
+                        <i class="icon-right"></i>   
+                    </div>
+                    <div class="select_box">
+                        <select>
+                            <option value=" ">天河区</option>  
+                            <option value=" ">越秀区</option>
+                            <option value=" ">白云区</option>  
+                            <option value=" ">荔湾区</option> 
+                            <option value=" ">番禺区</option>  
+                            <option value=" ">萝岗区</option> 
+                        </select>
+                        <i class="icon-right"></i>   
+                    </div>
+                </div>
+                	
+            </li>
+            
+            <li>
+                <label>详细地址：</label>
+                <textarea cols="50" rows="3" id="textarea" placeholder="请输入详细地址"></textarea>
+            </li>
+            <li>
+                <label>邮政编码：</label>
+                <input class="mobile" name="textfield" type="tel"  placeholder="请输入邮政编码" />
+            </li>
+        </ul>
+
+        <div class="bg-show">
+            <div class="list-box">
+                <span class="list-info">
+                    <label class="gray-font">设为默认地址</label>
+                </span>
+                <div class="slide-btn">
+                    <input type="checkbox" checked>
+                </div>
+            </div>
+        </div>
+
+        <div class="addAddress">
+            <a id="confirm-btn" class="btn btn-bg">完成</a>
+        </div>
+    </form>
+
+    <div class="tip-dialog">
+        <div class="tip-content">
+            <i class="icon-hook icon-tip"></i>
+        <p>手机号不能为空</p>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript">
+    $(function(e) {
+        //表单验证
+        $('#confirm-btn').click(function() {
+            var nameValue = $('.name').val();
+            var mobileNumberValue = $('.mobile').val();
+            var addressValue = $('textarea').val();
+ 
+            if(nameValue == ''){
+                empty_p('收货人姓名不能为空')
+            }else if (mobileNumberValue == '') {
+                empty_p('您的手机号不能为空');
+            } else if (!(isMobile(mobileNumberValue))) { 
+                wrong_p('手机号码格式错误');
+            } else if(addressValue == '') {
+                empty_p('请输入详细地址');
+            } else {
+                
+            }
+
+        });
+
+    });
+
+    </script>
+
+</body>
+
+</html>

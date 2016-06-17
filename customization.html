@@ -814,7 +814,7 @@
             var $_this = $(this);
             $(this).swipeSlide({
                 continuousScroll: false,
-                speed: 350000,
+                autoSwipe: false,
                 transitionType: 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
                 callback: function(i) {
                     $_this.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');

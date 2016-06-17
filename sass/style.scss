@@ -11,7 +11,6 @@
         display: inline-block;
     }
     a{
-        line-height: 2rem;
         font-size: $md-font;
     }
        
@@ -190,48 +189,7 @@ h4.x-title {
     }
 }
 
-.slide2 {
-    height: 12rem;
-    .slide-img{
-        width: 3.375rem;
-        display: block;
-        float: left;
-        margin: .25rem;
-        box-sizing: border-box;
-    }
-    label {
-        position: relative;
-        // width: 3.375rem;
-        // height: 3.375rem;
-        // display: inline-block;
-    }
-    .checkbox {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        input {border:none;}
-    }
-    li{
-        padding: .25rem;
-        img {
-            width: 3.375rem;
-            height: 3.375rem;
-            display: inline-block;
-            position: relative;
-        }
-    }
-    .dot span{
-        background-color: #7f7f7f ;
-    }
-    .list-box {
-        padding: 0;
-        font-size: $md-font;
-        p{
-            @extend .nowrap;
-            display: inline-block;
-        }
-    }    
-}
+
 .container-outter {
     width: 100%;
     overflow-x: auto;
@@ -412,7 +370,6 @@ i.icon-vip {
     padding: 0 .5rem;
     border: 1px solid #fff;
     @include borderRadius(1.8rem);
-    margin-top: .6rem;
     font-size: $md-font;
     i {
         margin-right: 0 !important;
@@ -546,12 +503,7 @@ i.icon-vip {
     .list-info .list-box {
         padding: .25rem 0;
     }
-    .checkbox {
-        padding-top: 1.4rem;
-        i{
-            top: 1.4rem;
-        }
-    }
+
     .delete{
         margin-left:.5rem;
         margin-right: 0;
@@ -579,13 +531,14 @@ i.icon-vip {
 
 // -------package_setting.html-----
 .setting-list {
-    
-    li {
+    font-size: $md-font;
+    .list-box {
         @include height(44px);
         padding: 0 $gauge;
     }
     .right-info {
         color: $color-gray;
+        padding-right: .5rem;
     }
 }
 .title-bar {
@@ -594,36 +547,66 @@ i.icon-vip {
     border-left: 3px solid $color-theme;
 }
 
-.wish-name input {width: 11rem;}
-li.wish-text {
-    height: 100px;
-    label{display:inherit;}
-    textarea {
-        width: 11rem;
-        line-height: 24px;
-        margin-top: 9px;
-    }
-}
+// .wish-name input {width: 11rem;}
+// li.wish-text {
+//     height: 100px;
+//     label{display:inherit;}
+//     textarea {
+//         width: 11rem;
+//         line-height: 24px;
+//         margin-top: 9px;
+//     }
+// }
 
 .wish-img{
     width: 24px;
     height: 24px;
     border: 1px solid #e1e1e1;
     border-radius: 4px;
-    margin: 8px 0
+    margin: 8px 0;
 }
 .upload {
-    position:relative;
     input{
         position:absolute;
         top: 0;
         left: 0;
-        width: 44px;
+        width: 100%;
         height: 44px;
         opacity: 0;
     }
 }
 
+.return-back a{
+    display: block;
+    padding-left: .5rem;
+    @include height;
+}
+.package-list {
+    ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 14rem;
+        z-index: 11;
+        height: 100%;
+        overflow-y: auto;
+        margin-top: 0;
+        -webkit-transform: translateX(150%) translateZ(0); 
+        -webkit-transition: all .4s linear 0s;
+    }
+    li {
+        img {
+            width: 50px;
+            height: 50px;
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            margin-right: .5rem;
+        }
+    }
+}
+.shade-dialog {
+    @extend .ui-dialog;
+}
 // -------------flavorist_detail.html-----------
 .instroduction {
     padding: 0 $gauge $gauge $gauge;
@@ -728,7 +711,9 @@ li.wish-text {
 .pro-sort-content {
     background-color: #fff;
     width: 100%;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 20rem;
     header {
         @include height(40px);
         text-align: center;
@@ -884,6 +869,253 @@ li.wish-text {
     }
 }
 
+// ------member.html-------/
+.container-2 {
+    background-color: rgba(255,255,255,.7) !important;
+    .a-link{
+        width: 50%;
+        display: block;
+        text-align: center;
+        @include height(50px);
+        color: $color-theme;
+        &:nth-child(1){
+            margin-left: -.5rem;
+            border-right: 1px solid #eee;
+        }
+    }
+}
+
+.m-table,.m-table-2 {
+    @include borderRadius(44px);
+    text-align: center;
+    width: 15rem;
+    margin: 1rem auto;
+    table-layout:fixed;
+    img {
+        @include circle(24px);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    th,td{
+        position: relative;
+        &:after{
+            @extend .border-bottom:after;
+            border-right: 1px solid $border-color;
+        }
+    }
+    th{
+        background-color: $color-theme;
+        color: #fff;
+    }
+    td{
+        width: 50%;
+    }
+}
+.m-table-2 td {
+    width: 33.333333%;
+    padding: 0 .2rem;
+    box-sizing:border-box;
+}
+// ------select_suit.html------
+.select {
+    font-size: $md-font;
+    color: $color-gray;
+    padding-left: 5rem;
+}
+.slide2 {
+    height: 13.4rem;
+    font-size: $md-font;
+    .slide-img{
+        width: 3.375rem;
+        display: block;
+        float: left;
+        margin: .25rem;
+        box-sizing: border-box;
+    }
+    p{
+        @extend .nowrap;
+        display: inline-block;
+        
+    }
+    label {
+        position: relative;
+  
+    }
+    .checkbox {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        input {border:none;}
+    }
+    li{
+        padding: .25rem;
+        img {
+            width: 3.375rem;
+            height: 3.375rem;
+            display: inline-block;
+            position: relative;
+        }
+    }
+    .dot span{
+        background-color: #7f7f7f ;
+    }
+    .list-box {
+        padding: 0;
+        height: 24px;
+    }    
+}
+
+.suit-setting-img  {
+    padding: 0 .25rem .5rem .25rem;
+    // overflow: hidden;
+    li{
+        position: relative;
+        width: 70px;
+        height: 70px;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        margin: 0 .25rem .5rem .25rem;
+        float: left;
+    }
+    i{
+        position: absolute;
+        top: -5px;
+        right: -2px;
+        @include circle(30px);
+        color: #fff;
+        background-color: rgba(0,0,0,.5);
+        font-size: 18px;
+        display: none;
+    }
+    i.show {display: block;}
+    img{
+        width: 70px;
+        height: 70px;      
+    }
+    
+}
+
+// ---------------------address.html----------------
+.header {
+    @include height;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    i{
+       float: left;
+       // padding-left: .5rem;
+    }
+}
+.address-list {
+   i.icon-delete{
+    margin-right: 0;
+    padding-left: .5rem;
+   }
+   p{
+    line-height: 1rem;
+    color: $color-gray;
+   }
+}
+.addAddress {
+    margin: $gauge 2rem;
+}
+
+// ------------address_manage.html-----
+.address-manage {
+    li {
+        padding: 10px $gauge;
+        box-sizing:border-box;
+    }
+    .btn {
+        display: inline-block !important;
+        margin-left: .5rem;
+    }
+    .checkbox{
+        float: left;
+        padding-top: 10px;
+        input{
+            top: 7px;
+        }
+        i{
+            top: 18px;
+        }
+    }
+}
+.address-info {
+    position: relative;
+    padding-bottom: 10px;
+    &:after {
+        @extend .border-bottom:after;
+    }
+    p{
+        color: $color-gray;
+        font-size: $md-font;
+    }
+    span{
+        padding-right: .5rem;
+    }
+}
+
+.new-addr-btn {
+    float: right;
+    padding-top: 10px;
+}
+
+// -------------add_address.html------
+.form-list {
+    font-size: $md-font;
+    li{
+        padding: 10px $gauge;
+        line-height: 24px;
+    }
+    label {
+        width: 4rem;
+    }
+    input {
+        width: 11rem;
+    }
+    textarea {
+        width: 15rem;
+        line-height: 20px;
+        padding-top: 4px;
+    }
+    .list-box {
+        padding: 0;
+    }
+    
+}
+.select_box {
+    // @extend %box;
+    display: -webkit-box;
+    -webkit-box-flex:1;
+    width: 100%;
+    font-size: $md-font;
+    background-color: #eee;
+    @include borderRadius(30px);
+    margin-right: .3rem;
+    margin-top: 4px;
+    padding-left: 4px;
+    position: relative;
+ 
+    &:last-child{
+        margin-right:0;
+    }
+    select {
+        width: 100%;
+        -webkit-box-flex: 1;
+        display: -webkit-box;
+        position: relative;
+        z-index: 2;
+    }
+    i{
+        color: #aaa;
+        font-size: 16px;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+
+    }
+}
 // -----fixed bottom-----
 .actionBar-container {
     background-color: #fff;
@@ -897,6 +1129,11 @@ li.wish-text {
     }
 }
 
+.btn-disable {
+    background-color: #ccc !important;
+    pointer-events:none;
+}
+
 .btn {
     @include height(50px);
     background-color: $color-theme;
@@ -908,6 +1145,11 @@ li.wish-text {
 .btn-bg {
      @include height(36px);
      border-radius: 6px;
+}
+.btn-gray {
+     @include height(36px);
+     border-radius: 6px;
+     background-color: #ccc;
 }
 .btn-border {
     @include borderRadius(36px);
@@ -952,4 +1194,8 @@ li.wish-text {
 }
 .hide {
     display:none;
+}
+.more-wp-open {
+    -webkit-transform: translateX(0) translateZ(0) !important;    
+    -webkit-transition: all .4s;
 }

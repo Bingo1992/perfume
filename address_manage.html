@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>收货地址管理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header bg-show">
+        <a href="#" onclick="history.back();"><i class="icon-left"></i></a>
+        <h4>收货地址管理</h4>
+    </header>
+    <ul class="address-manage">
+        <li class="bg-show">
+            <div class="address-info">
+                <span>张三</span>
+                <span>135****5688</span>
+                <p>广州市天河区天府路307号3楼景心科技股份有限公司景心科技股份有限公司</p>
+            </div>
+            <div class="clearfix">
+                <label class="checkbox" for="address1">
+                    <input type="radio" name="address" id="address1">
+                    <i class="icon-hook"></i> 设为默认
+                </label>
+            
+                <div class="new-addr-btn">
+                    <a class="delete btn btn-gray">删除</a>
+                    <a class="btn btn-bg" href="add_address.html">编辑</a>
+                </div>
+            </div>
+        </li>
+        <li class="bg-show">
+            <div class="address-info">
+                <span>张三</span>
+                <span>135****5688</span>
+                <p>广州市天河区天府路307号3楼景心科技股份有限公司景心科技股份有限公司</p>
+            </div>
+            <div class="clearfix">
+                <label class="checkbox" for="address2">
+                    <input type="radio" name="address" id="address2">
+                    <i class="icon-hook"></i> 设为默认
+                </label>
+            
+                <div class="new-addr-btn">
+                    <a class="delete btn btn-gray">删除</a>
+                    <a class="btn btn-bg" href="add_address.html">编辑</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="addAddress">
+        <a class="btn btn-bg" href="add_address.html">+新增地址</a>
+    </div>
+    
+    <div class="ui-dialog">
+        <div class="dialog-cnt">
+            <p>确定删除此地址吗？</p>
+            <div class="two-btn">
+                <a class="cancel">取消</a>
+                <a class="confirm">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    $(function() {
+        //删除地址
+        $('.delete').click(function() {
+            show_hide_dialog();
+            var $address = $(this).parents('li');
+            $('.confirm').click(function() {
+                $address.remove();
+            });
+
+        });
+    })
+    </script>
+</body>
+
+</html>

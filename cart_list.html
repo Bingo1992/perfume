@@ -16,7 +16,7 @@
 
 <body>
     <div class="banner">
-        <ul class="cart-list border-list">
+        <ul class="check-list cart-list border-list">
             <li>
                 <a class="list-box" href="#">
                     <label class="checkbox" for="cart1">
@@ -130,7 +130,10 @@
     <!-- 删除遮罩 -->
     <div class="ui-dialog">
         <div class="dialog-cnt">
-            <p>确定删除该商品吗？</p>
+            <div class="content">
+                <p>确定删除该商品吗？</p>
+            </div>
+            
             <div class="two-btn">
                <a class="cancel"  href="#">取消</a>
                 <a class="confirm" href="#">确定</a>
@@ -145,7 +148,6 @@
             show_hide_dialog();
             var index = $('.cart-list .delete').index($(this));
             $('.confirm').click(function(){
-                $('.ui-dialog').removeClass('show');
                 $('.cart-list').find('li').eq(index).remove();
 
                 // 购物车空时显示

@@ -55,16 +55,33 @@ $(function(){
          allCheck();//购物车全选
 
 
-         $('.slide2').find('label').click(function(){
-         	var $input = $(this).find('input');
-         	var check = $input.prop('checked');
-         	if(check == false){
-				$input.prop("checked", true);  
-			}else{
-				$input.prop("checked", false); 
-			}  
+   //       $('.slide2').find('label').click(function(){
+   //       	var $input = $(this).find('input');
+   //       	var check = $input.prop('checked');
+   //       	if(check == false){
+			// 	$input.prop("checked", true);  
+			// }else{
+			// 	$input.prop("checked", false); 
+			// }  
 
-         });
+   //       });
+
+        // -----package_setting.html  select_suit.html--------
+        //选择礼盒，包装样式，背景样式
+        $('.js-wp-open').click(function(){
+            var index = $('.js-wp-open').index($(this));
+            $('.package-list').find('ul').eq(index).addClass('more-wp-open');
+            $('.shade-dialog').addClass('show');
+            $('body').addClass('fixed-body');
+        });    
+
+         //包装设置隐藏弹出层
+        $('.return-back').click(function(){
+            hide_package();
+        });
+        $('.shade-dialog').click(function(){
+            hide_package();
+        });
  });
 
  //购物车数量加减
@@ -92,6 +109,9 @@ function show_hide_dialog(){
     $('.cancel').click(function(){
         $('.ui-dialog').removeClass('show');
     });
+    $('.confirm').click(function(){
+        $('.ui-dialog').removeClass('show');
+    });
 }
 
 // 1.5秒后隐藏提示语
@@ -102,25 +122,30 @@ function show_hide_TipDialog(){
     },1500);
 }
 
-
+//隐藏遮罩内容(包装设置)
+function hide_package(){
+    $('.package-list').find('ul').removeClass('more-wp-open');
+    $('.shade-dialog').removeClass('show');
+    $('body').removeClass('fixed-body');
+}
 
 function allCheck(){
 	//全选
 	$('.all-check').click(function(){ 
 		var check = $(".all-check :checkbox").prop("checked");
 		if(check == false){
-			$(".cart-list :checkbox").prop("checked", false);  
+			$(".check-list :checkbox").prop("checked", false);  
 		}else{
-			$(".cart-list :checkbox").prop("checked", true); 
+			$(".check-list :checkbox").prop("checked", true); 
 		}            
 	});
 
 	//单选某个商品时，若列表中有未勾选的商品，则取消全选按钮的选中状态
-	$(".cart-list :checkbox").click(function(){
+	$(".check-list :checkbox").click(function(){
 		var flag = 0;
 		//遍历每个商品
-		$(".cart-list :checkbox").each(function(i){
-			var check = $(".cart-list :checkbox").eq(i).prop("checked");
+		$(".check-list :checkbox").each(function(i){
+			var check = $(".check-list :checkbox").eq(i).prop("checked");
 			if(check == false){
 				flag++;
 			}
@@ -139,5 +164,23 @@ function active(className){
     $(className).addClass('active').siblings().removeClass('active');
 }
   
-
-
+// ------错误，警告，正确提示框通用函数------------
+function wrong_p(text){
+    $('.tip-dialog').find('i').attr('class','icon-tip icon-cancel')
+        .siblings('p').html(text);
+    show_hide_TipDialog();
+}
+function empty_p(text) {
+    $('.tip-dialog').find('i').attr('class','icon-tip icon-gantan')
+        .siblings('p').html(text);
+    show_hide_TipDialog();
+}
+function yes_p(text) {
+    $('.tip-dialog').find('i').attr('class','icon-tip icon-hook')
+        .siblings('p').html(text);
+    show_hide_TipDialog();
+}
+// *********用于检查手机格式是否正确***********
+function isMobile(mobileNumber) {
+    return /^(13[0-9]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/.test(mobileNumber); //Regular Expressions
+}

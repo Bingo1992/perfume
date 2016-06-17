@@ -77,6 +77,22 @@
         </div>
     </div>
 
+
+    <!-- 使用说明遮罩 -->
+    <div class="ui-dialog">
+        <div class="dialog-cnt">
+            <h2>使用说明</h2>
+            <div class="content">
+              <p>使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明</p>
+            </div>
+            
+            <div class="two-btn">
+                <a class="confirm" href="#">确定</a>
+            </div>
+        </div>
+    </div>
+
+
     <div class="fixed-bottom">
         <!-- 底部导航 -->
         <ul class="nav equably-layout">
@@ -106,6 +122,13 @@
             </li>
         </ul>
     </div>
+    <script type="text/javascript">
+    $(function(){
+      $('.ticket-list li').click(function(){
+        show_hide_dialog();
+      })
+    })
+    </script>
 
 </body>
 
