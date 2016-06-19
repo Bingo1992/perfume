@@ -1585,8 +1585,8 @@ i.icon-vip {
   color: #898989;
 }
 
-.addAddress {
-  margin: 0.5rem 2rem;
+.auto-btn {
+  padding: 1rem 2rem;
 }
 
 .address-manage li {
@@ -1678,6 +1678,73 @@ i.icon-vip {
   position: absolute;
   top: 4px;
   right: 4px;
+}
+
+/*--------------comment.html----------------*/
+.comment_form .sort-list ul {
+  padding: 0;
+  width: 15rem;
+}
+
+.com-text {
+  width: 15rem;
+  margin: .5rem;
+  border-radius: .2rem;
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.upload-pic {
+  overflow: hidden;
+  padding: .5rem .5rem 1rem .5rem;
+}
+
+.upload-pic img {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  float: left;
+  padding-right: .5rem;
+  padding-bottom: .5rem;
+}
+
+.add-pic {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  line-height: 4rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: .3rem;
+  color: #888;
+  float: left;
+}
+
+.add-pic span {
+  font-size: .6rem;
+}
+
+.add-pic input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0;
+}
+
+.tip {
+  color: #f60;
+  padding: 0 .5rem;
+}
+
+.upload-pic .percent {
+  float: left;
+  margin-top: 3.2rem;
+  margin-left: .5rem;
+  color: #888;
 }
 
 .actionBar-container {

@@ -392,7 +392,8 @@
 
             //选择类型
             $('.sort-list').find('li').click(function(){
-                $(this).addClass('active').siblings().removeClass('active');
+                // $(this).addClass('active').siblings().removeClass('active');
+                active($(this));
             });
 
             //点击重置按钮
