@@ -6,7 +6,7 @@
 
 配方详情：recipe_detail.html
 
-个人中心：personnel.html
+
 
 我的会员：member.html
 会员数量：member_count.html
@@ -28,3 +28,9 @@
 收货地址：address.html
 收货地址管理：address_manage.html
 填写收货地址：add_address.html
+
+
+个人中心：personnel.html
+帮助中心： help.html
+我的配方：my_recipe.html
+会员推广：member_popularize.html

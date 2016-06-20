@@ -225,6 +225,34 @@
             </li>
         </ul>
     </div>
+
+
+    <!-- 香水详情遮罩 -->
+    <div class="ui-dialog">
+      <div class="dialog-cnt">
+        <div class="list-box">
+          <img src="img/x1.jpg" class="list-img">
+          <div class="list-info">
+            <p>薰衣草香精</p>
+            <p class="theme-font">￥<span>10</span>/ml</p>
+          </div>
+        </div>
+        <p>详情描述</p>
+        <p class="gray-font">薰衣草是属于唇形科的一个属，约28种，分布于大西洋群岛及地中海地区至索马里，巴基斯坦及印度；我国仅栽培2种。</p>
+        <div class="auto-btn">
+          <div class="btn btn-bg cancel">确定</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    $(function(){
+        $('.matchSuit-list').find('li').click(function(){
+            show_hide_dialog();
+        })
+    })
+    </script>
 </body>
+
 
 </html>

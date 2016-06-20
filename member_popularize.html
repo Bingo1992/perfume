@@ -7,7 +7,7 @@
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta name="format-detection" content="telephone=no" />
-    <title>我的会员-累计订单</title>
+    <title>会员推广</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -16,33 +16,47 @@
 
 <body>
     <div class="banner">
-      <table class="m-table-2" width="100%">
-          <tr>
-              <th>订单号</th>
-              <th>产品名称</th>
-              <th>佣金</th>
-          </tr>
-          <tr>
-              <td>1891898874</td>
-              <td class="nowrap">产品名称产品名称产品名称产品名称</td>
-              <td>300.00</td>
-          </tr>
-           <tr>
-              <td>1891898874</td>
-              <td class="nowrap">产品名称产品名称产品名称产品名称</td>
-              <td>300.00</td>
-          </tr>
-           <tr>
-              <td>1891898874</td>
-              <td class="nowrap">产品名称产品名称产品名称产品名称</td>
-              <td>300.00</td>
-          </tr>
-      </table>
-    </div>
        
-    
+        <ul class="border-list">
+            <li>
+                <a class="list-box" href="">
+                    <div class="list-info">
+                        <h4>二维码推广</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+            </li>
+            <li class="content">
+                <p>蕴藏在圆形瓶身中的闪亮花香调香水。清新的气息让你沉醉在幸福与幸运的环绕中。</p>
+            </li>
+        </ul>
+        <ul class="border-list">
+            <li>
+                <a class="list-box" href="hot_popularize.html">
+                    <div class="list-info">
+                        <h4>热文推广</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+            </li>
+            <li class="content">
+                <p>蕴藏在圆形瓶身中的闪亮花香调香水。清新的气息让你沉醉在幸福与幸运的环绕中。</p>
+            </li>
+        </ul>
+        <ul class="border-list">    
+            <li>
+                <a class="list-box" href="">
+                    <div class="list-info">
+                        <h4>推广规则</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
     <!-- 底部固定内容 -->
-    <div class="fixed-bottom">      
+    <div class="fixed-bottom">
         <!-- 底部导航 -->
         <ul class="nav equably-layout">
             <li>
@@ -71,24 +85,6 @@
             </li>
         </ul>
     </div>
-
-    <div class="ui-dialog">
-      <div class="dialog-cnt">
-        <div class="content">
-          <p>产品名称产品名称产品名称产品名称</p>
-        </div>
-      </div>
-    </div>
-
-    <script type="text/javascript">
-    $('.m-table-2').find('.nowrap').click(function(){
-      var value = $(this).html();
-      $('.ui-dialog').addClass('show').find('p').html(value);
-      $('.ui-dialog').click(function(){
-        $(this).removeClass('show');
-      })
-    })
-    </script>
 </body>
 
 </html>

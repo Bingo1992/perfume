@@ -156,116 +156,27 @@
             </div>
         </div>
 
-        <!-- 认证调香师 -->
-      <!--   <div class="tabs-list">
-            <ul class="border-list">
-                <li class="list-box">
-                    <div class="per-img approve-img">
-                        <img src="img/per2.jpg">
-                        <i class="icon-vip"></i>
-                    </div>
-                    <div class="list-info">
-                        <h4>
-                            <span>奥利维耶</span>
-                            <span class="stars">
-                                <i class="icon-star_2 active"></i>
-                                <i class="icon-star_2"></i>
-                                <i class="icon-star_2"></i>
-                                <i class="icon-star_2"></i>
-                                <i class="icon-star_2"></i>
-                            </span>
-                        </h4>
-                        <p class="blue-font">世界级顶尖调香师</p>
-                        <div class="list-box more-recipe">
-                            <div class="list-info">
-                                <img src="img/1.jpg">
-                                <img src="img/1.jpg">
-                                <img src="img/1.jpg">
-                            </div>
-                            <a class="blue-font" href="flavorist_detail.html">更多配方&gt;</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-box">
-                    <div class="per-img approve-img">
-                        <img src="img/per2.jpg">
-                        <i class="icon-vip"></i>
-                    </div>
-                    <div class="list-info">
-                        <h4>
-                            <span>奥利维耶</span>
-                            <span class="stars">
-                                <i class="icon-star_2 active"></i>
-                                <i class="icon-star_2"></i>
-                                <i class="icon-star_2"></i>
-                                <i class="icon-star_2"></i>
-                                <i class="icon-star_2"></i>
-                            </span>
-                        </h4>
-                        <p class="blue-font">世界级顶尖调香师</p>
-                        <div class="list-box more-recipe">
-                            <div class="list-info">
-                                <img src="img/1.jpg">
-                                <img src="img/1.jpg">
-                                <img src="img/1.jpg">
-                                <img src="img/1.jpg">
-                            </div>
-                            <a class="blue-font" href="flavorist_detail.html">更多配方&gt;</a>
-                        </div>
-                    </div>
-                </li>        
-            </ul>
-        </div> -->
-            
-        <!-- 热销配方 -->
-        <!-- <div class="tabs-list">
-            <ul class="production-list border-list">
-                <li class="list-box" >
-                    <img class="list-img" src="img/pic1.jpg">
-                    <div class="list-info">
-                        <h4 class="nowrap">邂逅清新淡香水配方</h4>
-                        <p class="gray-font nowrap-2">蕴藏在圆形瓶身中的闪亮花香调香水。清新的气息让你沉醉在幸福与幸运的环绕中。</p>
-                            
-                        <div class="list-box">
-                            <div class="list-info">
-                                <span class="blue-font">
-                                    <i class="icon-heart"></i>
-                                    <span>1022</span>
-                                </span>
-                                <span class="blue-font">
-                                   <i class="icon-eyes"></i>
-                                   <span>1022</span> 
-                                </span>
-                            </div>
-                            <a class="btn-border">立即购买</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-box">
-                    <img class="list-img" src="img/pic2.jpg">
-                    <div class="list-info">
-                        <h4 class="nowrap">邂逅清新淡香水配方</h4>
-                        <p class="gray-font nowrap-2">蕴藏在圆形瓶身中的闪亮花香调香水</p>
-                        <div class="list-box">
-                            <div class="list-info">
-                                <span class="blue-font">
-                                <i class="icon-heart"></i>
-                                <span>1022</span>
-                            </span>
-                            <span class="blue-font">
-                               <i class="icon-eyes"></i>
-                               <span>1022</span> 
-                            </span>
-                            </div>
-                            <a class="btn-border">立即购买</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div> -->
     </div>
     <!-- -banner- -->
 
+    <!-- 香水详情遮罩 -->
+    <div class="ui-dialog">
+      <div class="dialog-cnt">
+        <div class="list-box">
+          <img src="img/x1.jpg" class="list-img">
+          <div class="list-info">
+            <p>薰衣草香精</p>
+            <p class="theme-font">￥<span>10</span>/ml</p>
+          </div>
+        </div>
+        <p>详情描述</p>
+        <p class="gray-font">薰衣草是属于唇形科的一个属，约28种，分布于大西洋群岛及地中海地区至索马里，巴基斯坦及印度；我国仅栽培2种。</p>
+        <div class="auto-btn">
+          <div class="btn btn-bg cancel">确定</div>
+        </div>
+      </div>
+    </div>
+    
     <!-- 底部固定内容 -->
     <div class="fixed-bottom"> 
 
@@ -303,6 +214,10 @@
     $(function(){
       $('.individuality-tabs').find('li').click(function(){
         active($(this));
+      });
+
+      $('.individuality-tabs-list').find('dd').click(function() {
+         show_hide_dialog();
       })
         
     });

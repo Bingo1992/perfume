@@ -230,7 +230,7 @@
                 </ul>
                 <div class="clearfix">
                     <div class="right">
-                        <a class="btn btn-bg" href="comment.html">评价</a>
+                        <a class="btn btn-bg" href="comment.html">订单评价</a>
                     </div>
                 </div>
             </div> 
@@ -275,7 +275,7 @@
     
     <div class="fixed-bottom">
         <!-- 结账 -->
-        <div class="actionBar-container list-box border-top">
+        <div class="actionBar-container list-box border-top hide">
             <label class="all-check">
                 <input type="checkbox">
                 <i class="icon-hook"></i>
@@ -321,7 +321,17 @@
         $('.goods-btn').click(function(){
             show_hide_TipDialog();
             $(this).addClass('btn-disable');
-        })
+        });
+
+        $('.tabs').find('li').click(function() {
+        var index = $('.tabs li').index($(this));
+        if($('.tabs-list').eq(index).hasClass('check-list')){
+            $('.actionBar-container').removeClass('hide');
+        }else {
+            $('.actionBar-container').addClass('hide');
+        }
+        
+    });
     })
     </script>
 

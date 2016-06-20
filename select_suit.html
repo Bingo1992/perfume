@@ -347,6 +347,7 @@
             </li>
         </ul>
     </div>
+
     <!-- 底部固定内容 -->
     <div class="fixed-bottom">
         <!-- 结账 -->
@@ -386,6 +387,7 @@
             </li>
         </ul>
     </div>
+
     <!-- 选择列表 -->
     <div class="package-list">
         <!-- 选择包装样式 -->
@@ -417,6 +419,7 @@
         </ul>
         <div class="shade-dialog"></div>
     </div>
+
     <!-- 加入购物车提示层 -->
     <div class="tip-dialog">
         <p class="tip-content">
@@ -425,17 +428,49 @@
     </div>
 
     <!-- 超过限制遮罩 -->
-    <div class="ui-dialog">
+    <div class="overflow-dialog ui-dialog">
         <div class="dialog-cnt">
             <div class="content">
                 <p>您最多只可选择<span class="allSuit">3</span>件礼盒</p>
             </div>
             
-            <div class="two-btn">
-                <a class="confirm" href="#">确定</a>
+            <div class="auto-btn">
+              <div class="btn btn-bg confirm">确定</div>
             </div>
         </div>
     </div>
+
+    <!-- 编辑状态不可选择遮罩 -->
+    <div class="edit-dialog ui-dialog">
+        <div class="dialog-cnt">
+            <div class="content">
+                <p>编辑状态下不可选择</p>
+            </div>
+            
+            <div class="auto-btn">
+              <div class="btn btn-bg confirm">确定</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 香水详情遮罩 -->
+    <div class="perfume-dialog ui-dialog">
+      <div class="dialog-cnt">
+        <div class="list-box">
+          <img src="img/x1.jpg" class="list-img">
+          <div class="list-info">
+            <p>薰衣草香精</p>
+            <p class="theme-font">￥<span>10</span>/ml</p>
+          </div>
+        </div>
+        <p>详情描述</p>
+        <p class="gray-font">薰衣草是属于唇形科的一个属，约28种，分布于大西洋群岛及地中海地区至索马里，巴基斯坦及印度；我国仅栽培2种。</p>
+        <div class="auto-btn">
+          <div class="btn btn-bg confirm">确定</div>
+        </div>
+      </div>
+    </div>
+
 
 
     <script type="text/javascript">
@@ -453,38 +488,86 @@
             });
         });
 
+        //香水详情提示层
+        $('#js-slide').find('p').click(function(){
+            $('.perfume-dialog').addClass('show');
+            $('.cancel').click(function(){
+                $('.perfume-dialog').removeClass('show');
+            });
+        });
+        
+        //select选择框
+        var amount = 0;
+        $('.select').click(function(){
+            amount =  parseInt($('.select option:selected').val());//选中的值
+            $('.allSuit').html(amount);//套装配置总数
+        });
 
-            
+        //点击确定按钮隐藏遮罩
+        $('.confirm').click(function(){
+            $('.ui-dialog').removeClass('show');
+        });
+
+        // ----------------------以下js有些逻辑不对应，请做修改--------------------
+
+        //点击编辑按钮
         $('#edit').click(function(){
             var $suit = $('.suit-setting-img').find('i');
             
             if ($(this).html()=='编辑') {
                 $(this).html('完成');
                 $suit.addClass('show');
+                $('#js-slide').find('input:checkbox').attr('disabled','disabled');//编辑状态下禁掉checkbox的选择
+                
             }else {
                 $(this).html('编辑');
                 $suit.removeClass('show');
+                $('#js-slide').find('input:checkbox').attr('disabled',false);
             }
+
+
             
+            //删除按钮
             $('.icon-cancel').click(function(){
                 $(this).parent('li').remove();
+                var len = $('.suit-setting-img li').length;
+                // 相对应checkbox去掉
+                var flag3 = 0;
+                var arr = [];
+                $("#js-slide :checkbox").each(function(i){
+                    var check = $("#js-slide :checkbox").eq(i).prop("checked");
+                    
+                    if(check == true){
+                         arr.push($("#js-slide :checkbox").eq(i));
+                         flag3++;  //获取选中的checkbox个数
+                    }
+                    
+                });
+                arr[flag3-1].attr("checked",false);//此处只是去除checkbox最后一项，与实际不符
+                
+
+                 if(len==0){
+                    $('#edit').addClass('btn-disable').html('编辑');;//图片个数为0时禁掉编辑按钮
+                    $('#js-slide').find('input:checkbox').attr('disabled',false);
+                    $('.selectSuit').html(len);
+                }
+                else{
+                    $('#edit').removeClass('btn-disable');
+                    $('.selectSuit').html(len);
+                }
 
             });
-
-            if($('.suit-setting-img li').length==0){
-                $('#edit').addClass('btn-disable');//图片个数为0时禁掉编辑按钮
-            }
-            else{
-                $('#edit').removeClass('btn-disable');
-            }
-
         })
 
-        var amount = 0;
-        $('.select').click(function(){
-            amount =  parseInt($('.select option:selected').val());//选中的值
-            $('.allSuit').html(amount);
-        });
+        //编辑状态下点击checkbox
+        $('#js-slide').find('label').click(function(){
+            var disable = $(this).find('input').attr('disabled');
+            if(disable=='disabled'){
+                $('.edit-dialog').addClass('show');
+            }
+                
+        })     
+
 
         // 限制套装件数
         $('#js-slide').find(':checkbox').click(function(){
@@ -499,7 +582,8 @@
                      flag2++;   
                     if(flag2 > amount){
                         $(this).prop("checked",false);
-                        show_hide_dialog();//显示超过限制提示
+                        //超出限制提示框
+                        $('.overflow-dialog').addClass('show');
                     }
                 }
             });

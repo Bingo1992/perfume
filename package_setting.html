@@ -71,18 +71,17 @@
                     <span class="list-info">
                         <label>上传个人照片/图片</label>
                     </span>
-                    <span class="gray-font">1.jpg</span>
+                    <span class="file-src gray-font">1.jpg</span>
                     <i class="icon-camera"></i>
-                    <input type="file">
-                    
+                    <input class="file" type="file">
                 </li>
                 <li class="list-box upload">    
                     <span class="list-info">
                         <label>上传祝福视频/音频</label>
                     </span>
-                    <span class="gray-font"></span>
+                    <span class="file-src gray-font"></span>
                     <i class="icon-video"></i>
-                    <input type="file">
+                    <input class="file" type="file">
                 </li>
             </ul>
         </div>
@@ -230,6 +229,16 @@
         </ul>
         
     </div>
+
+    <script type="text/javascript">
+    $('.file').change(function(){
+        var src = $(this).val();//获取文件路径
+        var arr=src.split('\\');//注split可以用字符或字符串分割 
+        var name=arr[arr.length-1];//取得的文件名称 
+        $(this).siblings('.file-src').html(name);
+    });
+   
+    </script>
 </body>
 
 </html>

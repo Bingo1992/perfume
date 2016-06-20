@@ -15,68 +15,65 @@
 </head>
 
 <body>
-	<div class="banner">
-		<form class="comment_form bg-show">
-	        <ul class="form-list border-list">
-	            <li>
-	                <label>香水名称：</label>
-	                <input class="name" name="textfield" type="text" placeholder="请输入香水名称" />
-	            </li>
-	            <li>
-	                <label>特性描述：</label>
-	                <input class="mobile" name="textfield" type="tel" placeholder="请输入特性描述" />
-	            </li>
-	        </ul>
-	        <div class="pro-sort-content">
-	            <div class="sort-list">
-	                <ul>
-	                    <li class="active">商务</li>
-	                    <li>旅行</li>
-	                    <li>约会</li>
-	                    <li>运动</li>
-	                    <li>日常</li>
-	                    <li>情趣</li>
-	                    <li>车载</li>
-	                </ul>
-	            </div>
-	        </div>
-	        <!-- <div class="input-row">
-	            <label>请对商品及服务进行评价：</label>
-	            <div class="wrapper">
-	                <a href="javascript:;" title="差"><i class="icon-star_2"></i></a>
-	                <a href="javascript:;" title="一般"><i class="icon-star_2"></i></a>
-	                <a href="javascript:;" title="好"><i class="icon-star_2"></i></a>
-	                <a href="javascript:;" title="很好"><i class="icon-star_2"></i></a>
-	                <a href="javascript:;" title="非常好"><i class="icon-star_2"></i></a>
-	                <input type="hidden" id="commentItem1" value="2">
-	                <p class="star_score"></p>
-	            </div>
-	        </div>
-	 -->
-	        <textarea class="com-text" placeholder="告诉大伙您对本商品的感受···" rows="4"></textarea>
-	        <!-- 添加图片 最多5张-->
-	        <div class="upload-pic">
-	            <img src="img/x1.jpg">
-	            <img src="img/x1.jpg">
-	            <div class="add-pic">
-	                <i class="icon-jia"></i>
-	                <span>添加图片</span>
-	                <input type="file" accept="image/*" multiple="multiple">
-	            </div>
-	            <p class="percent"><span>3</span>/5</p>
-	        </div>
-	        <p class="tip">四星+晒图+转发到朋友圈可获得积分奖励哦！</p>
-	        <div class="auto-btn">
-	            <a class="btn btn-bg" type="submit">
-	                提交评价
-	            </a>
-	        </div>
-	    </form>
-
-
-	</div>
-	    
-
+    <div class="banner">
+        <form class="comment_form bg-show">
+            <ul class="form-list border-list">
+                <li>
+                    <label>香水名称：</label>
+                    <input class="name" name="textfield" type="text" placeholder="请输入香水名称" />
+                </li>
+                <li>
+                    <label>特性描述：</label>
+                    <input class="mobile" name="textfield" type="tel" placeholder="请输入特性描述" />
+                </li>
+            </ul>
+            <div class="pro-sort-content">
+                <div class="sort-list">
+                    <ul>
+                        <li class="active">商务</li>
+                        <li>旅行</li>
+                        <li>约会</li>
+                        <li>运动</li>
+                        <li>日常</li>
+                        <li>情趣</li>
+                        <li>车载</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="input-row">
+                <label>请对商品及服务进行评价：</label>
+                <div class="wrapper">
+                    <a href="javascript:;" title="差"><i class="icon-star_2"></i></a>
+                    <a href="javascript:;" title="一般"><i class="icon-star_2"></i></a>
+                    <a href="javascript:;" title="好"><i class="icon-star_2"></i></a>
+                    <a href="javascript:;" title="很好"><i class="icon-star_2"></i></a>
+                    <a href="javascript:;" title="非常好"><i class="icon-star_2"></i></a>
+                    <input type="hidden" id="commentItem1" value="2">
+                    <p class="star_score"></p>
+                </div>
+            </div>
+     -->
+            <textarea class="com-text" placeholder="告诉大伙您对本商品的感受···" rows="4"></textarea>
+            <!-- 添加图片 最多4张-->
+            <div class="upload-pic">
+                <div class="add-img">
+                    <img src="img/x1.jpg">
+                <!--     <img src="img/x1.jpg">
+                    <img src="img/x1.jpg"> -->
+                </div>
+                <div class="add-pic">
+                    <span>添加图片</span>
+                    <input class="img-file" type="file" accept="image/*" multiple="multiple">
+                </div>
+                <p class="percent"><span>2</span>/4</p>
+            </div>
+            <div class="auto-btn">
+                <a class="btn btn-bg" type="submit">
+                    提交评价
+                </a>
+            </div>
+        </form>
+    </div>
     <!-- 删除图片遮罩 -->
     <div class="ui-dialog">
         <div class="dialog-cnt">
@@ -89,8 +86,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- 底部固定内容 -->
     <div class="fixed-bottom">
         <!-- 底部导航 -->
@@ -123,55 +118,42 @@
     </div>
     <script type="text/javascript">
     $(function() {
-        //评价页面
-        $('.wrapper a').click(function() {
-            var $wrapper = $(this).parent();
-            var $wrapper_a = $wrapper.find('a');
-            var $wrapper_p = $wrapper.find('p');
-            clearStar($wrapper);
-            var index = $wrapper_a.index(this);
-            for (var i = 0; i < index + 1; i++) {
-                $wrapper_a.eq(i).find('i').addClass('icon-stars-red');
 
+
+
+        //添加的图片大于4张时禁掉input
+        $('.add-pic').find('input').change(function() {
+
+            var len = $('.upload-pic').find('img').length;
+            if (len >= 4) {
+                $(this).attr('disabled', 'disabled');
             }
-            $wrapper_p.html($wrapper_a.eq(index).attr("title"));
-
+            // else {
+            //      var src = $(this).val();//获取文件路径
+            //      var $img = '<img>';
+            // }
         });
-    });
 
-    //清除评价页面的星星颜色
-    function clearStar(wrapper) {
-        var len = wrapper.find('a').length;
-        for (var i = 0; i < len; i++) {
-            wrapper.find('a').eq(i).find('i').removeClass('icon-stars-red');
-        }
-    }
-
-    //添加的图片大于5张时禁掉input
-    $('.add-pic').find('input').click(function() {
-        var len = $('.upload-pic').find('img').length;
-        if (len >= 5) {
-            $(this).attr('disabled', 'disabled');
-        }
-    });
-
-    //删除添加的图片
-    $('.upload-pic').find('img').on('click', function() {
-        var _this = $(this);
-        $('.ui-dialog').addClass('show');
-        $('.confirm').click(function() {
-            _this.remove();
-            $('.ui-dialog').removeClass('show');
+        //删除添加的图片
+        $('.upload-pic').find('img').on('click', function() {
+            var _this = $(this);
+            $('.ui-dialog').addClass('show');
+            $('.confirm').click(function() {
+                _this.remove();
+                $('.ui-dialog').removeClass('show');
+            });
+            //取消删除
+            $('.cancel').click(function() {
+                $('.ui-dialog').removeClass('show');
+            });
         });
-        //取消删除
-        $('.cancel').click(function() {
-            $('.ui-dialog').removeClass('show');
-        });
-    });
 
-    //选择类型
-    $('.sort-list').find('li').click(function() {
-        active($(this));
+        //选择使用场景
+        $('.sort-list').find('li').click(function() {
+            active($(this));
+        });
+
+
     });
     </script>
 </body>

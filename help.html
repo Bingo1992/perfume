@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>帮助中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+        <!-- 列表 -->
+        <ul class="help-list border-list">
+            <li>
+                <a class="list-box" href="#">
+                    <div class="list-info">
+                        <h4>联系客服</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+                 <div class="help-content">
+                    <a class="gray-font" href="tel:400-000-0000">客服电话:400-000-0000</a>
+                </div>
+                
+            </li>
+               
+            <li>
+                <a class="list-box" href="#">
+                    <div class="list-info">
+                        <h4>价格说明</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+                 <div class="help-content">
+                    <a class="gray-font" href="#">价格说明价格说明价格说明价格说明</a>
+                </div>
+                
+            </li>
+            <li>
+                <a class="list-box" href="#">
+                    <div class="list-info">
+                        <h4>价格说明</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+                 <div class="help-content">
+                    <a class="gray-font" href="#">价格说明价格说明价格说明价格说明</a>
+                </div>
+                
+            </li>
+            <li>
+                <a class="list-box" href="#">
+                    <div class="list-info">
+                        <h4>订单问题</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+                 <div class="help-content">
+                    <a class="gray-font" href="#">价格说明价格说明价格说明价格说明</a>
+                </div>
+                
+            </li>
+            <li>
+                <a class="list-box" href="#">
+                    <div class="list-info">
+                        <h4>挑选商品</h4>
+                    </div>
+                    <i class="icon-right"></i>
+                </a>
+                 <div class="help-content">
+                    <a class="gray-font" href="#">价格说明价格说明价格说明价格说明</a>
+                </div>
+                
+            </li>
+            
+           
+        </ul>
+    </div>
+    <!-- 底部固定内容 -->
+    <div class="fixed-bottom">
+        <!-- 底部导航 -->
+        <ul class="nav equably-layout">
+            <li>
+                <a href="index.html">
+                    <i class="icon-home_1"></i>
+                    <p>商城首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart_list.html">
+                    <i class="icon-cart"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="online_help.html">
+                    <i class="icon-wchat_1"></i>
+                    <p>在线咨询</p>
+                </a>
+            </li>
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-user_1"></i>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    // $(function(){
+        $('.help-list').find('li').click(function(){
+            var $i = $(this).find('i');
+            if($i.hasClass('icon-right')){
+                $i.attr('class','icon-up');
+                $(this).find('.help-content').slideDown();
+            }else {
+                $i.attr('class','icon-right');
+                $(this).find('.help-content').slideUp();
+            }
+            
+            
+        })
+    // })
+    </script>
+</body>
+
+</html>
