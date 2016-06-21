@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
     <script type='text/javascript' src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/swipeSlide.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <div class="list-box">
                 <div class="list-info">
                     <p class="gray-font">总容量
-                        <span class="theme-font"><span>50</span>/<span>150</span>ml</span>
+                        <span class="theme-font"><span class="caculate-ml">60</span>/<span class="total-ml">150</span>ml</span>
                     </p>
                 </div>
                 <div class="btn-border">编辑</div>
@@ -33,39 +34,48 @@
             <div class="slider">
                 <p class="main-p">主香</p>
                 <p class="plus icon-plus"></p>
+                <!-- 进度条 -->
                 <div class="tube">
                     <div class="min-tube"></div>
                 </div>
+
                 <p class="minus icon-minus"></p>
                 <div class="slider-info border-top">
-                    <p class="gray-font"><span>20</span>ml</p>
+                    <p class="gray-font"><span class="m-caculate">20</span>ml</p>
                     <p class="gray-font border-top">玫瑰</p>
                 </div>
             </div>
+
             <div class="slider">
-                <p class="assist-p">辅香</p>
+                <p class="main-p">主香</p>
                 <p class="plus icon-plus"></p>
+                <!-- 进度条 -->
                 <div class="tube">
                     <div class="min-tube"></div>
                 </div>
+
                 <p class="minus icon-minus"></p>
                 <div class="slider-info border-top">
-                    <p class="gray-font"><span>20</span>ml</p>
+                    <p class="gray-font"><span class="m-caculate">20</span>ml</p>
                     <p class="gray-font border-top">玫瑰</p>
                 </div>
             </div>
+
             <div class="slider">
-                <p class="minor-p">次香</p>
+                <p class="main-p">主香</p>
                 <p class="plus icon-plus"></p>
+                <!-- 进度条 -->
                 <div class="tube">
                     <div class="min-tube"></div>
                 </div>
+
                 <p class="minus icon-minus"></p>
                 <div class="slider-info border-top">
-                    <p class="gray-font"><span>20</span>ml</p>
+                    <p class="gray-font"><span class="m-caculate">20</span>ml</p>
                     <p class="gray-font border-top">玫瑰</p>
                 </div>
             </div>
+
             <div class="add-recipe">
                 <i class="icon-bottle_1"></i>
                 <p>选择下列香基自由组合属于自己的配方</p>
@@ -274,7 +284,7 @@
         </p>
     </div>
     <!-- -选择香基遮罩- -->
-    <div class="pro-dialog">
+    <div class="pro-dialog hide">
         <div class="pro-cnt">
             <!--图片轮播r-->
             <div class="slide slide3">
@@ -440,7 +450,7 @@
                             <div class="h-min-tube"></div>   
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount-2">
                         <span class="minus icon-minus"></span>
                         <input type="text" class="count" value="10" readonly>
                         <span class="plus icon-plus"></span>
@@ -453,7 +463,7 @@
                             <div class="h-min-tube"></div>   
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount-2">
                         <span class="minus icon-minus"></span>
                         <input type="text" class="count" value="10" readonly>
                         <span class="plus icon-plus"></span>
@@ -466,7 +476,7 @@
                             <div class="h-min-tube"></div>   
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount-2">
                         <span class="minus icon-minus"></span>
                         <input type="text" class="count" value="10" readonly>
                         <span class="plus icon-plus"></span>
@@ -479,7 +489,7 @@
                             <div class="h-min-tube"></div>   
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount-2">
                         <span class="minus icon-minus"></span>
                         <input type="text" class="count" value="10" readonly>
                         <span class="plus icon-plus"></span>
@@ -492,7 +502,7 @@
                             <div class="h-min-tube"></div>   
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount-2">
                         <span class="minus icon-minus"></span>
                         <input type="text" class="count" value="10" readonly>
                         <span class="plus icon-plus"></span>
@@ -508,13 +518,12 @@
     </div>
     <script type='text/javascript'>
     $(document).ready(function() {
-
-
         //激活元素
         $('.bottle-sort').find('li').click(function() {
             active($(this));
         });
 
+        //图片滑动
         $('.slide3').each(function() {
             var $_this = $(this);
             $(this).swipeSlide({

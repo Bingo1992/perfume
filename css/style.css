@@ -670,7 +670,7 @@ i.icon-right, i.icon-up, i.icon-down, i.icon-left {
 .min-tube {
   width: 10px;
   bottom: 0;
-  height: 30%;
+  height: 20%;
 }
 
 .horizational-tube {
@@ -723,7 +723,6 @@ i.icon-right, i.icon-up, i.icon-down, i.icon-left {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
-  display: none;
 }
 .pro-dialog .pro-cnt {
   width: 100%;
