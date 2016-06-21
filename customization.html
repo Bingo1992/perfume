@@ -9,566 +9,73 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta name="format-detection" content="telephone=no" />
     <title>定制配方</title>
-    <link href="css/bootstrap-slider.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
     <script type='text/javascript' src="js/jquery.min.js"></script>
-    <script type='text/javascript' src="js/bootstrap-slider.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/swipeSlide.min.js"></script>
 </head>
 
 <body>
     <div class="banner">
-        <div class="slider-example">
-            <div class="well">
-                <input class="perfumeSilder" type="text" />
-                <p class="flowerName">玫瑰</p>
+        <div class="bg-show">
+            <div class="list-box">
+                <div class="list-info">
+                    <p class="gray-font">总容量
+                        <span class="theme-font"><span>50</span>/<span>150</span>ml</span>
+                    </p>
+                </div>
+                <div class="btn-border">编辑</div>
             </div>
-            <div class="well">
-                <input class="perfumeSilder" type="text" />
-                <p class="flowerName">玫瑰花</p>
+        </div>
+        <!-- 进度条 -->
+        <div class="perfume-slider">
+            <div class="slider">
+                <p class="main-p">主香</p>
+                <p class="plus icon-plus"></p>
+                <div class="tube">
+                    <div class="min-tube"></div>
+                </div>
+                <p class="minus icon-minus"></p>
+                <div class="slider-info border-top">
+                    <p class="gray-font"><span>20</span>ml</p>
+                    <p class="gray-font border-top">玫瑰</p>
+                </div>
             </div>
-            <div class="well">
-                <input class="perfumeSilder" type="text" />
-                <p class="flowerName">玫瑰</p>
+            <div class="slider">
+                <p class="assist-p">辅香</p>
+                <p class="plus icon-plus"></p>
+                <div class="tube">
+                    <div class="min-tube"></div>
+                </div>
+                <p class="minus icon-minus"></p>
+                <div class="slider-info border-top">
+                    <p class="gray-font"><span>20</span>ml</p>
+                    <p class="gray-font border-top">玫瑰</p>
+                </div>
             </div>
-            <div class="well">
-                <input class="perfumeSilder" type="text" />
-                <p class="flowerName">玫瑰</p>
-            </div>
-            <div class="well">
-                <input class="perfumeSilder" type="text" />
-                <p class="flowerName">玫瑰</p>
-            </div>
-            <div class="well">
-                <input class="perfumeSilder" type="text" />
-                <p class="flowerName">玫瑰</p>
-            </div>
-            <div class="well">
-                <input class="perfumeSilder" type="text" />
-                <p class="flowerName">玫瑰</p>
+            <div class="slider">
+                <p class="minor-p">次香</p>
+                <p class="plus icon-plus"></p>
+                <div class="tube">
+                    <div class="min-tube"></div>
+                </div>
+                <p class="minus icon-minus"></p>
+                <div class="slider-info border-top">
+                    <p class="gray-font"><span>20</span>ml</p>
+                    <p class="gray-font border-top">玫瑰</p>
+                </div>
             </div>
             <div class="add-recipe">
                 <i class="icon-bottle_1"></i>
                 <p>选择下列香基自由组合属于自己的配方</p>
             </div>
         </div>
-        <div class="bg-show">
-
-            <!-- 容量提醒值 -->
-            <div class="total-ml list-box">
-                <div class="list-info">
-                    <span class="gray-font">总容量</span>
-                    <div class="tube">
-                        <div class="min-tube"></div>
-                    </div>
-                    <span class="gray-font"><span class="total">70</span>/150ml</span>
-                </div>
-                <div class="btn btn-bg">编辑</div>
-            </div>
-
-            <!-- 香基Ａ -->
-            <div class="border-top">
-                <div class="js-select list-box">
-                    <div class="list-info">
-                        <h4 class="x-title">香基A</h4>
-                    </div>
-                    <p class="gray-font">点击收起</p>
-                    <i class="icon-up"></i>
-                </div>
-                <div class="show-container">
-                    <div class="xiangji list-box">
-                        <div class="list-info">
-                            <p class="nowrap-2">香基（Flavoring Base）：也称为基香剂或主香剂，它是香精主体香的基础，是香精配方的主体，用量最大。香基...</p>
-                        </div>
-                        <a class="blue-font" href="#">查看详情</a>
-                    </div>
-                    <!--图片轮播r-->
-                    <div class="slide slide2">
-                        
-                        <ul>
-                            <li>
-                                <div class="slide-img">
-                                    <label for="p1">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p1" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                <div class="slide-img">
-                                    <label for="p2">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p2" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p3">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p3" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p4">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p4" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p5">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p5" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p6">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p6" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p7">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p7" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p8">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p8" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                            
-                            </li>
-                            <li>
-                                <div class="slide-img">
-                                    <label for="p11">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p11" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                <div class="slide-img">
-                                    <label for="p12">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p12" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p13">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p13" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p14">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p14" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p15">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p15" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p16">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p16" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                            
-                            </li>
-
-                        </ul>
-
-                        <!-- span个数与.slide里面li元素一致 -->
-                        <div class="dot">
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                    <!--图片轮播 end-->
-                </div>        
-            </div>
-            <!-- 香基A结束 -->
-
-            <!-- 香基B -->
-            <div class="border-top">
-                <div class="js-select list-box">
-                    <div class="list-info">
-                        <h4 class="x-title">香基B</h4>
-                    </div>
-                    <p class="gray-font">点击收起</p>
-                    <i class="icon-up"></i>
-                </div>
-                <div class="show-container">
-                    <div class="xiangji list-box">
-                        <div class="list-info">
-                            <p class="nowrap-2">香基（Flavoring Base）：也称为基香剂或主香剂，它是香精主体香的基础，是香精配方的主体，用量最大。香基...</p>
-                        </div>
-                        <a class="blue-font" href="#">查看详情</a>
-                    </div>
-                    <!--图片轮播r-->
-                    <div class="slide slide2">
-                        
-                        <ul>
-                            <li>
-                                <div class="slide-img">
-                                    <label for="p1">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p1" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                <div class="slide-img">
-                                    <label for="p2">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p2" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p3">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p3" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p4">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p4" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p5">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p5" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p6">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p6" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p7">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p7" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p8">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p8" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                            
-                            </li>
-                            <li>
-                                <div class="slide-img">
-                                    <label for="p11">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p11" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                <div class="slide-img">
-                                    <label for="p12">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p12" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p13">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p13" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p14">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p14" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p15">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p15" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                                 <div class="slide-img">
-                                    <label for="p16">
-                                        <img src="img/x1.jpg"> 
-                                        <div class="checkbox">
-                                            <input id="p16" type="checkbox" name="img" checked>
-                                            <i class="icon-hook"></i>
-                                        </div>
-                                    </label>
-                                    <a class="list-box">
-                                        <span class="list-info">
-                                            <p>香基名称</p>
-                                        </span>
-                                        <p class="blue-font">详情</p>
-                                    </a>
-                                 </div>
-                            
-                            </li>
-
-                        </ul>
-
-                        <!-- span个数与.slide里面li元素一致 -->
-                        <div class="dot">
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                    <!--图片轮播 end-->
-                </div>        
-            </div>
-            <!-- 香基B结束 -->
+        <div class="btn-perfume bg-show">
+            <div class="btn btn-main">选择主香</div>
+            <div class="btn btn-assist">选择辅香</div>
+            <div class="btn btn-minor">选择次香</div>
         </div>
-
         <!-- 选择瓶形 -->
         <div class="bg-show">
             <div class="js-select list-box border-bottom">
@@ -643,7 +150,6 @@
                 </div>
             </div>
         </div>
-
         <!-- 选择颜色 -->
         <div class="bg-show">
             <div class="js-select list-box border-bottom">
@@ -761,56 +267,255 @@
             </li>
         </ul>
     </div>
-
     <!-- 加入购物车提示层 -->
     <div class="tip-dialog">
         <p class="tip-content">
             加入购物车成功
         </p>
     </div>
+    <!-- -选择香基遮罩- -->
+    <div class="pro-dialog">
+        <div class="pro-cnt">
+            <!--图片轮播r-->
+            <div class="slide slide3">
+                <ul>
+                    <li>
+                        <div class="slide-img">
+                            <label for="p1">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p1" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p2">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p2" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p3">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p3" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p4">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p4" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p5">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p5" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p6">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p6" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p7">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p7" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p8">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p8" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-img">
+                            <label for="p11">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p11" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p12">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p12" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p13">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p13" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p14">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p14" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p15">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p15" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                        <div class="slide-img">
+                            <label for="p16">
+                                <img src="img/x1.jpg">
+                                <div class="checkbox">
+                                    <input id="p16" type="checkbox" name="img" checked>
+                                    <i class="icon-hook"></i>
+                                </div>
+                            </label>
+                            <p>香基名称</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- span个数与.slide里面li元素一致 -->
+                <div class="dot">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!--图片轮播 end-->
+
+            <ul class="slider-container border-list">
+                <li class="list-box">
+                    <div class="list-info">
+                        <span>香精名称</span>
+                        <div class="horizational-tube">
+                            <div class="h-min-tube"></div>   
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <span class="minus icon-minus"></span>
+                        <input type="text" class="count" value="10" readonly>
+                        <span class="plus icon-plus"></span>
+                    </div>
+                </li>
+                <li class="list-box">
+                    <div class="list-info">
+                        <span>香精名称</span>
+                        <div class="horizational-tube">
+                            <div class="h-min-tube"></div>   
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <span class="minus icon-minus"></span>
+                        <input type="text" class="count" value="10" readonly>
+                        <span class="plus icon-plus"></span>
+                    </div>
+                </li>
+                <li class="list-box">
+                    <div class="list-info">
+                        <span>香精名称</span>
+                        <div class="horizational-tube">
+                            <div class="h-min-tube"></div>   
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <span class="minus icon-minus"></span>
+                        <input type="text" class="count" value="10" readonly>
+                        <span class="plus icon-plus"></span>
+                    </div>
+                </li>
+                <li class="list-box">
+                    <div class="list-info">
+                        <span>香精名称</span>
+                        <div class="horizational-tube">
+                            <div class="h-min-tube"></div>   
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <span class="minus icon-minus"></span>
+                        <input type="text" class="count" value="10" readonly>
+                        <span class="plus icon-plus"></span>
+                    </div>
+                </li>
+                <li class="list-box">
+                    <div class="list-info">
+                        <span>香精名称</span>
+                        <div class="horizational-tube">
+                            <div class="h-min-tube"></div>   
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <span class="minus icon-minus"></span>
+                        <input type="text" class="count" value="10" readonly>
+                        <span class="plus icon-plus"></span>
+                    </div>
+                </li>
+            </ul>   
+
+            <div class="two-btn">
+                <a class="btn-border">返回</a>
+                <a class="btn btn-bg">确定</a>
+            </div> 
+        </div>
+    </div>
     <script type='text/javascript'>
     $(document).ready(function() {
-        // 滑块选择容量
-        var slider = null;
-        $('.perfumeSilder').each(function() {
-            $(this).slider({
-                orientation: 'vertical',
-                reversed: true,
-                step: 10, //每步值
-                min: 0, //最小值
-                max: 100, //最大值
-                value: 10, //当前值
-                
-            });
-        });
 
-        $('.well').on('touchmove', function() {
-            var amount = 150;
-            var total = 0,
-                value = 0;
-            $('.well').each(function(){
-                value = $(this).find('input').val();
-                total += parseInt(value);
-            })
-            // total = (total >= 150) ? 150 : total;
-            if(total >= amount){
-             // $(this).find('.perfumeSilder').slider("disable");
-             total=150;
-             alert('aaa');
-             // return;
-            }
-            $('.total').html(total);
-            var per = ((total )/ 150) * 100 + '%';
-            $('.min-tube').css('width', per);
-
-        });
 
         //激活元素
         $('.bottle-sort').find('li').click(function() {
             active($(this));
         });
 
-        $('.slide2').each(function(){
+        $('.slide3').each(function() {
             var $_this = $(this);
             $(this).swipeSlide({
                 continuousScroll: false,
@@ -821,7 +526,7 @@
                 }
             });
         })
-            
+
 
     });
     </script>

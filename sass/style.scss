@@ -61,16 +61,97 @@
 }
 
 // -----customization.html-----
-.slider-example {
+// .slider-example {
+//     display: -webkit-box;
+//     -webkit-box-orient: horizontal;
+//     color: $color-gray;
+//     font-size: $md-font;
+// }
+
+// .well {
+//      width: 1.7778rem;
+//      position:relative;
+//      &:nth-child(even) {
+//         background-color: #eee;
+//      }
+//      &:nth-child(odd){
+//         background-color: #f6f6f6;
+//      }
+//     &:after{
+//         @extend .border-right:after;
+//     }
+// }
+
+// .tooltip {
+//     display: block;
+//     visibility: visible;
+//     left: 0 !important;
+//     bottom: -80px;
+//     position: absolute;
+//     line-height: 40px;
+//     height: 40px;
+//     width: 1.7778rem;
+//     &:before {
+//         @extend .border-top:after;
+//     }
+//     span { display: inline-block;}
+// }
+// .tooltip-inner {
+//     text-decoration: none;
+//     display: inline-block;
+//     white-space: nowrap;
+// }
+
+// .flowerName {
+//     line-height: 40px;
+//     height: 40px;
+//     margin-top: 80px;
+//     color: $color-gray;
+//     position:relative;
+//     width: 1.7778rem;
+//     text-align: center;
+//     overflow: hidden;
+//     &:before {
+//         @extend .border-top:after;
+//     }
+// }
+
+// .tube {
+//     width: 6rem;
+//     position: relative;
+//     height: 10px;
+//     border-radius: 10px;
+//     background-color: #dadada;
+//     display: inline-block;
+// }
+
+// .min-tube{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 10px;
+//     border-radius: 10px;
+//     background: $color-theme;
+//     width: 46%;
+// }
+// .total-ml .btn{
+//     padding: 0 .7rem;
+// }
+.perfume-slider{
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     color: $color-gray;
     font-size: $md-font;
+    margin-top: -10px;
+    .minus,.plus {
+        background-color: #fff;
+    }
 }
 
-.well {
+.slider {
      width: 1.7778rem;
      position:relative;
+     text-align: center;
      &:nth-child(even) {
         background-color: #eee;
      }
@@ -82,39 +163,113 @@
     }
 }
 
-.tooltip {
-    display: block;
-    visibility: visible;
-    left: 0 !important;
-    bottom: -80px;
-    position: absolute;
-    line-height: 40px;
-    height: 40px;
-    width: 1.7778rem;
-    &:before {
-        @extend .border-top:after;
-    }
-    span { display: inline-block;}
+.main-p,.assist-p,.minor-p{
+    color: #fff;
+    width: 1.4rem;
+    margin: 6px auto;
+    @include height(24px);
+    border-radius: 2px;
 }
-.tooltip-inner {
-    text-decoration: none;
-    display: inline-block;
-    white-space: nowrap;
+.main-p {
+    background-color: #ff359a;  
+}
+.assist-p {
+    background-color: #daa0ff;
+}
+.minor-p {
+    background-color: #ffcb71;
+}
+.tube,.horizational-tube {
+    border-radius: 10px;
+    background-color: #dadada;
+    display: block;
+    position: relative;
+}
+.min-tube,.h-min-tube{
+    position: absolute;
+    left: 0;
+    background: $color-theme;
+    border-radius: 10px;
+}
+.tube {
+    width: 10px;
+    height: 180px;
+    margin: 6px auto;
+}
+.min-tube {
+    width: 10px;
+    bottom: 0;
+    height: 30%;
 }
 
-.flowerName {
-    line-height: 40px;
-    height: 40px;
-    margin-top: 80px;
-    color: $color-gray;
-    position:relative;
-    width: 1.7778rem;
-    text-align: center;
-    overflow: hidden;
-    &:before {
-        @extend .border-top:after;
+.horizational-tube {
+    width: 150px;
+    height: 10px;
+}
+.h-min-tube {
+    height: 10px;
+    top: 0;
+    width: 30%;
+}
+
+.slider-info{
+    margin-top: 6px;
+    p{
+        line-height: 30px;
     }
 }
+
+.btn-perfume {
+    padding: 8px .5rem;
+    box-sizing:border-box;
+    display: -webkit-box;
+    .btn {
+        display: -webkit-box;
+        -webkit-box-flex:1;
+        -webkit-box-pack:center;
+        width: 100%;
+        margin: 0 .25rem;
+        @include borderRadius(36px);
+        font-size: $md-font;
+    }
+    .btn-assist{
+        background-color: #a04bff;
+    }
+    .btn-minor{
+        background-color: #ffa721;
+    }
+}
+
+.pro-dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 10;
+    display: none;
+    .pro-cnt{
+        width: 100%;
+        background-color: #fff;
+    }
+    a.btn-border {
+        color: $color-theme;
+    }
+    .border-list{
+        margin: 0;
+    }
+    .list-box {
+        padding: 6px .5rem;
+        font-size: 12px;
+    }
+    .two-btn {
+        padding: .4rem 0;
+    }
+}
+
+
+
 .add-recipe {
     @extend %box;
     -webkit-box-orient:vertical;
@@ -125,29 +280,6 @@
         color: #ced6d9;
     }
 }
-
-.tube {
-    width: 6rem;
-    position: relative;
-    height: 10px;
-    border-radius: 10px;
-    background-color: #dadada;
-    display: inline-block;
-}
-
-.min-tube{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 10px;
-    border-radius: 10px;
-    background: $color-theme;
-    width: 46%;
-}
-.total-ml .btn{
-    padding: 0 .7rem;
-}
-
 .bottle-sort {
     @include height(36px);
     color: $color-gray;
@@ -932,7 +1064,7 @@ i.icon-vip {
     color: $color-gray;
     padding-left: 5rem;
 }
-.slide2 {
+.slide2,.slide3{
     height: 13.4rem;
     font-size: $md-font;
     .slide-img{
@@ -945,7 +1077,7 @@ i.icon-vip {
     p{
         @extend .nowrap;
         display: inline-block;
-        
+        padding-top: .2rem;
     }
     label {
         position: relative;
@@ -973,6 +1105,17 @@ i.icon-vip {
         padding: 0;
         height: 24px;
     }    
+}
+
+.slide3 {
+    height: 9.6rem;
+    .slide-img {
+        width: 2.6rem;
+    }
+    li img {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
 }
 
 .suit-setting-img  {
@@ -1145,8 +1288,11 @@ i.icon-vip {
 .upload-pic{
     overflow: hidden;
     padding: .5rem .25rem;
+    img{
+        float: left;
+    }
 }
-.add-img {float: left;}
+
 .upload-pic img {
     position: relative;
     width: 3.375rem;
