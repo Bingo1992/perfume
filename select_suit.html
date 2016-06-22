@@ -357,7 +357,7 @@
                 </span>
             </div>
             <a class="btn-cart">加入购物车</a>
-            <a class="btn" href="#">立即购买</a>
+            <a class="btn" href="package_setting.html">立即购买</a>
         </div>
         <!-- 底部导航 -->
         <ul class="nav equably-layout">
@@ -572,6 +572,7 @@
         // 限制套装件数
         $('#js-slide').find(':checkbox').click(function(){
             var flag2 = 0;
+            var _this = $(this);
             amount =  parseInt($('.select option:selected').val());//选中的值
 
             //统计checked数目
@@ -581,7 +582,7 @@
                 if(check == true){
                      flag2++;   
                     if(flag2 > amount){
-                        $(this).prop("checked",false);
+                        _this.prop("checked",false);
                         //超出限制提示框
                         $('.overflow-dialog').addClass('show');
                     }

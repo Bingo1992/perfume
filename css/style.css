@@ -307,6 +307,7 @@ img {
 .two-btn {
   padding: 1rem 0;
   -webkit-box-orient: horizontal;
+  box-sizing: border-box;
 }
 .two-btn a {
   display: inline-block;
@@ -609,9 +610,29 @@ i.icon-right, i.icon-up, i.icon-down, i.icon-left {
   color: #898989;
   font-size: 12px;
   margin-top: -10px;
+  position: relative;
 }
 .perfume-slider .minus, .perfume-slider .plus {
   background-color: #fff;
+}
+.perfume-slider .icon-cancel {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-radius: 1.2rem;
+  width: 1.2rem;
+  text-align: center;
+  background-color: #fe007f;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -.6rem;
+  z-index: 2;
+  display: none;
+}
+.perfume-slider .icon-cancel.show {
+  display: block;
 }
 
 .slider {
@@ -674,14 +695,14 @@ i.icon-right, i.icon-up, i.icon-down, i.icon-left {
 }
 
 .horizational-tube {
-  width: 150px;
+  width: 8rem;
   height: 10px;
 }
 
 .h-min-tube {
   height: 10px;
   top: 0;
-  width: 30%;
+  width: 10%;
 }
 
 .slider-info {
@@ -826,13 +847,13 @@ h4.x-title {
   table-layout: fixed;
 }
 .bottle-img img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 .bottle-img p {
   font-size: 12px;
   padding: 0 .3rem .5rem;
-  width: 80px;
+  width: 60px;
 }
 
 .bottle-color span {
@@ -1163,11 +1184,9 @@ i.icon-vip {
   text-align: center;
   width: 40px;
   background-color: #efefef;
+  display: inline-block;
 }
 
-.setting-list {
-  font-size: 12px;
-}
 .setting-list .list-box {
   height: 44px;
   line-height: 44px;
@@ -1718,9 +1737,6 @@ i.icon-vip {
   padding-top: 10px;
 }
 
-.form-list {
-  font-size: 12px;
-}
 .form-list li {
   padding: 10px 0.5rem;
   line-height: 24px;

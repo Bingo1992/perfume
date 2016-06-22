@@ -143,8 +143,24 @@
     color: $color-gray;
     font-size: $md-font;
     margin-top: -10px;
+    position: relative;
     .minus,.plus {
         background-color: #fff;
+    }
+    .icon-cancel {
+        @include circle(1.2rem);
+        background-color: $color-theme;
+        color: #fff;
+        font-size: 18px;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        margin-left: -.6rem;
+        z-index: 2;
+        display: none;
+    }
+    .icon-cancel.show {
+        display: block;
     }
 }
 
@@ -203,13 +219,13 @@
 }
 
 .horizational-tube {
-    width: 150px;
+    width: 8rem;
     height: 10px;
 }
 .h-min-tube {
     height: 10px;
     top: 0;
-    width: 30%;
+    width: 10%;
 }
 
 .slider-info{
@@ -343,13 +359,13 @@ h4.x-title {
 .bottle-img {
     table-layout:fixed;
     img{
-         width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
      p{
         font-size: $md-font;
         padding: 0 .3rem .5rem;
-        width: 80px;
+        width: 60px;
      }  
 }
 .bottle-color span {
@@ -662,11 +678,12 @@ i.icon-vip {
    @include borderRadius;
     width: 40px;
     background-color: #efefef;
+    display: inline-block;
 }
 
 // -------package_setting.html-----
 .setting-list {
-    font-size: $md-font;
+    // font-size: $md-font;
     .list-box {
         @include height(44px);
         padding: 0 $gauge;
@@ -1216,7 +1233,7 @@ i.icon-vip {
 
 // -------------add_address.html------
 .form-list {
-    font-size: $md-font;
+    // font-size: $md-font;
     li{
         padding: 10px $gauge;
         line-height: 24px;
