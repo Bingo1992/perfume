@@ -110,7 +110,7 @@ $(function(){
  //购物车数量加减
 function minus_plus(){
     var count = 1;
-    $('.minus').click(function(){
+    $('.minus').on('touchstart',function(){
         var $parent = $(this).parent('.amount');
         var $count = $parent.find('.count');
         count = $count.val(); //每次点击前先获取input的值
@@ -118,11 +118,18 @@ function minus_plus(){
         $count.val(--count);
     });
 
-    $('.plus').click(function(){  
+    $('.plus').on('touchstart',function(){  
         var $parent = $(this).parent('.amount');
         var $count = $parent.find('.count');
         count = $count.val(); //每次点击前先获取input的值
         $count.val(++count);
+    });
+
+    $('.count').change(function (){
+        if($(this).val()==0){
+            alert('数量不能为0');
+            $(this).val(1);
+        }
     });
 }   
 

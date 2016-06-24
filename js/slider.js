@@ -6,7 +6,7 @@ $(function() {
 	var m_total = 100; //每条试管总数
 	var step = 10;
     //升
-    $('body').delegate('.plus', 'click', function() {
+    $('body').delegate('.plus', 'touchstart', function() {
 
         var $v_parent = $(this).parent(); //纵向
         var $tube = $v_parent.find('.min-tube');
@@ -31,7 +31,7 @@ $(function() {
 
 
     //降
-    $('body').delegate('.minus', 'click', function() {
+    $('body').delegate('.minus', 'touchstart', function() {
         var $v_parent = $(this).parent(); //纵向
         var $tube = $v_parent.find('.min-tube');
 
