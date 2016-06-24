@@ -498,7 +498,7 @@
         
         //select选择框
         var amount = 0;
-        $('.select').click(function(){
+        $('.select').change(function(){
             amount =  parseInt($('.select option:selected').val());//选中的值
             $('.allSuit').html(amount);//套装配置总数
         });

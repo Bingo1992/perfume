@@ -15,28 +15,61 @@
 </head>
 
 <body>
-	<form>
-        <ul class="form-list border-list">
-        	<li>
-                <label>姓名：</label>
-                <input class="name" type="text"  placeholder="请输入姓名" />
+    <div class="banner">
+        <form>
+            <ul class="form-list border-list">
+                <li>
+                    <label>姓名：</label>
+                    <input class="name" type="text"  placeholder="请输入姓名" />
+                </li>
+                <li>
+                    <label>手机号：</label>
+                    <input class="mobile" type="tel"  placeholder="请输入手机号码" />
+                </li>
+               
+                <li>
+                    <label>验证码：</label>
+                    <input class="code" type="tel"  placeholder="请输入验证码" />
+                    <div class="btn-code btn btn-bg">获取验证码</div>
+                </li>
+            </ul>
+
+            <div class="auto-btn">
+                <a id="submit-btn" class="btn btn-bg">提交</a>
+            </div>
+        </form>
+    </div>
+
+     <div class="fixed-bottom">
+        <!-- 底部导航 -->
+        <ul class="nav equably-layout">
+            <li>
+                <a href="index.html">
+                    <i class="icon-home_1"></i>
+                    <p>商城首页</p>
+                </a>
             </li>
             <li>
-                <label>手机号：</label>
-                <input class="mobile" type="tel"  placeholder="请输入手机号码" />
+                <a href="cart_list.html">
+                    <i class="icon-cart"></i>
+                    <p>购物车</p>
+                </a>
             </li>
-           
             <li>
-                <label>验证码：</label>
-                <input class="code" type="tel"  placeholder="请输入验证码" />
-                <div class="btn-code btn btn-bg">获取验证码</div>
+                <a href="online_help.html">
+                    <i class="icon-wchat_1"></i>
+                    <p>在线咨询</p>
+                </a>
+            </li>
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-user_1"></i>
+                    <p>个人中心</p>
+                </a>
             </li>
         </ul>
-
-        <div class="auto-btn">
-            <a id="submit-btn" class="btn btn-bg">提交</a>
-        </div>
-    </form>
+    </div>
+    	
 
     <div class="tip-dialog">
         <div class="tip-content">

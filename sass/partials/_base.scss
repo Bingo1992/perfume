@@ -57,7 +57,7 @@ $gauge: .5rem;
 }
 
 .nowrap-2 {
-    line-height: 1rem !important;
+    line-height: 20px !important;
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -137,8 +137,10 @@ $gauge: .5rem;
 .list-img {
     position: relative;
     display: block;
-    width: 3.75rem;
-    height: 3.75rem;
+    // width: 3.75rem;
+    // height: 3.75rem;
+    width: 75px;
+    height: 75px;
     margin-right: .2rem;
 }
 
@@ -475,5 +477,5 @@ i.icon-tip.icon-hook{background-color: #3ec032;}
 	z-index: 3;
 }
 .left {float: left;}
-.right{float: right;padding: $gauge;}
+.right{float: right;padding: 10px $gauge;}
 i.icon-right,i.icon-up,i.icon-down,i.icon-left{color: #898989;}

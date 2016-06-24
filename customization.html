@@ -19,7 +19,7 @@
 
 <body>
     <div class="banner">
-        <div class="bg-show">
+        <div class="total-title border-bottom">
             <div class="list-box">
                 <div class="list-info">
                     <p class="gray-font">总容量
@@ -471,10 +471,6 @@
 
     <script type='text/javascript'>
     $(document).ready(function() {
-        //激活元素
-        $('.bottle-sort').find('li').click(function() {
-            active($(this));
-        });
 
         //显示香基详情
         $('.container-outter').find('.nowrap').click(function() {
@@ -495,9 +491,10 @@
                     $i.addClass('show');
                     $i.click(function(){
                         _this.remove();
-                    })
+                       bottle_change();//瓶子修改 
+                    });
+                 });
 
-                 })  
             }else {
                 $(this).html("编辑");
                 $('.slider').find('i.icon-cancel').removeClass('show');//隐藏删除按钮

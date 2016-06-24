@@ -94,11 +94,11 @@
              <ul class="form-list">
                 <li>
                     <label>落款姓名：</label>
-                    <input type="text" placeholder="请填写您的姓名或昵称">
+                    <input class="name" type="text" placeholder="请填写您的姓名或昵称">
                 </li>
                 <li>
                     <label>祝福语内容：</label>
-                    <textarea type="text" placeholder="文本内容不超过100个字符" rows="5"></textarea>
+                    <textarea class="wish" type="text" placeholder="文本内容不超过100个字符" rows="5"></textarea>
                 </li>
               
             </ul>
@@ -114,7 +114,7 @@
             <div class="list-info">
                 <span>合计：<span class="theme-font">￥<span>3123</span></span></span>
             </div>
-            <a class="btn" href="logistics_info.html">立即购买</a>
+            <a id="buy-btn" class="btn">立即购买</a>
         </div>
 
         <!-- 底部导航 -->
@@ -230,14 +230,41 @@
         
     </div>
 
+    <!-- 表单验证 -->
+    <div class="tip-dialog">
+        <div class="tip-content">
+            <i class="icon-hook icon-tip"></i>
+            <p>手机号不能为空</p>
+        </div>
+        
+    </div>
+
     <script type="text/javascript">
-    $('.file').change(function(){
-        var src = $(this).val();//获取文件路径
-        var arr=src.split('\\');//注split可以用字符或字符串分割 
-        var name=arr[arr.length-1];//取得的文件名称 
-        $(this).siblings('.file-src').html(name);
+    $(function(){
+        $('.file').change(function(){
+            var src = $(this).val();//获取文件路径
+            var arr=src.split('\\');//注split可以用字符或字符串分割 
+            var name=arr[arr.length-1];//取得的文件名称 
+            $(this).siblings('.file-src').html(name);
+        });
+
+        $('#buy-btn').click(function() {
+            var nameValue = $('.name').val();
+            var wishValue = $('.wish').val();  
+            if(nameValue == ''){
+                empty_p('落款姓名不能为空');
+            } else if(wishValue == '') {
+                empty_p('祝福语不能为空');
+            } else {
+                yes_p('提交成功');
+                window.location.href = "logistics_info.html";
+            }
+
+        });
+
+       
     });
-   
+        
     </script>
 </body>
 

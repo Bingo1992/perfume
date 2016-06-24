@@ -82,6 +82,29 @@ $(function(){
         $('.shade-dialog').click(function(){
             hide_package();
         });
+        $('.package-list').find('li').click(function(){
+            hide_package();
+        });
+
+
+        //点击收藏按钮
+        $('.love').click(function(){
+            if($(this).hasClass('focus')){
+                $(this).removeClass('focus');
+            }else {
+                $(this).addClass('focus');
+            }
+        
+        });
+
+        //点击分享按钮
+        $('.share').click(function(){
+            $('.share-dialog').addClass('show');
+            $('.share-dialog').click(function(){
+                $(this).removeClass('show');
+            });
+        })
+
  });
 
  //购物车数量加减

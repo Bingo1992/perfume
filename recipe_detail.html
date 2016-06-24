@@ -79,7 +79,7 @@
                 <div class="list-info">
                     <h4>香水配方</h4>
                 </div>
-                <p class="gray-font">薰衣草</p>
+                <!-- <p class="gray-font">薰衣草</p> -->
                 <i class="icon-up"></i>
             </div>
           
@@ -369,28 +369,7 @@
         });
     }, false);
 
-    $(function(){
-        //点击收藏按钮
-        $('.love').click(function(){
-            // show_hide_TipDialog();
-            if($(this).hasClass('focus')){
-                $(this).removeClass('focus');
-                // $('.tip-content').html('已取消收藏');
-            }else {
-                $(this).addClass('focus');
-                // $('.tip-content').html('已成功收藏');
-            }
-        
-        });
 
-        //点击分享按钮
-        $('.share').click(function(){
-            $('.share-dialog').addClass('show');
-            $('.share-dialog').click(function(){
-                $(this).removeClass('show');
-            })
-        })
-    })
     </script>
 </body>
 
