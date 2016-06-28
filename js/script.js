@@ -54,17 +54,33 @@ $(function(){
 
          allCheck();//购物车全选
 
+         // ----single_perfume.html comment.html customization.html---
+          
+        //产品筛选，推荐配方
+        $('.js-sort').click(function() {
+            $('.pro-sort-dialog').addClass('show');
+            $('body').addClass('fixed-body'); //固定遮罩下层内容
+           
+        });
+          //选择类型
+        $('.sort-list').find('li').click(function() {
+            active($(this));
+        });
 
-   //       $('.slide2').find('label').click(function(){
-   //       	var $input = $(this).find('input');
-   //       	var check = $input.prop('checked');
-   //       	if(check == false){
-			// 	$input.prop("checked", true);  
-			// }else{
-			// 	$input.prop("checked", false); 
-			// }  
+        //点击重置按钮
+        $('.btn-reset').click(function() {
+           hideSortDialog();
+        });
 
-   //       });
+        //点击遮罩
+        $('.ps-dialog').click(function(){
+            hideSortDialog();
+        });
+
+        function hideSortDialog(){
+            $('.pro-sort-dialog').removeClass('show');
+            $('body').removeClass('fixed-body'); //取消固定
+        }
 
         // -----package_setting.html  select_suit.html--------
         //选择礼盒，包装样式，背景样式

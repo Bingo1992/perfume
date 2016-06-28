@@ -45,7 +45,6 @@
         padding: 10px $gauge 0 $gauge ;
         height: 40px;
     }
-    .blue-font {font-size: 12px;}
 }
 .hot-img {
     width: 7.25rem;
@@ -245,23 +244,30 @@
 }
 
 .btn-perfume {
-    padding: 8px .5rem;
+    padding: 8px .25rem;
     box-sizing:border-box;
     display: -webkit-box;
-    .btn {
+    div{
         display: -webkit-box;
         -webkit-box-flex:1;
         -webkit-box-pack:center;
         width: 100%;
-        margin: 0 .25rem;
+        margin: 0 .15rem;
         @include borderRadius(36px);
         font-size: $md-font;
+        color: #fff;
+    }
+    .btn-main{
+        background-color: $color-theme;
     }
     .btn-assist{
         background-color: #a04bff;
     }
     .btn-minor{
         background-color: #ffa721;
+    }
+    .btn-border{
+        color: $color-theme;
     }
 }
 
@@ -274,8 +280,29 @@
     background-color: rgba(0,0,0,.6);
     z-index: 10;
     .pro-cnt{
-        width: 100%;
+        width: 14rem;
+        right: 0;
+        height: 100%;
+        overflow-y:auto;
         background-color: #fff;
+        position:absolute;
+        padding-bottom: 80px;
+        box-sizing: border-box;
+    }
+    label{
+        position:relative;
+        display: block;
+
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    .checkbox {
+        position:absolute;
+        bottom:0;
+        right: 0;
+        input {border:none;}
     }
     a.btn-border {
         color: $color-theme;
@@ -283,16 +310,31 @@
     .border-list{
         margin: 0;
     }
-    .list-box {
-        padding: 6px .5rem;
-        font-size: 12px;
+    .nowrap-2{
+        color: $color-gray;
     }
     .two-btn {
-        padding: .4rem 0;
+        position:fixed;
+        bottom:0;
+        width: 14rem;
+        background-color: #fff;
+        z-index: 20;
     }
 }
-
-
+.tip-label {
+    font-size: $sm-font;
+    color: #fff;
+    span{
+        display: inline-block;
+        padding:2px .2rem;
+        margin-top: 4px;
+        border-radius: 2px;
+    }
+}
+.purple-label{background-color:#daa0ff;}
+.green-label{background-color:#81e6bf;}
+.orange-label{background-color:#ffcb71;}
+.blue-label{background-color:#8fcbfd;}
 
 .add-recipe {
     @extend %box;
@@ -341,7 +383,6 @@ h4.x-title {
     }
     .blue-font{
         margin-top: 1rem;
-        font-size: $md-font;
         padding-left: .5rem;
     }
 }
@@ -583,7 +624,7 @@ i.icon-vip {
                 margin-left: -3px;
             }
         }
-    
+
 }
 
 .list-title {
@@ -591,6 +632,21 @@ i.icon-vip {
     .theme-font{
         line-height: 24px;
     }
+}
+
+.suit-detail {
+    color: $color-gray;
+    @include borderRadius(24px);
+    border: 1px solid $border-color;
+    width: 5rem;
+    i{
+        color: $border-color;
+        margin-right: 0 !important;
+    }
+}
+
+.suit-detail-list {
+    display:none;
 }
 
 .tabs-list {
@@ -787,6 +843,7 @@ i.icon-vip {
     color:#68839f;
     line-height: 24px;
     display: inline-block;
+    font-size: $md-font;
 }
 .more {
     line-height: 28px;
@@ -806,6 +863,7 @@ i.icon-vip {
     }
     .blue-font {
         margin-right: .5rem;
+        font-size: 14px;
         i{
             font-size: 20px;
         }
@@ -896,18 +954,16 @@ i.icon-vip {
 }
 .sort-list {
     padding: .25rem 0 .25rem .5rem;
-    width: 100%;
+    display: -webkit-box;
     overflow-y: auto;
     font-size: $md-font;
     p {
-        float: left;
         width: 3rem;
         line-height: 26px;
     }
     ul {
         padding: 0 $gauge;
-        float: left;
-        width: 11.5rem;
+        -webkit-box-flex:1;
     }
     li {
         float: left;
@@ -1125,7 +1181,7 @@ i.icon-vip {
     color: $color-gray;
     padding-left: 5rem;
 }
-.slide2,.slide3{
+.slide2{
     height: 13.4rem;
     font-size: $md-font;
     .slide-img{

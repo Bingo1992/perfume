@@ -471,35 +471,11 @@
 
     <script type='text/javascript'>
     $(document).ready(function() {
-        //产品筛选
-        $('.js-sort').click(function() {
-            $('.pro-sort-dialog').addClass('show');
-            $('body').addClass('fixed-body'); //固定遮罩下层内容
-
-            //选择类型
-            $('.sort-list').find('li').click(function() {
-                // $(this).addClass('active').siblings().removeClass('active');
-                active($(this));
-            });
-
-            //点击重置按钮
-            $('.btn-reset').click(function() {
-               hideDialog();
-            });
-
-            //点击遮罩
-            $('.ps-dialog').click(function(){
-                hideDialog();
-            });
-        });
-
+       //显示香水详情遮罩
         $('.bottle-img').find('p').click(function(){
             show_hide_dialog();
         })
-        function hideDialog(){
-            $('.pro-sort-dialog').removeClass('show');
-            $('body').removeClass('fixed-body'); //取消固定
-        }
+       
 
     });
     </script>

@@ -213,11 +213,12 @@ function remove_v_tube(i) {
 //随着试管多少瓶子的变化
 function bottle_change() {
     var len = $('.slider').length;
-    if (len < 7) {
+    if(len==0){
+
+    }else if (len < 7) {
         $('.add-recipe').removeClass('hide')
             .find('p').removeClass('hide')
             .siblings('i').css('font-size', '50px');
-
     }
     if (len >= 7) {
         $('.add-recipe').find('p').addClass('hide').siblings('i').css('font-size', '30px');

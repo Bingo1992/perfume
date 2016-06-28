@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 
 <head>
@@ -81,15 +81,44 @@
                 <i class="icon-bottle_1"></i>
                 <p class="sort-p"  data-num="4">选择下列香基自由组合属于自己的配方</p>
             </div>
-
-           
         </div>
 
         <div class="btn-perfume bg-show">
-            <div class="btn btn-main">选择主香</div>
-            <div class="btn btn-assist">选择辅香</div>
-            <div class="btn btn-minor">选择次香</div>
+            <div class="btn-main">选择主香</div>
+            <div class="btn-assist">选择辅香</div>
+            <div class="btn-minor">选择次香</div>
+            <div class="js-sort btn-border">推荐配方</div>
         </div>
+
+        <!-- 选择浓度 -->
+        <div class="bg-show">
+        	<div class="list-box">
+                <span class="list-info">
+                    <label>选择浓度</label>
+                </span>
+                <select class="select">
+                    <option>10%</option>
+                    <option>20%</option>
+                    <option>50%</option>
+                </select>
+                <i class="icon-right"></i>
+            </div>
+        </div>
+        <!-- 选择容量 -->
+        <div class="bg-show">
+        	<div class="list-box">
+                <span class="list-info">
+                    <label>选择容量</label>
+                </span>
+                <select class="select">
+                    <option>100ml</option>
+                    <option>200ml</option>
+                    <option>300ml</option>
+                </select>
+                <i class="icon-right"></i>
+            </div>
+        </div>
+
         <!-- 选择瓶形 -->
         <div class="bg-show">
             <div class="js-select list-box border-bottom">
@@ -290,153 +319,160 @@
     <!-- -选择香基遮罩- -->
     <div class="pro-dialog hide">
         <div class="pro-cnt">
-          
-            <!-- 图片列表 -->
-            <div class="container-outter">
-                <table class="bottle-img container-inner">
-                    <!-- 两个tr代表两行，当图片少于等于5个时只需一行 ，超过5个则用两行的形式展示-->
-                    <tbody><tr>
-                        <td>
-                            <label for="s1">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s1" type="checkbox" name="single" checked="">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s2">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s2" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s3">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s3" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s4">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s4" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s5">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s5" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s5">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s5" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="s6">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s6" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s7">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s7" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s8">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s8" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s9">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s9" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                        <td>
-                            <label for="s9">
-                                <img src="img/s1.jpg">
-                                <div class="checkbox">
-                                    <input id="s9" type="checkbox" name="single">
-                                    <i class="icon-hook"></i>
-                                </div>
-                            </label>
-                            <p class="nowrap">香基名称香基名称</p>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-
-            <!-- 进度条 -->
-            <ul class="slider-container border-list">
+            <ul class="border-list">
                 <li class="list-box">
+                    <label for="s1">
+                        <img src="img/s1.jpg">
+                        <div class="checkbox">
+                            <input id="s1" type="checkbox" name="single" checked="">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
                     <div class="list-info">
-                        <span>香精名称</span>
-                        <div class="horizational-tube">
-                            <div class="h-min-tube"></div>   
+                        <div class="list-box">
+                            <div class="list-info">
+                                <h4>香精名称</h4>
+                            </div>
+                            <a class="blue-font">查看详情</a>
+                        </div>
+                        <p class="nowrap-2">黑色，卓尔不群。无与伦比，令人着迷。它强烈的个性与神秘的优雅，预示着超乎想象</p>
+                        <div class="tip-label">
+                            <span class="purple-label">NO5主香</span>
+                            <span class="green-label">大师推荐</span>
+                            <span class="orange-label">偶像首选</span>
+                            <span class="blue-label">标签名称</span>
                         </div>
                     </div>
-                    <div class="amount-2">
-                        <span class="minus icon-minus"></span>
-                        <span class="m-caculate count">10</span>
-                        <span class="plus icon-plus"></span>
+                </li>
+                <li class="list-box">
+                    <label for="s2">
+                        <img src="img/s1.jpg">
+                        <div class="checkbox">
+                            <input id="s2" type="checkbox" name="single">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                    <div class="list-info">
+                        <div class="list-box">
+                            <div class="list-info">
+                                <h4>香精名称</h4>
+                            </div>
+                            <a class="blue-font">查看详情</a>
+                        </div>
+                        <p class="nowrap-2">黑色，卓尔不群。无与伦比，令人着迷。它强烈的个性与神秘的优雅，预示着超乎想象</p>
+                        <div class="tip-label">
+                            <span class="purple-label">NO5主香</span>
+                            <span class="green-label">大师推荐</span>
+                            <span class="orange-label">偶像首选</span>
+                            <span class="blue-label">标签名称</span>
+                        </div>
                     </div>
                 </li>
-        
-            </ul>   
+                <li class="list-box">
+                    <label for="s3">
+                        <img src="img/s1.jpg">
+                        <div class="checkbox">
+                            <input id="s3" type="checkbox" name="single">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                    <div class="list-info">
+                        <div class="list-box">
+                            <div class="list-info">
+                                <h4>香精名称</h4>
+                            </div>
+                            <a class="blue-font">查看详情</a>
+                        </div>
+                        <p class="nowrap-2">黑色，卓尔不群。无与伦比，令人着迷。它强烈的个性与神秘的优雅，预示着超乎想象</p>
+                        <div class="tip-label">
+                            <span class="purple-label">NO5主香</span>
+                            <span class="green-label">大师推荐</span>
+                            <span class="orange-label">偶像首选</span>
+                            <span class="blue-label">标签名称</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-box">
+                    <label for="s4">
+                        <img src="img/s1.jpg">
+                        <div class="checkbox">
+                            <input id="s4" type="checkbox" name="single">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                    <div class="list-info">
+                        <div class="list-box">
+                            <div class="list-info">
+                                <h4>香精名称</h4>
+                            </div>
+                            <a class="blue-font">查看详情</a>
+                        </div>
+                        <p class="nowrap-2">黑色，卓尔不群。无与伦比，令人着迷。它强烈的个性与神秘的优雅，预示着超乎想象</p>
+                        <div class="tip-label">
+                            <span class="purple-label">NO5主香</span>
+                            <span class="green-label">大师推荐</span>
+                            <span class="orange-label">偶像首选</span>
+                            <span class="blue-label">标签名称</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-box">
+                    <label for="s5">
+                        <img src="img/s1.jpg">
+                        <div class="checkbox">
+                            <input id="s5" type="checkbox" name="single">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                    <div class="list-info">
+                        <div class="list-box">
+                            <div class="list-info">
+                                <h4>香精名称</h4>
+                            </div>
+                            <a class="blue-font">查看详情</a>
+                        </div>
+                        <p class="nowrap-2">黑色，卓尔不群。无与伦比，令人着迷。它强烈的个性与神秘的优雅，预示着超乎想象</p>
+                        <div class="tip-label">
+                            <span class="purple-label">NO5主香</span>
+                            <span class="green-label">大师推荐</span>
+                            <span class="orange-label">偶像首选</span>
+                            <span class="blue-label">标签名称</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>  
 
-            <div class="two-btn">
+            <div class="two-btn border-top">
                 <a class="btn-border return">返回</a>
                 <a class="btn btn-bg confirm">确定</a>
             </div> 
         </div>
     </div>
-
+    
+    <!-- 推荐配方遮罩 -->
+    <div class="pro-sort-dialog">
+        <div class="ps-dialog"></div>
+        <div class="pro-sort-content">
+            <header class="border-bottom">推荐配方</header>
+            <div class="sort-list">
+                <ul>
+                    <li class="active">配方名称</li>
+                    <li>配方名称</li>
+                    <li>配方名称</li>
+                    <li>配方名称</li>
+                    <li>配方名</li>
+                    <li>配方名称</li>
+                    <li>配方名称配方</li>
+                </ul>
+            </div>
+            <div class="border-top">
+                <div class="right-btn">
+                    <p class="btn-reset">返回</p>
+                    <p class="btn">确定</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 香水详情遮罩 -->
     <div class="perfume-dialog ui-dialog">
@@ -473,7 +509,7 @@
     $(document).ready(function() {
 
         //显示香基详情
-        $('.container-outter').find('.nowrap').click(function() {
+        $('.pro-cnt').find('.blue-font').click(function() {
              $('.perfume-dialog').addClass('show');
             $('.cancel').click(function(){
                 $('.perfume-dialog').removeClass('show');

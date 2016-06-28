@@ -285,7 +285,7 @@ $gauge: .5rem;
 }
 .two-btn {
     // border-top: 1px solid #eee;
-    padding: $gauge * 2 0;
+    padding: 20px 0;
     @extend %box;
     -webkit-box-orient: horizontal;
     box-sizing:border-box;
