@@ -823,10 +823,19 @@ i.icon-right, i.icon-up, i.icon-down, i.icon-left {
   background-color: #8fcbfd;
 }
 
+.perfume-state {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.perfume-state h4 {
+  padding: .5rem .5rem .2rem .5rem;
+}
+
 .add-recipe {
   -webkit-box-orient: vertical;
   -webkit-box-flex: 1;
-  padding: 80px 0;
+  padding: 70px 0;
 }
 .add-recipe i {
   font-size: 60px;
@@ -834,6 +843,7 @@ i.icon-right, i.icon-up, i.icon-down, i.icon-left {
 }
 .add-recipe p {
   padding: 0 1rem;
+  margin: .25rem 0;
 }
 
 .bottle-sort {
