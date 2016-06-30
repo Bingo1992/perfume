@@ -1,8 +1,8 @@
-$(function() {
-	var total = $('.total-ml').html(); //总容量
-	var calculate = $('.caculate-ml').html(); //统计容量
-	var m_total = 100; //每条试管总数
-	var step = 5;
+$(function() {	
+    var total = $('.total-ml').html(); //总容量
+    var calculate = $('.caculate-ml').html(); //统计容量
+    var m_total = 100; //每条试管总数
+    var step = 5;
 
     //升
     $('.perfume-slider').delegate('.plus', 'touchstart', function() {
@@ -88,18 +88,28 @@ $(function() {
 
     });
 
-    // 统计纵向试管ml总数
-    function v_caculate() {
-        var s_total = 0; //所有试管ml总数
-        $('.slider').each(function() {
-            var value = parseInt($(this).find('.m-caculate').html());
-            s_total += value;
-            if (s_total >= total) {
-                $('.plus').addClass('btn-disable');
-            }
-        });
-        $('.caculate-ml').html(s_total);
-    }
+    //编辑试管(删除)
+    $('.per-edit').click(function () {
+        if($(this).html()=="编辑"){
+            $(this).html("完成");
+            $('.perfume-slider .slider').each(function(){
+                var _this = $(this);
+                var $i = $(this).find('i.icon-cancel');
+                $i.addClass('show'); //显示x号
+
+                $i.click(function(){
+                    _this.remove();
+                   bottle_change();//瓶子修改 
+                   v_caculate();//统计总容量
+                });
+             });
+
+        }else {
+            $(this).html("编辑");
+            $('.slider').find('i.icon-cancel').removeClass('show');//隐藏删除按钮
+        }
+                 
+    });
 
     //主香遮罩
     $('.btn-perfume').delegate('.btn-main', 'click', function() {
@@ -125,18 +135,21 @@ $(function() {
     function perNum(i) {
         var check_num = [1, 5, 3]; //主香只可选择一种
         var per_name = ["主香", "辅香", "次香"];
-        var flag;
+       
+
+        // --------选择主辅次香的数量---------
         $('.pro-cnt').delegate(':checkbox', 'click', function() {
             var _this = $(this);
-            flag = 0;
+            var flag = 0;
             //统计checked数目
             $(".pro-cnt :checkbox").each(function(j) {
                 var check = $(".pro-cnt :checkbox").eq(j).prop("checked");
                 if (check == true) {
                     flag++;
                     if (flag > check_num[i]) {
-                        flag--;
                         _this.prop("checked", false);
+                        flag--;
+                        
                         //超出限制提示框
                         var html = '您最多可以选择' + check_num[i] + '种' + per_name[i];
                         overflow_dialog(html);
@@ -147,18 +160,39 @@ $(function() {
                 var html2 = '您至少要选择1种' + per_name[i];
                 overflow_dialog(html2);
             }
-
         });
 
-        //点击确定添加纵向试管
+        //----------点击确定添加纵向试管------------
         $('.confirm').click(function() {
-            for(var k = 0; k < flag; k++){
+            var flag2 = 0;
+            $(".pro-cnt :checkbox").each(function(j) {
+                var check = $(".pro-cnt :checkbox").eq(j).prop("checked");
+                if (check == true) {
+                    flag2++;//点击确定时判断checked的个数
+                }
+            });
+            for(var k = 0; k < flag2; k++){
                 add_v_tube(i);//多少个checkbox=checked则加几支试管
             }
+            v_caculate();
         });
+    }//主香，辅香，次香的选择结束
+
+
+    // 统计纵向试管ml总数
+    function v_caculate() {
+        var s_total = 0; //所有试管ml总数
+        $('.slider').each(function() {
+            var value = parseInt($(this).find('.m-caculate').html());
+            s_total += value;
+            if (s_total >= total) {
+                $('.plus').addClass('btn-disable');
+            }
+        });
+        $('.caculate-ml').html(s_total);
     }
 
-});
+}); //(function())
 
 	
 
@@ -221,10 +255,6 @@ function add_v_tube(i) {
     sortByInput(asc); //主，辅，次排序
 }
 
-//减去纵向试管
-function remove_v_tube(i) {
-    $('.perfume-slider').find('.slider').eq(i).remove(); //此处只是减去最后一个
-}
 
 //随着试管多少瓶子的变化
 function bottle_change() {

@@ -101,7 +101,7 @@ img {
   position: relative;
 }
 
-.border-top:after, .bg-show:before, .border-list:before, .border-bottom:after, .bg-show:after, .border-list li:after, .dialog-cnt h2:after, .individuality-tabs li:after, .individuality-tabs-list li:after, .m-table th:after, .m-table td:after, .m-table-2 th:after, .m-table-2 td:after, .address-info:after, .border-right:after, .slider:after, .individuality-tabs:after, .border-left:after, .btn-cart:before, .right-btn .btn-reset:after, .match-suit:after {
+.border-top:after, .bg-show:before, .border-list:before, .border-bottom:after, .bg-show:after, .border-list li:after, .dialog-cnt h2:after, .individuality-tabs li:after, .individuality-tabs-list li:after, .m-table th:after, .m-table td:after, .m-table-2 th:after, .m-table-2 td:after, .address-info:after, .border-right:after, .slider:after, .individuality-tabs:after, .border-left:after, .btn-cart:before, .right-btn .btn-reset:after, .suit-detail:after, .match-suit:after {
   position: absolute;
   display: block;
   content: "";
@@ -1156,12 +1156,13 @@ i.icon-vip {
 
 .suit-detail {
   color: #898989;
-  height: 24px;
-  line-height: 24px;
-  border-radius: 6px;
+  width: 4rem;
   text-align: center;
+  position: relative;
+}
+.suit-detail:after {
   border: 1px solid #e1e1e1;
-  width: 5rem;
+  border-radius: 6px;
 }
 .suit-detail i {
   color: #e1e1e1;
@@ -1170,6 +1171,10 @@ i.icon-vip {
 
 .suit-detail-list {
   display: none;
+}
+.suit-detail-list img {
+  width: 50px;
+  height: 50px;
 }
 
 .tabs-list {
@@ -1630,8 +1635,8 @@ i.icon-vip {
 }
 
 .love.focus {
-  color: #f00;
-  border-color: #f00;
+  color: #fe007f;
+  border-color: #fe007f;
 }
 
 .share-dialog {

@@ -474,7 +474,42 @@
        //显示香水详情遮罩
         $('.bottle-img').find('p').click(function(){
             show_hide_dialog();
-        })
+        });
+
+        var m_total = 100; //每条试管总数
+        var step = 5;
+        //试管增加
+        $('.slider').find('.plus').on('touchstart',function(){
+            var $v_parent = $(this).parent(); //纵向
+            var $tube = $v_parent.find('.min-tube');
+
+            var $m_caculate = $v_parent.find('.m-caculate');
+            var m_caculate = parseInt($m_caculate.html());
+            if (m_caculate < m_total) {
+                m_caculate += step; //加
+                $m_caculate.html(m_caculate);
+            }
+            var per = (m_caculate / m_total) * 100 + "%";
+            $tube.css('height', per);
+        
+        });
+
+        // 试管减少
+        $('.slider').find('.minus').on('touchstart',function(){
+            var $v_parent = $(this).parent(); //纵向
+            var $tube = $v_parent.find('.min-tube');
+
+            var $m_caculate = $v_parent.find('.m-caculate');
+            var m_caculate = parseInt($m_caculate.html());
+            if (m_caculate > 0) {
+                m_caculate -= step; //减
+                $m_caculate.html(m_caculate);
+            }
+            var per = (m_caculate / m_total) * 100 + "%";
+            $tube.css('height', per);
+        
+        });
+
        
 
     });

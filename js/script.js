@@ -119,7 +119,7 @@ $(function(){
             $('.share-dialog').click(function(){
                 $(this).removeClass('show');
             });
-        })
+        });
 
  });
 

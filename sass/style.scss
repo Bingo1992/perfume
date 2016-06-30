@@ -647,9 +647,14 @@ i.icon-vip {
 
 .suit-detail {
     color: $color-gray;
-    @include borderRadius(24px);
-    border: 1px solid $border-color;
-    width: 5rem;
+    width: 4rem;
+    text-align: center;
+    position: relative;
+    &:after {
+        @extend %mini-border;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+    }
     i{
         color: $border-color;
         margin-right: 0 !important;
@@ -658,6 +663,10 @@ i.icon-vip {
 
 .suit-detail-list {
     display:none;
+    img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .tabs-list {
@@ -1114,8 +1123,8 @@ i.icon-vip {
 }
 
 .love.focus {
-    color: #f00;
-    border-color: #f00;
+    color: $color-theme;
+    border-color: $color-theme;
 }
 
 .share-dialog {
@@ -1192,6 +1201,16 @@ i.icon-vip {
     color: $color-gray;
     padding-left: 5rem;
 }
+
+// .select{
+//     font-size: $md-font;
+//     color: $color-gray;
+//     line-height: 24px;
+//     padding-left: 12.6rem;
+//     width: 100%;
+//     position: absolute;
+//     right: 0;
+// }
 .slide2{
     height: 13.4rem;
     font-size: $md-font;

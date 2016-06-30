@@ -23,7 +23,7 @@
             <div class="list-box">
                 <div class="list-info">
                     <p class="gray-font">总容量
-                        <span class="theme-font"><span class="caculate-ml">40</span>/<span class="total-ml">100</span>%</span>
+                        <span class="theme-font"><span class="caculate-ml">0</span>/<span class="total-ml">100</span>%</span>
                     </p>
                 </div>
                 <div class="per-edit btn-border">编辑</div>
@@ -32,7 +32,7 @@
         <!-- 试管 -->
 
         <div class="perfume-slider">
-            <div class="slider sort-slider">
+          <!--   <div class="slider sort-slider">
                 <i class="icon-cancel"></i>
                 <p class="main-p sort-p" data-num="1">主香</p>
                 <p class="plus icon-plus"></p>
@@ -76,19 +76,18 @@
                     <p class="gray-font"><span class="m-caculate">5</span>%</p>
                     <p class="gray-font border-top">玫瑰</p>
                 </div>
-            </div>
+            </div> -->
 
+            <!-- 添加的描述 -->
             <div class="add-recipe  sort-slider">
                 <i class="icon-bottle_1"></i>
                 <p class="sort-p"  data-num="4">选择下列香基自由组合属于自己的配方</p>
-                <p class="stage-p hide">
+                <p class="stage-p">
                     1、主香只可选择1种，容量为25%~50%;<br>
-                    2、辅香可选择1~5种，每种容量5%~50%；<br>
+                    2、辅香可选择1~5种，每种容量5%~50%;<br>
                     3、次香可选择1~3种，每种容量为5%.
                 </p>
-            </div>
-
-           
+            </div> 
         </div>
 
         <div class="btn-perfume bg-show">
@@ -117,6 +116,7 @@
                     <option>20%</option>
                     <option>50%</option>
                 </select>
+                    
                 <i class="icon-right"></i>
             </div>
         </div>
@@ -131,6 +131,7 @@
                     <option>200ml</option>
                     <option>300ml</option>
                 </select>
+                    
                 <i class="icon-right"></i>
             </div>
         </div>
@@ -526,33 +527,14 @@
 
         //显示香基详情
         $('.pro-cnt').find('.blue-font').click(function() {
-             $('.perfume-dialog').addClass('show');
+            $('.perfume-dialog').addClass('show');
             $('.cancel').click(function(){
                 $('.perfume-dialog').removeClass('show');
             });
         });
 
 
-        //编辑试管
-        $('.per-edit').click(function () {
-            if($(this).html()=="编辑"){
-                $(this).html("完成");
-                $('.perfume-slider .slider').each(function(){
-                    var _this = $(this);
-                    var $i = $(this).find('i.icon-cancel');
-                    $i.addClass('show');
-                    $i.click(function(){
-                        _this.remove();
-                       bottle_change();//瓶子修改 
-                    });
-                 });
 
-            }else {
-                $(this).html("编辑");
-                $('.slider').find('i.icon-cancel').removeClass('show');//隐藏删除按钮
-            }
-                     
-        })
     });
     </script>
 </body>
