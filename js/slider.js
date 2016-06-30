@@ -210,7 +210,7 @@ function pro_dialog() {
     $('.return').click(function() {
         $('.pro-dialog').addClass('hide');
         $('body').removeClass('fixed-body');
-        history.go(0); //刷新页面
+        // history.go(0); //刷新页面
     });
     // 确定按钮
     $('.confirm').click(function() {
