@@ -200,7 +200,7 @@ $(function() {
 function pro_dialog() {
     if ($('.per-edit').html() == "完成") {
         overflow_dialog("编辑状态下不可选择");
-    } else if($('.caculate-ml').html == 100){
+    } else if($('.caculate-ml').html() == 100){
     	overflow_dialog("总量已达100%，不可再添加");
     } else {
         $('.pro-dialog').removeClass('hide');
