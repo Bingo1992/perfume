@@ -121,6 +121,20 @@ $(function(){
             });
         });
 
+
+        // -------cart_list.html， order_list.html-----
+        //点击显示套装详情
+        $('.suit-detail').click(function(){
+            var $i = $(this).find('i');
+            var $li = $(this).parents('li');
+            $li.find('.suit-detail-list').toggleClass('show');
+            if($i.hasClass('icon-right')){
+                $i.attr('class','icon-up');
+            }else{
+                $i.attr('class','icon-right');
+            }
+        })
+
  });
 
  //购物车数量加减

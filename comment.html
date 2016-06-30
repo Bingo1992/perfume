@@ -20,11 +20,11 @@
             <ul class="form-list border-list">
                 <li>
                     <label>香水名称：</label>
-                    <input class="name" name="textfield" type="text" placeholder="请输入香水名称" />
+                    <input class="per-name" name="textfield" type="text" placeholder="请输入香水名称" />
                 </li>
                 <li>
                     <label>特性描述：</label>
-                    <input class="mobile" name="textfield" type="tel" placeholder="请输入特性描述" />
+                    <input class="state" name="textfield" type="text" placeholder="请输入特性描述" />
                 </li>
             </ul>
             <div class="pro-sort-content border-bottom">
@@ -55,7 +55,7 @@
 
             <textarea class="com-text" placeholder="告诉大伙您对本商品的感受···" rows="4"></textarea>
             <div class="auto-btn">
-                <a class="btn btn-bg" type="submit">
+                <a id="btn-comment" class="btn btn-bg">
                     提交评价
                 </a>
             </div>
@@ -103,6 +103,15 @@
             </li>
         </ul>
     </div>
+
+    <!-- 表单验证遮罩 -->
+    <div class="tip-dialog">
+        <div class="tip-content">
+            <i class="icon-hook icon-tip"></i>
+            <p>手机号不能为空</p>
+        </div>
+        
+    </div>
     <script type="text/javascript">
     $(function() {
 
@@ -134,9 +143,18 @@
             });
         });
 
-        //选择使用场景
-        $('.sort-list').find('li').click(function() {
-            active($(this));
+        //表单验证
+        $('#btn-comment').click(function() {
+            var nameValue = $('.per-name').val();
+            var stateValue = $('.state').val();  
+            if(nameValue == ''){
+                empty_p('香水名称不能为空');
+            } else if(stateValue == '') {
+                empty_p('特性描述不能为空');
+            } else {
+                yes_p('提交成功');
+            }
+
         });
 
 

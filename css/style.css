@@ -1156,9 +1156,10 @@ i.icon-vip {
 
 .suit-detail {
   color: #898989;
-  width: 4rem;
-  text-align: center;
+  width: 78px;
+  padding-left: 10px;
   position: relative;
+  margin: 5px 0;
 }
 .suit-detail:after {
   border: 1px solid #e1e1e1;
