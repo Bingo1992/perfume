@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>商城首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/swipeSlide.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="banner-2">
+        <!-- 头部 -->
+        <div class="bg-show">
+             <!--banner轮播-->
+            <div class="slide" id="slide2">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/ban2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/ban2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/ban2.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="dot">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!--banner end-->
+
+            <div class="detail-info">
+                 <p>范思哲(VERSACE)晶钻女用香水 30ml(又名：范思哲(VERSACE)晶钻女士香水 30ml)</p>
+                <div class="list-box">
+                    <div class="list-info">
+                        <span class="theme-font">￥<span>309</span></span>
+                    </div>
+                    <span class="blue-font">
+                        销量
+                        <span>47283</span>
+                    </span>
+                </div>
+            </div>    
+        </div>
+
+        <!-- 购买数量 -->
+        <div class="bg-show">
+            <div class="list-box">
+                <div class="list-info">
+                    <h4>购买数量</h4>
+                </div>
+                <div class="amount">
+                    <span class="minus icon-minus"></span>
+                    <input type="text" class="count" value="1">
+                    <span class="plus icon-plus"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品介绍 -->
+        <div class="bg-show introduce-pro">
+           <h4>产品介绍</h4>
+           <div class="rich-content">
+               <img src="img/detail1.jpg">
+               <img src="img/detail2.jpg">
+               <img src="img/detail3.jpg">
+           </div>
+        </div>
+           
+    </div>
+    <!-- -banner- -->
+    <!-- 底部固定内容 -->
+    <div class="fixed-bottom">
+        <div class="actionBar-container list-box border-top">
+          
+            <ul class="nav-2">
+                <li>
+                    <a href="index.html">
+                        <i class="icon-home_1"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart_list.html">
+                        <i class="icon-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+            </ul>
+       
+            <a class="btn-cart">加入购物车</a>
+            <a class="btn" href="package_setting.html">立即购买</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        //banner图片只有一张时，隐藏圆点
+        window.onload = function() {
+                var len = $('#slide2 li').length;
+                if (len <= 1) {
+                    $('.dot').addClass('hide');
+                }
+            }
+            //首页banner 图片轮播效果
+        $('#slide2').swipeSlide({
+            continuousScroll: true,
+            speed: 3000,
+            transitionType: 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+            callback: function(i) {
+                $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+            }
+        });
+
+    });
+    </script>
+</body>
+
+</html>

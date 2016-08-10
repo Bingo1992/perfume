@@ -172,7 +172,7 @@ $(function() {
                 }
             });
             for(var k = 0; k < flag2; k++){
-                add_v_tube(i);//多少个checkbox=checked则加几支试管
+               add_v_tube(i);//多少个checkbox=checked则加几支试管
             }
             v_caculate();
         });
@@ -217,7 +217,6 @@ function pro_dialog() {
         $('.pro-dialog').addClass('hide');
         $('body').removeClass('fixed-body');
         // history.go(0); //刷新页面
-
     });
 }
 

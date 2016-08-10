@@ -34,3 +34,7 @@
 帮助中心： help.html
 我的配方：my_recipe.html
 会员推广：member_popularize.html
+
+
+其他产品信息：product.html
+产品详情：product_detail.html
