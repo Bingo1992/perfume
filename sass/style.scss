@@ -60,7 +60,56 @@
     @include height;
     text-align: center;
 }
+.navBar {
+    position: relative;
+    a{
+        position: relative;
+        top: -.8rem;
+        @include circle(2.9rem);
+        background-color: $color-theme;
+        z-index: 6;
+        box-sizing: border-box;
+        // border: .4rem solid #231418;
+    }
+   
+    i{
+        color: #fff !important;
+    }
+}
 
+.nav-bar {
+    position:absolute;
+    width: 11.1rem;
+    height: 4.55rem;
+    left: 50%;
+    margin-left: -5.7rem;
+    background-image: url(../img/navBg.png);
+    background-size: 100% 100%;
+    bottom: 60px;
+    p{
+        color: #fff;
+        line-height: 1.2rem;
+    }
+    a{
+        position: absolute;
+        top: .6rem;
+        @include circle(2.4rem);
+    }
+    a:nth-child(1){
+        left:.7rem;
+    }
+    a:nth-child(2){
+        background-color: #ff4444;
+        left: 50%;
+        margin-left: -1.2rem;
+        top: -.7rem;
+    }
+    a:nth-child(3){
+        background-color: #a04bff;
+        right: .7rem;
+        
+    }
+}
 // -----customization.html-----
 // .slider-example {
 //     display: -webkit-box;

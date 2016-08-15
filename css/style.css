@@ -601,6 +601,62 @@ i.icon-right, i.icon-up, i.icon-down, i.icon-left {
   text-align: center;
 }
 
+.navBar {
+  position: relative;
+}
+.navBar a {
+  position: relative;
+  top: -.8rem;
+  height: 2.9rem;
+  line-height: 2.9rem;
+  border-radius: 2.9rem;
+  width: 2.9rem;
+  text-align: center;
+  background-color: #fe007f;
+  z-index: 6;
+  box-sizing: border-box;
+}
+.navBar i {
+  color: #fff !important;
+}
+
+.nav-bar {
+  position: absolute;
+  width: 11.1rem;
+  height: 4.55rem;
+  left: 50%;
+  margin-left: -5.7rem;
+  background-image: url(../img/navBg.png);
+  background-size: 100% 100%;
+  bottom: 60px;
+}
+.nav-bar p {
+  color: #fff;
+  line-height: 1.2rem;
+}
+.nav-bar a {
+  position: absolute;
+  top: .6rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  border-radius: 2.4rem;
+  width: 2.4rem;
+  text-align: center;
+}
+.nav-bar a:nth-child(1) {
+  left: .7rem;
+}
+.nav-bar a:nth-child(2) {
+  background-color: #ff4444;
+  left: 50%;
+  margin-left: -1.2rem;
+  top: -.7rem;
+}
+.nav-bar a:nth-child(3) {
+  background-color: #a04bff;
+  right: .7rem;
+}
+
 .perfume-slider {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
