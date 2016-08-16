@@ -322,19 +322,19 @@
                 </a>
             </li>
             <li class="navBar">
-                <a>
-                    <i class="icon-cancel"></i>
+                <a class="btn-navBar">
+                    <i class="icon-plus"></i>
                 </a>
                 <div class="nav-bar">
-                	<a href="#">
+                	<a href="private_recipe.html">
                 		<i class="icon-bottle_1"></i>
                 		<p>私属配方</p>
                 	</a>
-                	<a href="#">
+                	<a href="single_perfume.html">
                 		<i class="icon-bottle_2"></i>
                 		<p>独立香型</p>
                 	</a>
-                	<a href="#">
+                	<a href="match_suit.html">
                 		<i class="icon-gift"></i>
                 		<p>搭配套装</p>
                 	</a>
@@ -375,6 +375,17 @@
                 $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
             }
         });
+
+        $('.btn-navBar').click(function(){
+            $('.nav-bar').toggleClass('scale');
+            // $(this).find('i').toggleClass('rotate');
+            var $i = $(this).find('i');
+            if($i.hasClass('icon-plus')){
+                $i.attr('class','icon-cancel');
+            }else {
+                $i.attr('class','icon-plus');
+            }
+        })
         
     });
     </script>
