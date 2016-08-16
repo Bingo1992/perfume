@@ -2240,6 +2240,7 @@ i.icon-vip {
 }
 .navBar i.icon-cancel {
   font-weight: bold;
+  font-size: 28px;
 }
 .navBar i.icon-plus {
   font-size: 48px !important;
