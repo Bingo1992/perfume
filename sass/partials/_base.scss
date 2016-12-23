@@ -193,6 +193,12 @@ $gauge: .5rem;
 		color: $color-gray;
 		margin-bottom: 10px;
 	}
+    i[class*="bg-"] {
+        @include circle(80px);
+        color: #fff;
+        font-size: 60px;
+       
+    }
     .icon-wchat_1 {
         font-size: 55px;
     }
@@ -206,7 +212,9 @@ $gauge: .5rem;
         width: 6rem;
     }
 }
-
+.bg-success{background-color: #09BB07;}
+.bg-warn{background-color: #F76260;}
+.bg-info {background-color: #10AEFF;}
 // ----checkbox allcheck---
 .checkbox,.all-check {
     display: block;

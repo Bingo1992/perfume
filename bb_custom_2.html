@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>定制气垫BB霜</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="banner-2">
+        <div class="fixed-top bg-show">
+            <div class="head-portrait">
+                <img class="perPic" src="img/per_bb.png" alt="">
+                <img class="imgPic" src="img/bb_pic.png">
+                <img class="textPic"  src="img/bb_text.png">
+            </div>
+            <ul class="sort-pic-tab border-bottom">
+                <li class="active">图案选择</li>
+                <li>文字选择</li>
+            </ul>
+        </div>
+        <!-- 图案选择 -->
+        <div class="tabs-container bg-show show">
+            <ul class="bb-pic-select">
+                <li>
+                    <label>
+                        <img src="img/bb_pic.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1" checked>
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_pic_2.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_pic.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_pic_3.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_pic.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1" checked>
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_pic_2.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_pic.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_pic_3.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic1">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <!-- 文字选择 -->
+        <div class="tabs-container bg-show">
+            <ul class="bb-pic-select">
+                <li>
+                    <label>
+                        <img src="img/bb_text.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic2" checked>
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_text_2.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic2">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_text.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic2">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <img src="img/bb_text.png">
+                        <div class="checkbox">
+                            <input type="radio" name="pic2">
+                            <i class="icon-hook"></i>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- -banner- -->
+    <!-- 底部固定内容 -->
+    <div class="fixed-bottom">
+        <div class="actionBar-container border-top">
+            <ul class="equably-layout">
+                <li>
+                    <a class="btn-cancel btn" onclick="history.back(0);">返回</a>
+                </li>
+                <li>
+                    <a class="btn btn-exportImg">马上定制</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 完成定制提示 -->
+    <div class="tip-dialog">
+        <div class="tip-content">
+            <i class="icon-tip icon-hook"></i>
+            <p>定制成功</p>
+        </div>
+    </div>
+
+    <!-- 筛选遮罩 -->
+    <div class="pro-sort-dialog">
+        <div class="ps-dialog"></div>
+        <div class="pro-buy-content">
+            <i class="btn-reset icon-cancel"></i>
+            <div class="pro-name-box border-bottom">
+                <h4>定制气垫BB霜</h4>
+                <p class="theme-font">￥<span>200.00</span></p>
+            </div>
+            <div class="sort-list-cnt">
+                <div class="sort-list">
+                    <h4>颜色分类</h4>
+                    <ul>
+                        <li>浅粉色</li>
+                        <li>浅米色</li>
+                        <li>自然粉色</li>
+                        <li>自然米色</li>
+                        <li>深米色</li>
+                    </ul>
+                </div>
+                <div class="sort-list">
+                    <h4>功效</h4>
+                    <ul>
+                        <li>补水/保湿</li>
+                        <li>抗皱遮瑕</li>
+                        <li>美白亮肤</li>
+                        <li>定妆</li>
+                        <li>隔离</li>
+                        <li>细致毛孔</li>
+                    </ul>
+                </div>
+                 <div class="list-box border-top">
+                    <div class="list-info">
+                        <h4>购买数量</h4>
+                    </div>
+                    <div class="amount">
+                        <span class="minus icon-minus"></span>
+                        <input type="text" class="count" value="1">
+                        <span class="plus icon-plus"></span>
+                    </div>
+                </div>
+            </div>
+ 
+            <a class="btn btn-confirm">立即购买</a>
+        </div>
+    </div>
+
+    <!-- 合成的图片隐藏域 -->
+    <img class="export-img hide">
+
+
+
+    <script type="text/javascript">
+    $(function() {
+        //tab选项卡
+        $('.sort-pic-tab').find('li').click(function() {
+            active($(this));
+            var index = $('.sort-pic-tab li').index($(this));
+            $('.tabs-container').eq(index).addClass('show').siblings('.tabs-container').removeClass('show');
+        });
+
+
+        // ---合成图片----
+        var imgPic = 'img/bb_pic.png'; //选中的图案
+        var textPic = 'img/bb_text.png'; //选中的文字
+        var srcData = [],base64 = [];
+        //选择图片
+        $('.tabs-container :radio').click(function() {
+            var $parent = $(this).closest('.tabs-container');
+            var index = $('.tabs-container').index($parent); //index=0则图案，index=1则文字
+            var $img = $(this).closest('.checkbox').siblings('img');
+            if (index == 0) {
+                imgPic = $img.attr('src');
+                $('.imgPic').attr('src',imgPic);
+            } else if (index == 1) {
+                textPic = $img.attr('src');
+                $('.textPic').attr('src',textPic);
+            }
+
+        });
+
+        //合成图片，并存于隐藏域中
+        $('.btn-exportImg').click(function(){
+            drawImg(function() {
+                $('.export-img').attr('src', base64[0]);//图片合成需要在服务器下运行
+            });
+           $('.pro-sort-dialog').addClass('show');//选择属性
+           
+           //点击立即购买
+           $('.btn-confirm').click(function(){
+                var listLen = $('.sort-list').length;//选项个数
+                var activeNum = $('.sort-list .active').length;//已选个数
+                if(activeNum < listLen){
+                    alert('还有未选项');
+                }else {
+                    window.location.href ="package_setting.html";
+                }
+           });
+        });
+      
+        function drawImg(fn) {
+            var srcData = ['img/per_bb.png', imgPic, textPic];
+            var canvas = document.createElement('canvas'),
+                ctx = canvas.getContext('2d'),
+                len = srcData.length;
+
+            canvas.width = 300;//生成的图片宽高
+            canvas.height = 300;
+            ctx.rect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+
+            function drawing(i) {
+                if (i < len) {
+                    var img = new Image;
+                    //img.crossOrigin = 'Anonymous'; //解决跨域
+                    img.src = srcData[i];
+                    img.onload = function() {
+                        ctx.drawImage(img, 0, 0, 300, 300);
+                        drawing(i + 1); //递归
+                    }
+                } else {
+                    //保存生成作品图片
+                    base64.push(canvas.toDataURL("image/jpeg", 0.8));
+                    //alert(JSON.stringify(base64));
+                    fn();
+                }
+            }
+            drawing(0);
+        }
+    });
+    </script>
+</body>
+
+</html>

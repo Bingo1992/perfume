@@ -118,22 +118,33 @@
         //添加的图片大于4张时禁掉input
         $('.add-pic').find('input').change(function() {
 
-            var len = $('.upload-pic').find('img').length;
-            if (len >= 4) {
-                alert("上传的图片最多只能4张");
-                return;
-            }
-            else {
-                 var src = $(this).val();//获取文件路径
-                 $('.add-pic').before('<img>');
-            }
+            // var len = $('.upload-pic').find('img').length;
+            // if (len >= 4) {
+            //     alert("上传的图片最多只能4张");
+            //     return;
+            // }
+            // else {
+            //      var src = $(this).val();//获取文件路径
+            //      $('.add-pic').before('<img>');
+            // }
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var dataUri = event.target.result;
+                if($('.upload-pic img').length<4){
+                    $('.add-pic').before('<img src='+dataUri+'>');
+                }else {
+                   alert("上传的图片最多只能4张");
+                   return; 
+                }
+            };
+            reader.readAsDataURL(this.files[0]);
         });
 
         //删除添加的图片
-        $('.upload-pic').find('img').on('click', function() {
+        $('.upload-pic').delegate('img','click', function() {
             var _this = $(this);
             $('.ui-dialog').addClass('show');
-            $('.confirm').click(function() {
+            $('.confirm').unbind('click').click(function() {
                 _this.remove();
                 $('.ui-dialog').removeClass('show');
             });

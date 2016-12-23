@@ -46,9 +46,9 @@ $(function(){
         });
     
     	//购物车提示语
-    	$('.btn-cart').click(function(){
-            show_hide_TipDialog();//显示提示语(函数在script.js)
-        });
+    	// $('.btn-cart').click(function(){
+     //        show_hide_TipDialog();//显示提示语(函数在script.js)
+     //    });
 
          minus_plus();//购物车加减
 
@@ -79,6 +79,7 @@ $(function(){
 
         function hideSortDialog(){
             $('.pro-sort-dialog').removeClass('show');
+            $('.xtab-btn-slide').find('i').removeClass('rotate');
             $('body').removeClass('fixed-body'); //取消固定
         }
 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>定制气垫BB霜</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+     <!-- 图片裁剪插件 -->
+    <script src="js/iscroll-zoom.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/jquery.photoClip.js"></script>
+</head>
+
+<body>
+    <div class="banner-2">
+       <div class="btn-tip">
+            <p>?</p>
+            定制帮助
+        </div>
+        <div class="head-portrait">
+            <div id="view"></div>
+        </div>
+        <div class="btn-upload">
+            <div class="btn">上传图片</div>
+            <input class="portraitFile" id="portraitFile" type="file">
+        </div>
+        <div class="gauge-box">
+            <p class="gray-font">温馨提示：图片为印刷所用，为保证效果，因此图片建议上传3M大图</p>
+        </div>
+    </div>
+    <!-- -banner- -->
+    <!-- 底部固定内容 -->
+    <div class="fixed-bottom">
+        <div class="actionBar-container border-top">
+            <a class="btn btn-buy" href="bb_custom_2.html">下一步</a>
+        </div>
+    </div>
+
+    <!-- 图片裁剪 -->    
+    <article class="cutPic-container">
+        <div id="clipArea"></div>
+        <div class="two-btn">
+            <a class="cancel" href="#">取消</a>
+            <a id="clipBtn" class="confirm" href="#">保存</a>
+        </div>
+    </article>
+
+    <!-- 定制帮助 -->
+    <div class="ui-dialog">
+      <div class="dialog-cnt">
+        <div class="gauge-box">
+            <p class="gray-font">薰衣草是属于唇形科的一个属，约28种，分布于大西洋群岛及地中海地区至索马里，巴基斯坦及印度；我国仅栽培2种。薰衣草是属于唇形科的一个属，约28种，分布于大西洋群岛及地中海地区至索马里，巴基斯坦及印度；我国仅栽培2种。</p>
+        </div>
+        <div class="auto-btn">
+          <div class="btn btn-bg cancel">确定</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+   $(function(){
+        // 关闭裁剪窗口
+        $("#clipBtn").add('.cancel').click(function(e){
+            $('.cutPic-container').hide();
+        });
+        // 图片裁剪
+        $("#clipArea").photoClip({
+            width: 280,
+            height: 280,
+            file: "#portraitFile",
+            view: "#view",
+            ok: "#clipBtn",
+            loadStart: function () {
+                // console.log("照片读取中");
+            },
+            loadComplete: function () {
+                // console.log("照片读取完成");
+                $('.cutPic-container').show();
+            },
+            clipFinish: function (dataURL) {
+                $('.btn-upload').find('.btn').html('修改图片');
+                // console.log(dataURL);
+            }
+        });
+
+        // 定制帮助
+        $('.btn-tip').click(function(){
+            show_hide_dialog();
+        })
+   });
+    </script>
+</body>
+
+</html>

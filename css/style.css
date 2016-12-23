@@ -211,6 +211,15 @@ img {
   color: #898989;
   margin-bottom: 10px;
 }
+.nothing i[class*="bg-"] {
+  height: 80px;
+  line-height: 80px;
+  border-radius: 80px;
+  width: 80px;
+  text-align: center;
+  color: #fff;
+  font-size: 60px;
+}
 .nothing .icon-wchat_1 {
   font-size: 55px;
 }
@@ -222,6 +231,18 @@ img {
 .nothing .btn {
   margin: .8rem auto;
   width: 6rem;
+}
+
+.bg-success {
+  background-color: #09BB07;
+}
+
+.bg-warn {
+  background-color: #F76260;
+}
+
+.bg-info {
+  background-color: #10AEFF;
 }
 
 .checkbox, .all-check {
@@ -1309,13 +1330,14 @@ i.icon-vip {
   margin: 8px 0;
 }
 
-.upload input {
+input[type="file"] {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 44px;
+  height: 100%;
   opacity: 0;
+  z-index: 3;
 }
 
 .return-back a {
@@ -1456,7 +1478,7 @@ i.icon-vip {
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 10;
+  z-index: 8;
 }
 
 .pro-sort-dialog {
@@ -1475,8 +1497,8 @@ i.icon-vip {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 20rem;
-  z-index: 12;
-  position: relative;
+  z-index: 18;
+  position: fixed;
 }
 .pro-sort-content header {
   height: 40px;
@@ -1512,6 +1534,9 @@ i.icon-vip {
 .sort-list li.active {
   color: #fe007f;
   border-color: #fe007f;
+}
+.sort-list li.active a {
+  color: #fe007f;
 }
 
 .right-btn {
@@ -1988,6 +2013,7 @@ i.icon-vip {
   width: 3.375rem;
   height: 3.375rem;
   opacity: 0;
+  z-index: 2;
 }
 
 .upload-pic .percent {
@@ -2118,21 +2144,288 @@ i.icon-vip {
   font-size: 12px;
 }
 
+.xtab-btn-slide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 12;
+  background-color: #fff;
+  width: 2rem;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.xtab-btn-slide i {
+  -webkit-transform: rotate(0deg);
+  -webkit-transition: all .4s;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg) !important;
+  -webkit-transition: all .4s;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 3;
+}
+
+#carousel {
+  height: 40px;
+}
+
+.sort-nav-bb {
+  padding: 0 2rem 0 0;
+  overflow-x: auto;
+  display: -webkit-box;
+  position: relative;
+  background-color: #fff;
+}
+.sort-nav-bb li {
+  text-align: center;
+  width: 3.4rem;
+  font-size: 13px;
+  height: 40px;
+}
+.sort-nav-bb a {
+  padding: 10px 4px;
+  box-sizing: border-box;
+  display: block;
+}
+.sort-nav-bb .active a {
+  color: #fe007f;
+  border-bottom: 2px solid #fe007f;
+}
+
+.banner-3 {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.bb-title {
+  padding: 10px;
+}
+.bb-title img {
+  height: 36px;
+  line-height: 36px;
+  border-radius: 36px;
+  width: 36px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.bb-list {
+  margin-top: -39px;
+  padding-top: 39px;
+}
+.bb-list ul {
+  padding: 0 5px;
+  overflow: hidden;
+}
+.bb-list li {
+  width: 33.333%;
+  float: left;
+}
+.bb-list a {
+  padding: 10px 5px;
+  display: block;
+}
+
+.bb-img {
+  border: 1px solid #eee;
+}
+
+.gauge-box {
+  padding: 10px;
+}
+.gauge-box .nowrap-2 {
+  padding-bottom: 4px;
+}
+
+.pro-buy-content {
+  background-color: #fff;
+  width: 100%;
+  z-index: 8;
+  position: fixed;
+  bottom: 0;
+  top: 80px;
+}
+.pro-buy-content .icon-cancel {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 24px;
+  width: 24px;
+  text-align: center;
+  color: #5f646e;
+  border: 2px solid #5f646e;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 10;
+}
+.pro-buy-content .btn {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.pro-name-box {
+  padding: 30px 10px;
+  margin-bottom: 10px;
+}
+
+.sort-list-cnt {
+  overflow-y: auto;
+  position: absolute;
+  top: 108px;
+  bottom: 54px;
+}
+.sort-list-cnt .sort-list {
+  display: block;
+}
+.sort-list-cnt h4 {
+  padding: 0 0 8px .5rem;
+}
+
+.btn-tip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.btn-tip p {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fe007f;
+  border: 1px solid #fe007f;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 20px;
+  width: 20px;
+  text-align: center;
+}
+
+.btn-upload {
+  position: relative;
+  margin: 0 3rem;
+}
+.btn-upload .btn {
+  border-radius: 4px;
+}
+
+.head-portrait {
+  margin: 1rem auto;
+  width: 12rem;
+  height: 12rem;
+  position: relative;
+}
+.head-portrait img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.head-portrait .perPic {
+  border-radius: 50%;
+}
+
+.cutPic-container {
+  top: 0;
+  z-index: 10;
+  background-color: #000;
+  display: none;
+}
+.cutPic-container a {
+  position: relative;
+}
+
+#clipArea {
+  margin: 30px auto;
+  height: 300px;
+}
+
+#view {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url(../img/picframe.png);
+}
+
+.sort-pic-tab {
+  height: 1.4rem;
+  line-height: 1.35rem;
+  padding-bottom: .5rem;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+}
+.sort-pic-tab li {
+  color: #fe007f;
+  padding: 0 .5rem;
+  margin: 0 .5rem;
+}
+.sort-pic-tab li.active {
+  color: #fff;
+  background-color: #fe007f;
+  border-radius: 1.8rem;
+}
+
+.tabs-container {
+  padding-top: 15.9rem;
+  display: none;
+}
+
+.bb-pic-select {
+  overflow: hidden;
+  padding: .5rem .3rem 0 .3rem;
+}
+.bb-pic-select li {
+  float: left;
+  width: 25%;
+}
+.bb-pic-select label {
+  display: block;
+  padding: 0 .3rem;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.bb-pic-select img {
+  border: 1px solid #eee;
+  background-color: #ccc;
+}
+.bb-pic-select .checkbox {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
 .actionBar-container {
   background-color: #fff;
   box-sizing: border-box;
-  padding: 0 0 0 0.5rem;
+  padding: 0;
   height: 50px;
   line-height: 50px;
 }
 .actionBar-container .all-check {
-  margin-right: 1rem;
+  margin: 0 .5rem;
 }
 .actionBar-container .all-check input {
   top: 8px;
 }
 .actionBar-container .all-check i {
   top: 13px;
+}
+.actionBar-container .list-info {
+  padding-left: .5rem;
+}
+.actionBar-container .equably-layout a {
+  padding: 0;
 }
 
 .btn-disable {
@@ -2175,6 +2468,17 @@ i.icon-vip {
   box-sizing: border-box;
 }
 
+.btn-cancel {
+  background-color: #ccc;
+  padding: 0 .5rem;
+}
+
+.btn-default {
+  background-color: #F8F8F8;
+  color: #333 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .btn-code {
   position: absolute;
   top: 3px;
@@ -2206,7 +2510,7 @@ i.icon-vip {
   margin-top: 54px;
 }
 
-.fixed-body {
+.fixed-body, .cutPic-container {
   position: fixed;
   width: 100%;
   height: 100%;

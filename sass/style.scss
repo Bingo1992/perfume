@@ -806,15 +806,15 @@ i.icon-vip {
     border-radius: 4px;
     margin: 8px 0;
 }
-.upload {
-    input{
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 44px;
-        opacity: 0;
-    }
+
+input[type="file"]{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 3;
 }
 
 .return-back a{
@@ -948,7 +948,7 @@ i.icon-vip {
     left: 0;
     width: 100%;
     background-color: rgba(0,0,0,.6);
-    z-index: 10;
+    z-index: 8;
 }
 .pro-sort-dialog{
     position: fixed;
@@ -966,8 +966,8 @@ i.icon-vip {
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 20rem;
-    z-index: 12;
-    position: relative;
+    z-index: 18;
+    position: fixed;
     header {
         @include height(40px);
         text-align: center;
@@ -999,6 +999,9 @@ i.icon-vip {
     li.active {
         color: $color-theme;
         border-color: $color-theme;
+        a{
+           color: $color-theme; 
+        }
     }
 }
 .right-btn {
@@ -1477,6 +1480,7 @@ i.icon-vip {
     width: 3.375rem;
     height: 3.375rem;
     opacity: 0;
+    z-index: 2;
 }
 
 .upload-pic .percent{
@@ -1597,17 +1601,263 @@ i.icon-vip {
         font-size: 12px;
     }
 }
+
+// -----bb.html-----
+.xtab-btn-slide {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 12;
+    background-color: #fff;
+    width: 2rem;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    i {
+        -webkit-transform: rotate(0deg);  
+        -webkit-transition: all .4s;
+        
+    }
+}
+.rotate{
+    -webkit-transform: rotate(180deg) !important;  
+    -webkit-transition: all .4s;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 3;
+}
+#carousel {
+    height: 40px;
+    ul{
+        // -webkit-transform:translate3d(0,0,0);
+        // transform:translate3d(0,0,0);
+        // -webkit-transition: all 300ms  cubic-bezier(.33,.66,.66,1);
+    }
+    
+}
+.sort-nav-bb {
+    padding: 0 2rem 0 0;
+    overflow-x: auto;
+    display: -webkit-box;
+    position: relative;
+    background-color: #fff;
+    li {
+        text-align: center;
+        width: 3.4rem;
+        font-size: 13px;
+        height: 40px;
+    }
+    a {
+        padding: 10px 4px;
+        box-sizing: border-box;
+        display: block;
+    }
+    .active a{
+        color: $color-theme;
+        border-bottom: 2px solid $color-theme;
+        
+    }  
+}
+.banner-3 {
+    padding-top: 40px;
+    padding-bottom:70px;
+}
+.bb-title {
+    padding: 10px;
+    img {
+        @include circle(36px);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+}
+.bb-list {
+    margin-top: -39px;
+    padding-top: 39px;
+    ul {
+        padding: 0 5px;
+        overflow: hidden;
+    }
+    li {
+        width: 33.333%;
+        float: left;
+    }
+    a {
+        padding: 10px 5px;
+        display: block; 
+    }
+}
+.bb-img {
+    border: 1px solid #eee;
+}
+.gauge-box {
+    padding: 10px;
+    .nowrap-2 {padding-bottom: 4px;}
+}
+
+// bb_detail.html
+.pro-buy-content {
+    background-color: #fff;
+    width: 100%;
+    z-index: 8;
+    position: fixed;
+    bottom: 0;
+    top: 80px;
+    // max-height: 80%;
+    // overflow-y: auto;
+    .icon-cancel {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        @include circle(24px);
+        color: #5f646e;
+        border: 2px solid #5f646e;
+        font-size: 16px;
+        font-weight: bold;
+        z-index: 10;
+    }
+    .btn {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+}
+.pro-name-box {
+    padding: 30px 10px;
+    margin-bottom: 10px;
+    
+}
+.sort-list-cnt {
+    overflow-y: auto;
+    position: absolute;
+    top: 108px;
+    bottom: 54px;
+    // padding-bottom: 54px;
+    .sort-list {display: block;}
+    h4 {
+        padding: 0 0 8px .5rem;
+    }
+}
+
+// --------bb_custom.html----------
+.btn-tip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    p {
+        display: inline-block;
+        vertical-align: middle;
+        color: $color-theme;
+        border: 1px solid $color-theme;
+        @include circle(20px);
+    }
+}
+.btn-upload {
+    position: relative;
+    margin: 0 3rem;
+    .btn {border-radius: 4px;}
+}
+.head-portrait {
+    margin: 1rem auto;
+    width: 12rem;
+    height: 12rem;
+    position: relative;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .perPic {
+        border-radius: 50%;
+    }
+}
+
+.cutPic-container{
+    @extend .fixed-body;
+    top: 0;
+    z-index: 10;
+    background-color: #000;
+    display: none;
+    a {position: relative;}
+}
+
+#clipArea {
+    margin: 30px auto;
+    height: 300px;  
+}
+
+#view {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url(../img/picframe.png);
+}
+
+.sort-pic-tab {
+    height: 1.4rem;
+    line-height: 1.35rem;
+    padding-bottom: .5rem;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    li {
+        color: $color-theme;
+        padding: 0 .5rem;
+        margin: 0 .5rem;
+        &.active {
+            color: #fff;
+            background-color: $color-theme;
+            border-radius: 1.8rem;
+        }
+    }
+}
+
+.tabs-container {
+    padding-top: 15.9rem;
+    display: none;
+}
+.bb-pic-select {
+    overflow: hidden;
+    padding: .5rem .3rem 0 .3rem;
+
+    li {
+        float: left;
+        width: 25%;
+    }
+    label {
+        display: block;
+        padding: 0 .3rem;
+        margin-bottom: .5rem;
+        position: relative;
+    }
+    img {
+        border: 1px solid #eee;
+        background-color: #ccc;
+    }
+    .checkbox {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+    }
+}
 // -----fixed bottom-----
 .actionBar-container {
     background-color: #fff;
     box-sizing:border-box;
-    padding: 0 0 0 $gauge;
+    padding: 0;
     @include height(50px);
     .all-check {
-        margin-right: 1rem;
+        margin:  0 .5rem;
         input{top: 8px;}
         i{top: 13px;}
     }
+    .list-info {padding-left: .5rem;}
+    .equably-layout a{padding: 0;}
 }
 
 .btn-disable {
@@ -1640,7 +1890,15 @@ i.icon-vip {
     padding: 0 .5rem;
     box-sizing:border-box;
 }
-
+.btn-cancel {
+    background-color: #ccc;
+    padding: 0 .5rem;
+}
+.btn-default {
+    background-color: #F8F8F8;
+    color: #333 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
 .btn-code {
     position: absolute;
     top: 3px;

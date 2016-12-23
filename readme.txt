@@ -38,3 +38,21 @@
 
 其他产品信息：product.html
 产品详情：product_detail.html
+
+气垫BB霜：bb.html
+气垫BB霜-产品详情：bb_detail.html
+
+定制气垫BB霜：bb_custom.html
+
+结果页：result.html
+
+
+--------2016.12.23修改内容----------
+修改的文件：
+1、product_detail.html（加入购物车和立即购买点击添加遮罩）；
+2、script.js修改小部分内容；
+3、style.css修改。
+
+添加的文件：
+bb.html，bb_detail.html，bb_custom.html，bb_custom_2.html，result.html
+hammer.min.js，iscroll.js，iscroll-zoom.min.js，jquery.photoClip.js，sortTab.js
